@@ -1,0 +1,41 @@
+#####-----> GER: Alternate Strategy Plan <><> <><> <><> <><> <><>
+
+r56_german_communist = {
+	name = "GER: Communist Plan"
+	desc = "The essential and necessary AI behavior for Germany to go communist and form an Unholy Alliance with the Soviet Union."
+	
+	enable = {
+		original_tag = GER
+		OR = {
+			has_country_flag = GER_AI_RANDOM_COMMUNIST
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = COMMUNIST
+			}
+		}
+	}
+	abort = {
+		SOV = {
+			NOT = {
+				has_government = communism
+			}
+		}
+	}
+	
+	#-> GER: AI National Focus Priority <><>
+	ai_national_focuses = {
+		GER_political_sphere
+		GER_kill_hitler
+		GER_political_turmoil
+		GER_repeal_reichstag_fire_decree
+		GER_alliance_with_soviets
+	}
+	
+	focus_factors = {
+		GER_repeal_reichstag_fire_decree = 1.0
+		GER_alliance_with_the_soviets = 1.0
+		GER_world_revolution = 0
+	}
+}
+
+#####-----> End of File <><> <><> <><> <><> <><>

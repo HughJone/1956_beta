@@ -1,5 +1,32 @@
 ﻿l_english:
  
- #ENG (AI BEHAVIOR)
+ #####-----> Game Rules Localization <><> <><> <><> <><> <><>
+ 
+ ###---> AI Behavior <><> <><> <><>
+ 
+ #-> General <><>
+ RULE_OPTION_DEFAULT_AI_DESC:0 "The AI will make decisions based on other gameplay settings, such as the option to force historical focuses and other gameplay scenarios."
+ RULE_OPTION_COMMUNIST:0 "Communist"
+ RULE_OPTION_COMMUNIST_ALTERNATE:0 "Communist - Alternate"
+ RULE_OPTION_COMMUNIST_HISTORICAL:0 "Communist - Historical"
+ RULE_OPTION_DEMOCRATIC:0 "Democratic"
+ RULE_OPTION_DEMOCRATIC_ALTERNATE:0 "Democratic - Alternate"
+ RULE_OPTION_DEMOCRATIC_HISTORICAL:0 "Democratic - Historical"
+ RULE_OPTION_FASCIST:0 "Fascist"
+ RULE_OPTION_FASCIST_ALTERNATE:0 "Fascist - Alternate"
+ RULE_OPTION_FASCIST_HISTORICAL:0 "Fascist - Historical"
+ RULE_OPTION_AUTHORITARIAN:0 "Authoritarian"
+ RULE_OPTION_AUTHORITARIAN_ALTERNATE:0 "Authoritarian - Alternate"
+ RULE_OPTION_AUTHORITARIAN_HISTORICAL:0 "Authoritarian - Historical"
+ 
+ #-> GER: Germany <><>
+ RULE_OPTION_COMMUNIST_GER_AI_DESC:0 ""
+ RULE_OPTION_COMMUNIST_ALTERNATE_GER_AI_DESC:0 ""
+ RULE_OPTION_DEMOCRATIC_GER_AI_DESC:0 ""
+ RULE_OPTION_FASCIST_HISTORICAL_GER_AI_DESC:0 "The German AI will follow a similar path close to history by remilitarizing the Rhineland and utilizing an aggressive expansionism policy."
+ RULE_OPTION_FASCIST_ALTERNATE_GER_AI_DESC:0 ""
+ RULE_OPTION_AUTHORITARIAN_GER_AI_DESC:0 ""
+ 
+ #-> ENG: United Kingdom <><>
  RULE_OPTION_VISIT_GERMANY:0 "State Visit To Germany"
  RULE_OPTION_VISIT_GERMANY_ENG_AI_DESC:0 "The British AI will order a State Visit to Germany and become fascist, by going down the relevant path in the national focus tree."

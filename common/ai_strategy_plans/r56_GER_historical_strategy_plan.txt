@@ -1,0 +1,219 @@
+#####-----> GER: Historical Strategy Plan <><> <><> <><> <><> <><>
+
+r56_german_historical = {
+	name = "GER: Fascist Historical Plan"
+	desc = "The essential and necessary AI behavior for Germany."
+	
+	enable = {
+		original_tag = GER
+		or = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = GER_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = GER_AI_RANDOM_FASCIST
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = FASCIST_HISTORICAL
+			}
+		}
+	}
+	abort = {
+		OR = {
+			any_country = {
+				OR = {
+					has_completed_focus = HUN_invite_the_habsburg_prince
+					has_completed_focus = FRA_far_right_leagues
+					has_completed_focus = FRA_radicalize_front
+					has_completed_focus = USA_war_plan_red
+					has_completed_focus = USA_war_plan_white
+				}
+			}
+			SWE = {
+				has_government = communism
+			}
+			SOV = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			ENG = {
+				NOT = {
+					has_government = democratic
+				}
+			}
+		}
+	}
+	
+	#-> GER: AI National Focus Priority <><>
+	ai_national_focuses = {
+		#Grab as fast as you can if available:
+		GER_around_maginot
+		GER_volkssturm
+		GER_total_war
+		
+		#1936
+		GER_begin_depression_recovery
+		GER_rhineland
+		GER_appoint_economic_positions
+		GER_two_side_economics
+		GER_support_autarks_I
+		GER_volksgemeinschaft
+		GER_deutsche_arbeitsfront
+		GER_autobahn
+		GER_political_sphere
+		GER_denounce_versailles
+		
+		#1937
+		GER_purge_political_opponents
+		GER_combine_SS_gestapo
+		GER_volkswagen
+		GER_steelworks_issues
+		GER_privatize_reichsbahn
+		GER_military_industrial_complex
+		GER_foreign_volunteers
+		
+		#1938
+		GER_anschluss
+		GER_support_autarks_II
+		GER_nationalize_resource_industries
+		GER_demand_sudetenland
+		GER_anti_comitern_pact
+		GER_strengthen_german_state
+		
+		#1939
+		GER_end_of_czechoslovakia
+		GER_demand_memel
+		GER_alliance_with_italy
+		GER_prepare_poland_invasion
+		GER_modernize_CAS
+		GER_schwerepunkt_tactics
+		GER_mol_rib_pact
+		GER_danzig_or_war
+		GER_west_wall
+		GER_nationalize_aviation_industry
+		
+		#1940
+		GER_weserubung
+		GER_prepare_france_invasion
+		GER_core_lorraine
+		GER_blitzkreig_tactics
+		GER_war_with_france
+		GER_second_vienna_award
+		GER_support_military_research
+		GER_finish_reinhardt
+		GER_plan_sealion
+		
+		#1941
+		GER_air_superiority_english_channel
+		GER_enigma
+		GER_build_panzer_army
+		GER_ussr_war_goal
+		GER_lebensraum
+		GER_form_the_reichskommissariats
+		GER_encirclement_doctrine
+		
+		#1942+
+		GER_wunderwaffe
+		GER_train_panzergrenadiers
+		GER_counter_sloped_armor
+		GER_sweden_friend
+		GER_counter_anti_tank
+		GER_seige_fortified_towns
+		GER_finland_friend
+		GER_jet_research
+		GER_5_factor
+		GER_naval_superiority_english_channel
+		GER_landing_craft
+		GER_u_boat_effort
+		GER_train_marines
+		GER_train_paratroopers
+		GER_8_factor
+		GER_establish_peenmunde
+		GER_reform_uranprojekt
+	}
+	
+	focus_factors = {
+		GER_denounce_versailles = 1.0
+	}
+	
+	#-> GER: AI Strategy Priority <><>
+	ai_strategy = {
+		type = template_prio
+		id = medium_armor
+		value = 111
+	}
+	
+	#-> GER: AI Ideas & Traits Priority <><>
+	ideas = {
+		hjalmar_schacht = 10
+	}
+	
+	traits = {
+		captain_of_industry = 5
+	}
+	
+	#Keep small, as it is used as a factor for some things such as research needs.
+	#Recommended around 1.0. Useful for relation between plans.
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+}
+
+GER_minor_allies = {
+	name = "GER: Minor Allies"
+	desc = "Used to make minor European nations like the Axis more."
+	
+	enable = {
+		has_government = fascism
+		is_in_faction = no
+		GER = {
+			has_government = fascism
+		}
+		OR = {
+			original_tag = ROM
+			original_tag = HUN
+			original_tag = BUL
+			original_tag = YUG
+			original_tag = ITA
+			original_tag = CZE
+			original_tag = DEN
+			original_tag = NOR
+			original_tag = SWE
+			original_tag = FIN
+			original_tag = SPR
+			original_tag = POR
+			original_tag = HOL
+			original_tag = BEL
+			original_tag = LUX
+			original_tag = POL
+			original_tag = LAT
+			original_tag = LIT
+			original_tag = EST
+			original_tag = CRO
+			original_tag = SLO
+		}
+	}
+	abort = {
+		GER = {
+			NOT = {
+				has_government = fascism
+			}
+		}
+	}
+	
+	#-> GER: AI Strategy Priority <><>
+	ai_strategy = {
+		type = alliance
+		id = "JAP"
+		value = -500
+	}
+}
+
+#####-----> End of File <><> <><> <><> <><> <><>

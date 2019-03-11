@@ -533,13 +533,48 @@ maximum_fort_level = {
 #	}
 #}
 
+###---> AI Behavior <><> <><> <><>
 
-
- ##  ###     ###  ### #  #  ##  #   # ###  ##  ###  
-#  #  #      #  # #   #  # #  # #   #  #  #  # #  # 
-####  #      ###  ##  #### ####  # #   #  #  # ###  
-#  #  #      #  # #   #  # #  #  # #   #  #  # #  # 
-#  # ###     ###  ### #  # #  #   #   ###  ##  #  # 
+#-> GER: Germany <><>
+GER_ai_behavior = {
+	name = "GER_AI_BEHAVIOR"
+	group = "RULE_GROUP_AI_BEHAVIOR"
+	default = {
+		name = DEFAULT
+		text = "RULE_OPTION_DEFAULT"
+		desc = "RULE_OPTION_DEFAULT_AI_DESC"
+	}
+	option = {
+		name = COMMUNIST
+		text = "RULE_OPTION_COMMUNIST"
+		desc = "RULE_OPTION_COMMUNIST_GER_AI_DESC"
+	}
+	option = {
+		name = COMMUNIST_ALTERNATE
+		text = "RULE_OPTION_COMMUNIST_ALTERNATE"
+		desc = "RULE_OPTION_COMMUNIST_ALTERNATE_GER_AI_DESC"
+	}
+	option = {
+		name = DEMOCRATIC
+		text = "RULE_OPTION_DEMOCRATIC"
+		desc = "RULE_OPTION_DEMOCRATIC_GER_AI_DESC"
+	}
+	option = {
+		name = FASCIST_HISTORICAL
+		text = "RULE_OPTION_FASCIST_HISTORICAL"
+		desc = "RULE_OPTION_FASCIST_HISTORICAL_GER_AI_DESC"
+	}
+	option = {
+		name = FASCIST_ALTERNATE
+		text = "RULE_OPTION_FASCIST_ALTERNATE"
+		desc = "RULE_OPTION_FASCIST_ALTERNATE_GER_AI_DESC"
+	}
+	option = {
+		name = AUTHORITARIAN
+		text = "RULE_OPTION_AUTHORITARIAN"
+		desc = "RULE_OPTION_AUTHORITARIAN_GER_AI_DESC"
+	}
+}
 
 JAP_ai_behavior = {
 	name = "JAP_AI_BEHAVIOR"
