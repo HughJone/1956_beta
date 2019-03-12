@@ -137,7 +137,7 @@ r56_german_historical = {
 	}
 	
 	focus_factors = {
-		GER_denounce_versailles = 1.0
+		GER_denounce_versailles = 1
 	}
 	
 	#-> GER: AI Strategy Priority <><>
@@ -159,9 +159,9 @@ r56_german_historical = {
 	#Keep small, as it is used as a factor for some things such as research needs.
 	#Recommended around 1.0. Useful for relation between plans.
 	weight = {
-		factor = 1.0
+		factor = 1
 		modifier = {
-			factor = 1.0
+			factor = 1
 		}
 	}
 }

@@ -20,9 +20,9 @@
  RULE_OPTION_AUTHORITARIAN_HISTORICAL:0 "Authoritarian - Historical"
  
  #-> GER: Germany <><>
- RULE_OPTION_COMMUNIST_GER_AI_DESC:0 ""
- RULE_OPTION_COMMUNIST_ALTERNATE_GER_AI_DESC:0 ""
- RULE_OPTION_DEMOCRATIC_GER_AI_DESC:0 ""
+ RULE_OPTION_COMMUNIST_GER_AI_DESC:0 "The German AI will establish a communist system before creating an Unholy Alliance with the Soviet Union."
+ RULE_OPTION_COMMUNIST_ALTERNATE_GER_AI_DESC:0 "The German AI will establish a communist system before pushing the World Revolution."
+ RULE_OPTION_DEMOCRATIC_GER_AI_DESC:0 "The German AI will set to restore democracy and establish the Bundesrepublik."
  RULE_OPTION_FASCIST_HISTORICAL_GER_AI_DESC:0 "The German AI will follow a similar path close to history by remilitarizing the Rhineland and utilizing an aggressive expansionism policy."
  RULE_OPTION_FASCIST_ALTERNATE_GER_AI_DESC:0 ""
  RULE_OPTION_AUTHORITARIAN_GER_AI_DESC:0 ""

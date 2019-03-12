@@ -32,9 +32,76 @@ r56_german_communist = {
 	}
 	
 	focus_factors = {
-		GER_repeal_reichstag_fire_decree = 1.0
-		GER_alliance_with_the_soviets = 1.0
+		GER_repeal_reichstag_fire_decree = 1
+		GER_alliance_with_the_soviets = 1
 		GER_world_revolution = 0
+	}
+}
+
+r56_german_communist_alternate = {
+	name = "GER: Communist Alternate Plan"
+	desc = "The essential and necessary AI behavior for Germany to go communist and push the World Revolution alone."
+	
+	enable = {
+		original_tag = GER
+		OR = {
+			has_country_flag = GER_AI_RANDOM_COMMUNIST_ALTERNATE
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = COMMUNIST_ALTERNATE
+			}
+		}
+	}
+	abort = {
+		#No abort triggers.
+	}
+	
+	#-> GER: AI National Focus Priority <><>
+	ai_national_focuses = {
+		GER_political_sphere
+		GER_kill_hitler
+		GER_political_turmoil
+		GER_repeal_reichstag_fire_decree
+		GER_world_revolution
+	}
+	
+	focus_factors = {
+		GER_repeal_reichstag_fire_decree = 1
+		GER_world_revolution = 1
+		GER_alliance_with_the_soviets = 0
+	}
+}
+
+r56_german_democratic = {
+	name = "GER: Democratic Plan"
+	desc = "The essential and necessary AI behavior for Germany to go democratic and establish the Bundesrepublik."
+	
+	enable = {
+		original_tag = GER
+		OR = {
+			has_country_flag = GER_AI_RANDOM_DEMOCRATIC
+			has_game_rule = {
+				rule = GER_ai_behavior
+				option = DEMOCRATIC
+			}
+		}
+	}
+	abort = {
+		#No abort triggers.
+	}
+	
+	#-> GER: AI National Focus Priority <><>
+	ai_national_focuses = {
+		GER_political_sphere
+		GER_kill_hitler
+		GER_political_turmoil
+		GER_restore_weimar
+		GER_establish_bundesrepublik
+	}
+	
+	focus_factors = {
+		GER_restore_weimar = 1
+		GER_establish_bundesrepublik = 1
 	}
 }
 
