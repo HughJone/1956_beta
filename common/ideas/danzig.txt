@@ -87,7 +87,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			equipment_bonus = {
@@ -112,7 +112,7 @@ ideas = {
 			
 			traits = { silent_workhorse }			
 			ai_will_do = {
-				factor = 1
+				factor = 4
 			}
 		}
 		DNZ_edmund_beyl = {
@@ -154,7 +154,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }

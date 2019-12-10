@@ -128,9 +128,11 @@ ideas = {
 			picture = generic_pp_unity_bonus
 			
 			modifier = {
-				stability_factor = 0.05
+				political_power_gain = 0.2
+				consumer_goods_factor = 0.03
 				production_speed_buildings_factor = 0.05
-				consumer_goods_factor = 0.02
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
 			}
 		}
 		
@@ -145,9 +147,10 @@ ideas = {
 			picture = generic_goods_red_bonus
 			
 			modifier = {
-				political_power_gain = 0.2
-				production_speed_buildings_factor = 0.1
-				conscription = -0.02
+				conscription = -0.005
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_start_efficiency_factor = 0.1
+				conversion_cost_civ_to_mil_factor = -0.25
 			}
 		}
 		
@@ -161,10 +164,16 @@ ideas = {
 			picture = FRA_motorized_focus
 			
 			modifier = {
-				production_speed_buildings_factor = 0.1
-				consumer_goods_factor = 0.03
 				stability_factor = 0.05
+				consumer_goods_factor = 0.02
+				production_speed_industrial_complex_factor = 0.1
+
 			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}			
 		}
 		
 		goeringworks_idea = {
@@ -244,11 +253,11 @@ ideas = {
 			modifier = {
 				global_building_slots_factor = 0.1
 				production_speed_buildings_factor = 0.05
-				production_speed_arms_factory_factor = -0.15
+				production_speed_arms_factory_factor = -0.05
 				political_power_gain = 0.15
 			}
 			research_bonus = {
-					industry = 0.05
+					industry = 0.10
 					electronics = 0.05
 			}
 		}
@@ -426,7 +435,7 @@ ideas = {
 			picture = german_advisors
 			
 			research_bonus = {
-					motorized_equipment = 0.10
+					motorized_equipment = 0.15
 			}
 			equipment_bonus = {
 				motorized_equipment = {
@@ -471,6 +480,17 @@ ideas = {
 					has_government = democratic
 				}
 			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = fascism
+				}
+				
+			}
 			
 			picture = generic_pp_unity_bonus
 			
@@ -488,7 +508,7 @@ ideas = {
 			picture = generic_manpower_bonus
 			
 			modifier = {
-				conscription = 0.01
+				conscription = 0.02
 			}
 		}
 		
@@ -500,9 +520,7 @@ ideas = {
 			picture = generic_production_bonus
 			
 			modifier = {
-				consumer_goods_factor = -0.05
-				production_speed_arms_factory_factor = 0.25
-				conversion_cost_civ_to_mil_factor = -0.5
+				production_speed_arms_factory_factor = 0.1
 			}
 		}
 		
@@ -514,9 +532,9 @@ ideas = {
 			picture = FRA_national_mobilization_focus
 			
 			modifier = {
-				conscription = 0.02
+				conscription = 0.01
 				consumer_goods_factor = -0.05
-				stability_factor = 0.05
+				war_support_factor = 0.05
 			}
 		}
 		
@@ -575,6 +593,17 @@ ideas = {
 			allowed = {always = no}
 			
 			picture = generic_communism_drift_bonus
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = communism
+				}
+				
+			}
 			
 			modifier = {
 				stability_weekly = 0.0015
@@ -666,8 +695,8 @@ ideas = {
 			
 			picture = generic_goods_red_bonus
 			
-			modifier = {
-				consumer_goods_factor = -0.05
+			research_bonus = {
+				industry = 0.07
 			}
 		}
 		
@@ -679,7 +708,10 @@ ideas = {
 			picture = generic_production_bonus
 			
 			modifier = {
-				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.05
+				stability_factor = -0.15
+
 			}
 		}
 		
@@ -691,6 +723,17 @@ ideas = {
 			allowed = {always = no}
 			
 			picture = generic_democratic_drift_bonus
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = democratic
+				}
+				
+			}
 			
 			modifier = {
 				stability_weekly = 0.0015
@@ -704,10 +747,19 @@ ideas = {
 			allowed = {always = no}
 			
 			picture = generic_volunteer_expedition_bonus
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				has_government = fascism
+				
+			}
 			
 			modifier = {
 				fascism_drift = -0.05
-				stability_factor = 0.03
+				political_power_factor = 0.2
 			}
 		}
 		
@@ -719,8 +771,8 @@ ideas = {
 			picture = generic_pp_unity_bonus
 			
 			modifier = {
-				stability_factor = 0.02
-				communism_drift = -0.05
+				production_factory_max_efficiency_factor = 0.1
+				global_building_slots_factor = 0.15
 			}
 		}
 		
@@ -732,7 +784,7 @@ ideas = {
 			picture = the_great_depression
 			
 			modifier = {
-				trade_opinion_factor = 0.2
+				consumer_goods_factor = -0.05
 			}
 		}
 		
@@ -744,8 +796,7 @@ ideas = {
 			picture = generic_goods_red_bonus
 			
 			modifier = {
-				trade_opinion_factor = 0.2
-				industry_repair_factor = 1.5
+				production_speed_buildings_factor = 0.1
 			}
 		}
 		
@@ -757,8 +808,8 @@ ideas = {
 			picture = FRA_factory_strikes
 			
 			modifier = {
-				consumer_goods_factor = 0.08
-				stability_factor = 0.15
+				stability_factor = 0.2
+				line_change_production_efficiency_factor = 0.1
 				war_support_factor = -0.05
 			}
 		}
@@ -771,8 +822,8 @@ ideas = {
 			picture = generic_production_bonus
 			
 			modifier = {
-				conversion_cost_mil_to_civ_factor = -0.5
-				production_speed_buildings_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.15
 			}
 		}
 		
@@ -799,7 +850,8 @@ ideas = {
 			modifier = {
 				production_speed_bunker_factor = 0.2
 				production_speed_coastal_bunker_factor = 0.2
-				justify_war_goal_time = 0.25
+				army_core_defence_factor = 0.1
+				supply_consumption_factor = -0.15
 			}
 		}
 		
@@ -851,6 +903,17 @@ ideas = {
 			allowed = {always = no}
 			
 			picture = triumphant_will
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = neutrality
+				}
+				
+			}
 			
 			modifier = {
 				neutrality_drift = 0.25
@@ -897,7 +960,7 @@ ideas = {
 			picture = generic_intel_bonus
 			
 			modifier = {
-				conscription = 0.02
+				conscription = 0.01
 				justify_war_goal_time = -0.1
 				army_core_attack_factor = 0.1
 			}
@@ -991,7 +1054,7 @@ ideas = {
 			picture = generic_production_bonus
 			
 			modifier = {
-				production_speed_industrial_complex_factor = 0.15
+				production_speed_industrial_complex_factor = 0.1
 				production_speed_nuclear_reactor_factor = 0.15
 				production_speed_synthetic_refinery_factor = 0.15
 			}
@@ -1006,8 +1069,8 @@ ideas = {
 			
 			modifier = {
 				production_speed_rocket_site_factor = 0.15
-				production_speed_arms_factory_factor = 0.15
-				production_speed_dockyard_factor = 0.15
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
 			}
 		}
 		
@@ -1271,6 +1334,17 @@ ideas = {
 
 			picture = generic_fascism_drift_bonus
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = fascism
+				}
+				
+			}
+
 			modifier = {
 				fascism_drift = 0.2
 				fascism_acceptance = 85
@@ -1290,6 +1364,17 @@ ideas = {
 
 			picture = generic_neutrality_drift_bonus
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = neutrality
+				}
+				
+			}
+
 			modifier = {
 				neutrality_drift = 0.2
 				neutrality_acceptance = 85
@@ -1303,6 +1388,17 @@ ideas = {
 
 			allowed_civil_war = {
 				 has_government = fascism
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = democratic
+				}
+				
 			}
 
 			removal_cost = -1
@@ -1324,6 +1420,17 @@ ideas = {
 				 has_government = fascism
 			}
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = fascism
+				}
+				
+			}
+
 			removal_cost = -1
 
 			picture = generic_fascism_drift_bonus
@@ -1341,6 +1448,17 @@ ideas = {
 
 			allowed_civil_war = {
 				 has_government = neutrality
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = neutrality
+				}
+				
 			}
 
 			removal_cost = -1
@@ -1362,6 +1480,17 @@ ideas = {
 				 has_government = democratic
 			}
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = democratic
+				}
+				
+			}
+
 			removal_cost = -1
 
 			picture = generic_democratic_drift_bonus
@@ -1379,6 +1508,17 @@ ideas = {
 
 			allowed_civil_war = {
 				 has_government = neutrality
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = fascism
+				}
+				
 			}
 
 			removal_cost = -1
@@ -1403,6 +1543,17 @@ ideas = {
 
 			picture = ger_revive_the_kaiserreich
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = neutrality
+				}
+				
+			}
+
 			modifier = {
 				neutrality_drift = 0.1
 				drift_defence_factor = 0.1
@@ -1419,6 +1570,17 @@ ideas = {
 
 			allowed_civil_war = {
 				 has_government = neutrality
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = neutrality
+				}
+				
 			}
 
 			removal_cost = -1
@@ -1442,6 +1604,17 @@ ideas = {
 
 			allowed_civil_war = {
 				 has_government = democratic
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = democratic
+				}
+				
 			}
 
 			removal_cost = -1
@@ -1610,6 +1783,17 @@ ideas = {
 
 			picture = HUN_hungarian_monarchy_habsburg
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = neutrality
+				}
+				
+			}
+
 			modifier = {
 				neutrality_drift = 0.2
 			}
@@ -1628,6 +1812,17 @@ ideas = {
 
 			picture = anti_soviet_pact
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = communism
+				}
+				
+			}
+
 			modifier = {
 				communism_drift = -0.1
 			}
@@ -1645,6 +1840,17 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_communism_drift_bonus
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = communism
+				}
+				
+			}
 
 			modifier = {
 				communism_drift = 0.1
@@ -1683,6 +1889,15 @@ ideas = {
 
 			picture = anti_soviet_pact
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				has_government = neutrality
+				
+			}
+
 			modifier = {
 				communism_drift = -0.1
 			}
@@ -1718,6 +1933,17 @@ ideas = {
 			removal_cost = -1
 
 			picture = ger_the_great_red_menace
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = democratic
+				}
+				
+			}
 
 			modifier = {
 				communism_drift = -0.02
@@ -1773,6 +1999,17 @@ ideas = {
 
 			picture = generic_neutrality_drift_bonus
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = neutrality
+				}
+				
+			}
+
 			modifier = {
 				neutrality_drift = 0.1
 			}
@@ -1790,6 +2027,17 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_neutrality_drift_bonus
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = neutrality
+				}
+				
+			}
 
 			modifier = {
 				neutrality_drift = 0.2
@@ -2888,6 +3136,7 @@ ideas = {
 					has_completed_focus = GER_denounce_versailles
 				OR = {
 					has_government = fascism
+					
 					has_country_flag = GER_reinstated_nazi_leadership
 				}
 				NOT = { has_idea = heinrich_himmler }
@@ -2949,6 +3198,10 @@ ideas = {
 				NOT = { has_idea = rudolf_hess }
 			}
 			
+			ai_will_do = {
+				factor = 4
+			}
+			
 			traits = { silent_workhorse }
 		}
 		
@@ -2979,9 +3232,330 @@ ideas = {
 			allowed = {
 				original_tag = GER
 			}
+
+			available = {
+				has_government = fascism
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
 			
 			traits = { smooth_talking_charmer }
 		}
+
+		GER_jacob_kaiser = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			picture = minister_GER_Jakob_Kaiser
+
+			available = {
+				has_government = democratic
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+			
+			traits = { silent_workhorse }
+		}
+
+		GER_Ludwig_Kaas = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			picture = minister_GER_Ludwig_Kaas
+
+			available = {
+				has_government = democratic
+			}
+
+			ai_will_do = {
+				factor = 4
+			}
+			
+			traits = { priest }
+		}
+
+		GER_Josef_Muller = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			picture = minister_GER_Josef_Muller
+
+			available = {
+				has_government = democratic
+				BAV = {
+					exists = no
+				}
+			}
+
+			ai_will_do = {
+				factor = 2
+			}
+			
+			traits = { devouted_anti_fascist }
+		}
+
+		GER_Andreas_Hermes = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			picture = minister_GER_Andreas_Hermes
+
+			available = {
+				has_government = democratic
+			}
+
+			ai_will_do = {
+				factor = 3
+			}
+			
+			traits = { ambitious_agrarian }
+		}
+
+		GER_fritz_schaffer = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			picture = minister_GER_fritz_schaffer
+
+			available = {
+				has_government = democratic
+				BAV = {
+					exists = no
+				}
+			}
+
+			ai_will_do = {
+				factor = 5
+			}
+			
+			traits = { economist  }
+		}
+
+		GER_Wilhelm_Pieck = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			picture = minister_GER_Wilhelm_Pieck
+
+			available = {
+				has_government = communism
+				NOT = {
+					has_country_leader = {
+					    name = "Wilhelm Pieck"
+					    ruling_only = yes
+					}
+				}
+			}
+
+			ai_will_do = {
+				factor = 4
+			}
+			
+			traits = { POL_Flamboyant_Activist }
+		}
+
+		GER_Franz_Dahlem = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			picture = minister_GER_Franz_Dahlem
+
+			available = {
+				has_government = communism
+			}
+
+			ai_will_do = {
+				factor = 2
+			}
+			
+			traits = { POL_Union_Boss }
+		}
+
+		GER_Bernhard_Bastlein = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			picture = minister_GER_Bernhard_Bastlein
+
+			available = {
+				has_government = communism
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+			
+			traits = { resistance_figure }
+		}
+
+		GER_Walter_Ulbricht = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			picture = minister_GER_Walter_Ulbricht
+
+			available = {
+				has_government = communism
+			}
+
+			ai_will_do = {
+				factor = 2
+			}
+			
+			traits = { economic_reformer }
+		}
+
+		GER_franz_jacob = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			picture = minister_GER_franz_jacob
+
+			available = {
+				has_government = communism
+			}
+
+			ai_will_do = {
+				factor = 3
+			}
+			
+			traits = { war_industry_specialist }
+		}
+
+		GER_alfred_hugenberg = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			picture = minister_GER_alfred_hugenberg
+
+			available = {
+				has_completed_focus = GER_rally_the_monarchists
+			}
+
+			ai_will_do = {
+				factor = 3
+			}
+			
+			traits = { monarchist_figure }
+		}
+
+		GER_Carl_Friedrich_Goerdeler = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			picture = minister_GER_Carl_Friedrich_Goerdeler
+
+			available = {
+				has_government = neutrality
+			}
+
+			ai_will_do = {
+				factor = 3
+			}
+			
+			traits = { captain_of_industry }
+		}
+
+		GER_Theodor_Duesterberg = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			picture = minister_GER_Theodor_Duesterberg
+
+			available = {
+				has_government = neutrality
+			}
+
+			ai_will_do = {
+				factor = 3
+			}
+			
+			traits = { paramilitarist }
+		}
+
+		GER_Wilhelm_von_Gayl = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			picture = minister_GER_Wilhelm_von_Gayl
+
+			available = {
+				has_government = neutrality
+			}
+
+			ai_will_do = {
+				factor = 3
+			}
+			
+			traits = { authoritarian_centralizer }
+		}
+
+		GER_Paul_Lejeune_Jung = {
+
+			
+			allowed = {
+				original_tag = GER
+			}
+
+			picture = minister_GER_Paul_Lejeune_Jung
+
+			available = {
+				has_government = neutrality
+			}
+
+			ai_will_do = {
+				factor = 3
+			}
+			
+			traits = { POL_Foreign_Trade_Advocate }
+		}
+
 	}
 
 	
@@ -2994,11 +3568,14 @@ ideas = {
 
 			
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+				}
 			}
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { heavy_tank_manufacturer }
@@ -3009,11 +3586,14 @@ ideas = {
 
 			
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+				}
 			}
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { fast_tank_manufacturer }
@@ -3028,11 +3608,15 @@ ideas = {
 			picture = GER_MAN
 			
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+					original_tag = BAV
+				}
 			}
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { medium_tank_manufacturer }
@@ -3051,11 +3635,14 @@ ideas = {
 
 			
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+				}
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			equipment_bonus = {
@@ -3070,11 +3657,14 @@ ideas = {
 
 			
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+				}
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { raiding_fleet_naval_manufacturer }
@@ -3083,7 +3673,26 @@ ideas = {
 				
 			}
 			
-		}	
+		}
+		GER_deschimag = {
+
+			picture = generic_naval_manufacturer_3
+			
+			allowed = {
+				original_tag = GER
+			}
+			
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			
+			traits = { battlefleet_designer }
+			
+			equipment_bonus = {
+				
+			}
+			
+		}		
 	}
 	
 	aircraft_manufacturer = { 
@@ -3093,11 +3702,15 @@ ideas = {
 		messerschmitt = {
 			
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+					original_tag = BAV
+				}
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { light_aircraft_manufacturer }
@@ -3113,11 +3726,29 @@ ideas = {
 		
 		junkers = { 
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+					original_tag = SWE
+				}
+			}
+
+			available = {
+				if = {
+					limit = {
+						original_tag = SWE
+					}
+					GER = {
+						has_opinion = {
+	    					target = SWE
+	    					value > 0
+						}
+					}
+				}
 			}
 						
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { CAS_manufacturer }
@@ -3136,12 +3767,15 @@ ideas = {
 
 			
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+				}
 			}
 			
 						
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { medium_aircraft_manufacturer }
@@ -3155,12 +3789,15 @@ ideas = {
 
 			
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+				}
 			}
 			
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { heavy_aircraft_manufacturer }
@@ -3173,12 +3810,15 @@ ideas = {
 		dornier = {
 
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+				}
 			}
 			
 						
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { naval_aircraft_manufacturer }
@@ -3192,12 +3832,15 @@ ideas = {
 			picture = blohm_und_voss
 
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+				}
 			}
 			
 						
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { flying_ship_manufacturer }
@@ -3205,7 +3848,36 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}
-		}		
+		}
+		GER_deutsche_forschungsanstalt_fur_segelflug = { #DFS
+			
+			picture = generic_air_manufacturer_1
+
+			allowed = {
+				OR = {
+					original_tag = GER
+					original_tag = WGR
+				}
+				
+			}
+			available = {
+				has_tech = paratroopers
+			}						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { glider_manufacturer }
+			
+			modifier = {
+				paradrop_organization_factor = 0.1
+				paratrooper_aa_defense = 0.1
+				extra_paratrooper_supply_grace = 48
+			}
+			ai_will_do = {
+				factor = 0
+			}			
+		}				
 
 
 	}
@@ -3215,12 +3887,15 @@ ideas = {
 		ig_faben = {
 			
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+				}
 			}
 			
 			research_bonus = {
-				industry = 0.05
-				synth_resources = 0.1
+				industry = 0.10
+				synth_resources = 0.155
 			}
 			
 			traits = { refinery_concern }
@@ -3233,25 +3908,60 @@ ideas = {
 		krupp = {
 			
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+				}
+			}
+			
+			research_bonus = {
+				industry = 0.15
+				naval_gunnery_tech = 0.15
+			}
+			
+			traits = { industrial_concern }
+			
+			ai_will_do = {
+				factor = 1
+			}			
+		}
+		GER_vereinigte_stahlwerke = {
+			
+			picture = generic_industrial_concern_1
+
+			allowed = {
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+				}
 			}
 			
 			research_bonus = {
 				industry = 0.10
-				
 			}
 			
 			traits = { industrial_concern }
-		}
+			modifier = {
+				production_speed_steel_mill_factor = 0.15 
+			}
+			ai_will_do = {
+				factor = 0
+			}						
+		}		
+
+
 
 		siemens = {
 			
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+				}
 			}
 			
 			research_bonus = {
-				electronics = 0.10
+				electronics = 0.15
 			}
 			
 			traits = { electronics_concern }
@@ -3265,11 +3975,14 @@ ideas = {
 		rheinmetall = {
 			
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+				}
 			}
 			
 			research_bonus = {
-				artillery = 0.10
+				artillery = 0.15
 			}
 			
 			traits = { artillery_manufacturer }
@@ -3283,11 +3996,14 @@ ideas = {
 
 			
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+				}
 			}
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.15
 			}
 			
 			traits = { infantry_equipment_manufacturer }
@@ -3303,11 +4019,14 @@ ideas = {
 		opel = {
 			
 			allowed = {
-				original_tag = GER
+				OR = {
+					original_tag = WGR
+					original_tag = GER
+				}
 			}
 			
 			research_bonus = {
-				motorized_equipment = 0.10
+				motorized_equipment = 0.15
 			}
 			
 			traits = { motorized_equipment_manufacturer }
@@ -3322,7 +4041,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				rocketry = 0.10
+				rocketry = 0.15
 			}
 			
 			traits = { rocket_scientist }
@@ -3336,7 +4055,7 @@ ideas = {
 			}
 		
 			research_bonus = {
-				nuclear = 0.10
+				nuclear = 0.15
 			}
 			
 			traits = { nuclear_scientist }
@@ -3350,7 +4069,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.1
 			}
 			
 			
@@ -3367,11 +4086,18 @@ ideas = {
 			cost = 250
 			
 			research_bonus = {
-				cat_mobile_warfare = 0.10
+				cat_mobile_warfare = 0.15
 			}
 			
 
 			traits = { mobile_warfare_expert }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_tech = mobile_warfare
+					add = 1
+				}
+			}		
 		}
 		
 		wolfram_von_richthofen = {
@@ -3384,21 +4110,30 @@ ideas = {
 			cost = 250
 			
 			research_bonus = {
-				cat_battlefield_support = 0.10
+				cat_battlefield_support = 0.15
 			}
 			
 			traits = { close_air_support_proponent }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_tech = formation_flying
+					add = 1
+				}
+			}			
 		}
 		
-		walther_wever = {
-
+		#walther_wever = { #died in june 36
+		GER_hanna_reitsch = {
 			
+			picture = generic_navy_female_europe
+
 			allowed = {
 				original_tag = GER
 			}
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -3412,10 +4147,17 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { dive_bomber }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_tech = formation_flying
+					add = 1
+				}
+			}			
 		}
 		
 		alfred_saalwachter = {
@@ -3432,6 +4174,13 @@ ideas = {
 			}
 			
 			traits = { submarine_specialist }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_tech = trade_interdiction
+					add = 1
+				}
+			}			
 		}
 		
 		otto_ciliax = {
@@ -3442,7 +4191,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }

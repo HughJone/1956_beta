@@ -1282,7 +1282,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				research_speed_factor = 0.07
+				research_speed_factor = 0.10
 			}
 		}
 
@@ -1922,7 +1922,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				has_government = neutrality
 			}
 			
 			removal_cost = -1
@@ -1938,7 +1938,7 @@ ideas = {
 			}
 
 			allowed_civil_war = {
-				always = yes
+				has_government = fascism
 			}
 			
 			removal_cost = -1
@@ -2092,7 +2092,7 @@ ideas = {
 		}			
 		HOL_dutch_plane_requirements_list = {
 			
-			picture = man_five_year_plan_air
+			picture = hol_dutch_plane_requirments_list
 			
 			allowed = {
 				always = no
@@ -2103,10 +2103,16 @@ ideas = {
 
 			removal_cost = -1
 			
-			research_bonus = { air_equipment = -0.03 } 			
+			research_bonus = { air_equipment = -0.03 }
+			modifier = {
+				air_equipment_upgrade_xp_cost = 1.5
+			}
+			 
 
 		}	
 		HOL_reliance_on_the_gold_standard = {
+
+			picture = hol_reliance_on_the_gold_standard
 				
 			allowed = {
 				always = no
@@ -2205,6 +2211,17 @@ ideas = {
 
 			allowed_civil_war = {
 
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = fascism
+				}
+				
 			}
 
 			removal_cost = -1
@@ -2407,33 +2424,10 @@ ideas = {
 			ai_will_do = {
 				factor = 0
 			}
-		}	
-		HOL_meinoud_rost_van_tonningen = {
-			
-			allowed = {
-				original_tag = HOL	
-			}
-			available = { 
-			}			
-			traits = { fascist_demagogue }
-	
-			on_add = {
-				country_event = political.7
-			}
-	
-			do_effect = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-	
-			ai_will_do = {
-				factor = 0
-			}
 		}
-		HOL_meinout_rost_van_tonningen = {
+		HOL_meinout_rost_van_tonningen = { #meinoud with a d...
 
-			picture = generic_fascist_demagogue_western_european_2d
+			picture = HOL_meinoud_rost_van_tonningen
 
 			allowed = {
 				original_tag = HOL			
@@ -2444,7 +2438,11 @@ ideas = {
 					limit = {
 						has_dlc = "Man the Guns"
 					}
-					has_completed_focus = HOL_volk_en_vaderland
+					OR = {
+						has_completed_focus = HOL_volk_en_vaderland
+						has_completed_focus = HOL_economic_recovery
+					}
+					
 				}
 				if = {
 					limit = { has_dlc = "Man the Guns" }	
@@ -2455,7 +2453,7 @@ ideas = {
 			traits = { fascist_demagogue }
 		}		
 		
-		HOL_willem_schermerhorn = {
+		HOL_willem_schermerhorn = { #replaced by dlc guy
 
 			picture = generic_political_advisor_europe_2
 
@@ -2537,16 +2535,17 @@ ideas = {
 			
 			traits = { propaganda_expert }
 		}
-		HOL_jan_goudriaan = {
-
-			picture = generic_political_advisor_europe_2
-
-			allowed = {
-				original_tag = HOL
-			}
-			
-			traits = { captain_of_industry }
-		}
+#		HOL_jan_goudriaan = { #replaced by dlc guy
+#
+#
+#			picture = generic_political_advisor_europe_2
+#
+#			allowed = {
+#				original_tag = HOL
+#			}
+#			
+#			traits = { captain_of_industry }
+#		}
 
 		HOL_cornelis_van_geelkerken = {
 
@@ -2596,6 +2595,24 @@ ideas = {
 			
 			traits = { council_communist }
 		}
+
+		HOL_anton_de_kom = {
+
+			picture = generic_communist_africa
+			
+			allowed = {
+				original_tag = HOL
+				has_dlc = "Man the Guns"
+			}
+
+			available = {
+				has_government = communism
+				has_completed_focus = HOL_decolonization
+				has_completed_focus = HOL_communism_east_indies
+			}
+			
+			traits = { colonial_communist }
+		}		
 
 		HOL_adriaan_dijxhoorn = {
 			picture = generic_political_advisor_europe_2
@@ -2665,7 +2682,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -2681,13 +2698,17 @@ ideas = {
 			cost = 250
 						
 			research_bonus = {
-				cat_grand_battle_plan = 0.10
+				cat_grand_battle_plan = 0.15
 			}
 			
 			traits = { grand_battle_plan_expert }
 
 			ai_will_do = {
-				factor = 1
+				factor = 0
+				modifier = {
+					has_tech = trench_warfare
+					add = 1
+				}
 			}
 		}
 		HOL_godfried_van_voorst_tot_voorst1 = {
@@ -2699,7 +2720,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -2713,7 +2734,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }
@@ -2973,7 +2994,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { light_aircraft_manufacturer }
@@ -2997,7 +3018,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { medium_aircraft_manufacturer }
@@ -3020,7 +3041,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { flying_ship_manufacturer }
@@ -3048,7 +3069,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			equipment_bonus = {
@@ -3071,7 +3092,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			equipment_bonus = {
@@ -3093,7 +3114,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			equipment_bonus = {
@@ -3124,7 +3145,7 @@ ideas = {
 			removal_cost = 10
 			
 			research_bonus = {
-				motorized_equipment = 0.10
+				motorized_equipment = 0.15
 			}
 			
 			traits = { motorized_equipment_manufacturer }
@@ -3140,7 +3161,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.15
 			}
 			
 			available = {
@@ -3177,7 +3198,7 @@ ideas = {
 			}			
 			
 			research_bonus = {
-				artillery = 0.10
+				artillery = 0.15
 			}
 			
 			equipment_bonus = {
@@ -3206,7 +3227,7 @@ ideas = {
 			picture = generic_industrial_concern_1
 			
 			research_bonus = {
-				industry = 0.10
+				industry = 0.15
 				
 			}
 			
@@ -3220,13 +3241,17 @@ ideas = {
 			}
 			
 			available = {
-				has_completed_focus = HOL_electronic_innovations
+				OR = {
+					has_completed_focus = HOL_electronic_innovations
+					has_completed_focus = HOL_philips_focus
+				}
+				
 			}
 			
 			picture = generic_electronics_concern_1
 			
 			research_bonus = {
-				electronics = 0.10
+				electronics = 0.15
 			}
 			
 			traits = { electronics_concern }
@@ -3238,8 +3263,11 @@ ideas = {
 			}
 			
 			research_bonus = {
-				industry = 0.05
-				synth_resources = 0.1
+				industry = 0.10
+				refining_tech = 0.25
+			}
+			modifier = {
+				fuel_gain_factor = 0.1
 			}
 			
 			traits = { refinery_concern }
@@ -3268,7 +3296,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { converted_train_manufacturer }

@@ -9,7 +9,7 @@ if = {
 	}
 }
 
-set_research_slots = 4
+set_research_slots = 5
 set_stability = 0.75
 set_war_support = 0
 set_variable = { var = senators_support value = 48 }
@@ -21,9 +21,8 @@ set_variable = { var = quorum_medium value = 49 }
 set_variable = { var = quorum_high value = 58 }
 USA_recalc_congress_icon_frames = yes
 USA = {
-	# These events don't yet exist in the game and someone should add 'em in later
-	# country_event = { id = usa.50 days = 2 }
-	# country_event = { id = usa.51 days = 2 }
+	country_event = { id = usa.50 days = 2 }
+	country_event = { id = usa.51 days = 2 }
 }
 
 # Starting tech
@@ -33,6 +32,7 @@ set_technology = {
 	etax_doctrine = 1
 	camo = 1
 	gw_armored_car = 1
+	steel_production_1 = 1
 	
 	infantry_weapons = 1
 	infantry_weapons1 = 1
@@ -40,6 +40,7 @@ set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
 	gw_artillery = 1
+	interwar_antiair = 1
 	gwtank = 1
 	early_fighter = 1
 	cv_early_fighter = 1
@@ -50,6 +51,7 @@ set_technology = {
 	flying_boat = 1
 	superior_firepower = 1
 	base_strike = 1
+	motorised_infantry = 1
 	fuel_silos = 1
 	fuel_refining = 1
 	marines = 1
@@ -193,7 +195,7 @@ give_guarantee = URG
 		basic_light_tank = 1
 		interwar_artillery = 1
 		interwar_antitank = 1
-		interwar_antiair = 1
+
 		infantry_weapons2 = 1
 		support_weapons = 1
 		support_weapons2 = 1
@@ -268,7 +270,7 @@ give_guarantee = URG
 			plane_engine_upgrade = 2
 			plane_reliability_upgrade = 3
 		}
-	}
+	}	
 }
 
 
@@ -277,26 +279,15 @@ give_guarantee = URG
 set_convoys = 400
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 99
-		}
-
-		fascism = {
-			popularity = 0
-		}
-		
-		communism = {
-			popularity = 1
-			#banned = no #default is no
-		}
-	}
-	
 	ruling_party = democratic
 	last_election = "1932.11.8"
 	election_frequency = 48
 	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 99
+	fascism = 0
+	communism = 1
 }
 
 add_ideas = {
@@ -317,26 +308,15 @@ set_autonomy = {
 1939.1.1 = {
 
 	set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 99
-			}
-
-			fascism = {
-				popularity = 0
-			}
-			
-			communism = {
-				popularity = 1
-				#banned = no #default is no
-			}
-		}
-		
 		ruling_party = democratic
 		last_election = "1936.11.3"
 		election_frequency = 48
 		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 99
+		fascism = 0
+		communism = 1
 	}
 }
 
@@ -387,13 +367,13 @@ create_corps_commander = {
 create_field_marshal = {
 	name = "Omar Bradley"
 	picture = "Portrait_USA_Omar_Bradley.dds"
-	traits = {  trait_engineer trait_cautious harsh_leader meticulous expert_delegator}
+	traits = {  trait_engineer trait_cautious harsh_leader meticulous expert_delegator brilliant_strategist}
 
-	skill = 4
+	skill = 5
 
 	attack_skill = 3
-	defense_skill = 3
-	planning_skill = 6
+	defense_skill = 5
+	planning_skill = 4
 	logistics_skill = 4
 }
 create_field_marshal = {
@@ -401,18 +381,18 @@ create_field_marshal = {
 	picture = "r56_portrait_USA_George_Marshal.dds"
 	traits = {old_guard meticulous organizer politically_connected expert_delegator thorough_planner}
 
-	skill = 3
+	skill = 4
 
 	attack_skill = 1
 	defense_skill = 1
-	planning_skill = 10
-	logistics_skill = 3
+	planning_skill = 3
+	logistics_skill = 8
 }
 
 create_field_marshal = {
 	name = "Dwight D. Eisenhower"
 	picture = "Portrait_USA_Dwight_D_Eisenhower.dds"
-	traits = { logistics_wizard organizer offensive_doctrine trait_cautious meticulous politically_connected }
+	traits = { logistics_wizard organizer offensive_doctrine trait_cautious meticulous armor_officer politically_connected }
 	skill = 5
 	id = 602
 	attack_skill = 3
@@ -464,12 +444,12 @@ create_field_marshal = {
 	name = "Douglas MacArthur"
 	id = 57
 	picture = "Portrait_USA_Douglas_MacArthur.dds"
-	traits = {  offensive_doctrine brilliant_strategist career_officer media_personality politically_connected naval_invader}
+	traits = {  offensive_doctrine brilliant_strategist career_officer media_personality politically_connected }
 
 	skill = 4
 
-	attack_skill = 5
-	defense_skill = 2
+	attack_skill = 4
+	defense_skill = 3
 	planning_skill = 4
 	logistics_skill = 2
 }
@@ -490,9 +470,8 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Lloyd Fredendall"
 	picture = "Portrait_USA_Lloyd_Fredendall.dds"
-	traits = { old_guard inflexible_strategist decided_planner}
-
-	skill = 1
+	traits = { old_guard infantry_officer inflexible_strategist }
+	skill = 2
 
 	attack_skill = 1
 	defense_skill = 1
@@ -587,7 +566,7 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "William Simpson"
 	picture = "Portrait_USA_William_Hood_Simpson.dds"
-	traits = { infantry_officer brilliant_strategist }
+	traits = { infantry_officer }
 
 	skill = 3
 	
@@ -748,7 +727,7 @@ create_navy_leader = {
 create_navy_leader = {
 	name = "Charles M. Cooke, Jr."
 	picture = "Portrait_USA_Charles_M_Cooke.dds"
-	traits = { career_officer }
+	traits = { navy_career_officer }
 	skill = 2
 	attack_skill = 1
 	defense_skill = 1
@@ -756,9 +735,72 @@ create_navy_leader = {
 	coordination_skill = 3
 }
 
+create_navy_leader = {
+	name = "Jerauld Wright"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Generic_navy_2.dds"
+	traits = { navy_career_officer }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	maneuvering_skill = 1
+	coordination_skill = 1
+}
+create_navy_leader = {
+	name = "Willis Augustus Lee"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Generic_navy_1.dds"
+	traits = { bold blockade_runner }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	maneuvering_skill = 2
+	coordination_skill = 1
+}
+
+create_navy_leader = {
+	name = "Thomas C. Kinkaid"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Generic_navy_3.dds"
+	traits = { gentlemanly fleet_protector }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Marc A. Mitscher"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Generic_navy_2.dds"
+	traits = { naval_lineage air_controller}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 4
+}
+create_navy_leader = {
+	name = "Jesse B. Oldendorf"
+	portrait_path = "gfx/leaders/USA/Portrait_USA_Generic_navy_3.dds"
+	traits = { gunnery_expert gentlemanly}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+
 
 ### VARIANTS ###
 # 1936 Start #
+create_equipment_variant = {
+	name = "M1 Garand Kit"
+	type = infantry_equipment_1
+	upgrades = {
+		INF_reliability_upgrade = 1
+		INF_SA_upgrade = 3
+		INF_HA_upgrade = 0
+		INF_defence_upgrade = 0
+	}
+}
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	### Ship Variants ###

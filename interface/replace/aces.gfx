@@ -1363,6 +1363,11 @@ spriteTypes = {
 		name = "GFX_RAJ_ace_f_0"
 		texturefile = "gfx/aces/RAJ_f_pilot.dds"
 	}
+	spriteType = {
+		name = "GFX_RAJ_ace_f_1"
+		texturefile = "gfx/aces/RAJ_f_pilot2.dds"
+	}	
+	
 	##########################
 	## PAK_2d ##
 	##########################
@@ -1387,6 +1392,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_PAK_ace_f_0"
 		texturefile = "gfx/aces/RAJ_f_pilot.dds"
+	}
+	spriteType = {
+		name = "GFX_RAJ_ace_f_1"
+		texturefile = "gfx/aces/RAJ_f_pilot2.dds"
 	}	
 	##########################
 	# USA #
@@ -1582,6 +1591,10 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_SOV_ace_f_6"
+		texturefile = "gfx/aces/SOV_f_pilot7.dds"
+	}	
+	spriteType = {
+		name = "GFX_SOV_ace_f_8"
 		texturefile = "gfx/aces/asian_f_pilot.dds"
 	}	
 	##########################
@@ -2034,7 +2047,7 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_ARM_ace_f_6"
-		texturefile = "gfx/aces/asian_f_pilot.dds"
+		texturefile = "gfx/aces/SOV_f_pilot7.dds"
 	}
 	##########################
 	## BEL ##
@@ -2228,6 +2241,6 @@ spriteTypes = {
 	}
 	spriteType = {
 		name = "GFX_GEO_ace_f_6"
-		texturefile = "gfx/aces/asian_f_pilot.dds"
+		texturefile = "gfx/aces/SOV_f_pilot7.dds"
 	}	
 }

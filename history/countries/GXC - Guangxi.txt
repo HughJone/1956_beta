@@ -7,7 +7,7 @@ set_country_flag = is_warlords
 set_convoys = 5
 set_war_support = 0.1
 set_stability = 0.50 
-set_research_slots = 3
+set_research_slots = 4
 
 # Starting tech
 set_technology = {
@@ -47,36 +47,20 @@ create_corps_commander = {
 	portrait_path = "gfx/leaders/GXC/r56_portrait_GXC_Bai_Chongxi.dds"
 	traits = { hill_fighter trickster }
 	skill = 5
-	attack_skill = 1
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 2
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 4
 }
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 0
-		}
-
-		fascism = {
-			popularity = 0
-		}
-		
-		communism = {
-			popularity = 0
-			#banned = no #default is no
-		}
-		
-		neutrality = { 
-			popularity = 100
-		}
-	}
 	ruling_party = neutrality
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 100
 }
 
 create_country_leader = {

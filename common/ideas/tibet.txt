@@ -20,6 +20,17 @@ ideas = {
 				original_tag = TIB
 			}
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = neutrality
+				}
+				
+			}
+
 			removal_cost = -1
 		
 			modifier = {
@@ -32,6 +43,17 @@ ideas = {
 		
 			allowed = {
 				original_tag = TIB
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = neutrality
+				}
+				
 			}
 
 			removal_cost = -1
@@ -329,7 +351,7 @@ ideas = {
 			removal_cost = -1
 		
 			modifier = {
-				production_speed_buildings_factor = -0.3
+				research_speed_factor = -0.03 #changed, both factor and building speed debuffs are to crippling 
 				industrial_capacity_factory = -0.3 
 			}
 		}
@@ -344,7 +366,7 @@ ideas = {
 			removal_cost = -1
 		
 			modifier = {
-				production_speed_buildings_factor = -0.2
+				research_speed_factor = -0.02 #changed, both factor and building speed debuffs are to crippling 
 				industrial_capacity_factory = -0.2
 			}
 		}		
@@ -375,9 +397,9 @@ ideas = {
 			}
 			traits = { democratic_reformer }
 	
-			on_add = {
-				country_event = political.13
-			}
+			#on_add = {
+			#	country_event = political.13
+			#}
 	
 			do_effect = {
 				NOT = {
@@ -398,7 +420,35 @@ ideas = {
 				has_completed_focus = TIB_traditional_government
 			}			
 			traits = { staunch_monarchist }
-		}		
+			do_effect = {
+				NOT = {
+					has_government = neutrality
+				}
+			}			
+		}
+		TIB_thubten_kunphela = {
+			allowed = {
+				original_tag = TIB
+			}
+
+			picture = generic_political_advisor_india_2
+
+			available = { 
+				has_completed_focus = TIB_radical_reforms
+			}				
+			traits = { fascist_demagogue }
+			on_add = {
+				country_event = political.7
+			}
+			do_effect = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}			
 		
 		TIB_taring_jigme_civilian = {
 			
@@ -455,7 +505,12 @@ ideas = {
 			}
 			available = {
 				has_government = communism
-			}			
+			}
+
+			ai_will_do = {
+				factor = 4
+			}
+
 			traits = { silent_workhorse }
 		}
 	}
@@ -581,7 +636,7 @@ ideas = {
 				has_completed_focus = TIB_army_review
 			}
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -606,13 +661,17 @@ ideas = {
 			cost = 250
 						
 			research_bonus = {
-				cat_grand_battle_plan = 0.10
+				cat_grand_battle_plan = 0.15
 			}
 			
 			traits = { grand_battle_plan_expert }
 			ai_will_do = {
-				factor = 1
-			}			
+				factor = 0
+				modifier = {
+					has_tech = trench_warfare
+					add = 1
+				}
+			}		
 		}		
 		TIB_ENG_air_theorist = {
 			
@@ -631,7 +690,7 @@ ideas = {
 				}
 			}			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -733,7 +792,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.15
 			}
 			
 			traits = { infantry_equipment_manufacturer }
@@ -754,7 +813,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				industry = 0.10
+				industry = 0.15
 			}
 			
 			traits = { industrial_concern }

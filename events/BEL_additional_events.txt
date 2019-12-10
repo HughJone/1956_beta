@@ -3486,8 +3486,22 @@ country_event = { # we are flanders!
 		trigger = {
 			has_government = democratic
 		}
+		if = {
+			limit = {
+				BEL = { is_subject = yes }  
+			}
+			OVERLORD = {
+				set_country_flag = bel_overlord				 
+			} 
+		}		
 		random_owned_controlled_state = {
 			VLA = { transfer_state = PREV }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = bel_overlord
+			}
+			puppet = VLA
 		}
 		BEL = {
 			delete_unit_template_and_units = {
@@ -3509,6 +3523,7 @@ country_event = { # we are flanders!
 				set_nationality = WLL
 			}			
 		}	
+		VLA = { annex_country = { target = BEL transfer_troops = yes } change_tag_from = BEL }
 		VLA = { #send the flemish techs to wallonia to be sure that they both receive it
 			WLL = {
 				transfer_technology = yes
@@ -3525,22 +3540,12 @@ country_event = { # we are flanders!
 				set_politics = {
 					ruling_party = neutrality
 					elections_allowed = no
-					parties = {
-						neutrality = {
-							popularity = 73
-						}
-						democratic = { 
-							popularity = 10
-						}
-
-						fascism = {
-							popularity = 15
-						}
-						
-						communism = {
-							popularity = 2
-						}
-					}
+				}
+				set_popularities = {
+					democratic = 0.10
+					fascism = 0.15
+					communism = 0.2
+					neutrality = 0.73
 				}
 				create_country_leader = {
 					name = "Pierre Ryckmans"
@@ -3554,39 +3559,17 @@ country_event = { # we are flanders!
 			}			
 		}
 		
-		
-		if = {
-			limit = {
-				BEL = { is_subject = yes }  
-			}
-			BEL = { 
-				OVERLORD = { 
-					puppet = VLA						 
-				} 
-			}
-		}
-		
 		VLA = {
 			set_politics = {
 				ruling_party = democratic
 				elections_allowed = yes
-				parties = {
-					neutrality = {
-						popularity = 1
-					}
-					democratic = { 
-						popularity = 72
-					}
-
-					fascism = {
-						popularity = 24
-					}
-					
-					communism = {
-						popularity = 3
-					}
-				}
-			}		
+			}
+			set_popularities = {
+				democratic = 0.72
+				fascism = 0.24
+				communism = 0.3
+				neutrality = 0.1
+			}
 		}
 		if = {
 			limit = {
@@ -3773,8 +3756,22 @@ country_event = { # we are flanders!
 		trigger = {
 			has_government = fascism
 		}
+		if = {
+			limit = {
+				BEL = { is_subject = yes }  
+			}
+			OVERLORD = {
+				set_country_flag = bel_overlord				 
+			} 
+		}		
 		random_owned_controlled_state = {
 			VLA = { transfer_state = PREV }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = bel_overlord
+			}
+			puppet = VLA
 		}
 		BEL = {
 			delete_unit_template_and_units = {
@@ -3810,38 +3807,19 @@ country_event = { # we are flanders!
 			}
 		}
 		VLA = { annex_country = { target = BEL transfer_troops = yes } change_tag_from = BEL }	
-		if = {
-			limit = {
-				BEL = { is_subject = yes }  
-			}
-			BEL = { 
-				OVERLORD = { 
-					puppet = VLA						 
-				} 
-			}
-		}		
+		
 		
 		VLA = {
 			set_politics = {
 				ruling_party = fascism
 				elections_allowed = no
-				parties = {
-					neutrality = {
-						popularity = 5
-					}
-					democratic = { 
-						popularity = 31
-					}
-
-					fascism = {
-						popularity = 62
-					}
-					
-					communism = {
-						popularity = 2
-					}
-				}
-			}		
+			}
+			set_popularities = {
+				democratic = 0.31
+				fascism = 0.62
+				communism = 0.2
+				neutrality = 0.5
+			}
 		}
 		if = {
 			limit = {
@@ -4066,34 +4044,31 @@ country_event = { # we are flanders!
 			limit = {
 				BEL = { is_subject = yes }  
 			}
-			BEL = { 
-				OVERLORD = { 
-					puppet = VLA						 
-				} 
+			OVERLORD = {
+				set_country_flag = bel_overlord				 
+			} 
+		}		
+		random_owned_controlled_state = {
+			VLA = { transfer_state = PREV }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = bel_overlord
 			}
+			puppet = VLA
 		}		
 		
 		VLA = {
 			set_politics = {
 				ruling_party = communism
 				elections_allowed = no
-				parties = {
-					neutrality = {
-						popularity = 1
-					}
-					democratic = { 
-						popularity = 33
-					}
-
-					fascism = {
-						popularity = 14
-					}
-					
-					communism = {
-						popularity = 52
-					}
-				}
-			}		
+			}
+			set_popularities = {
+				democratic = 0.33
+				fascism = 0.14
+				communism = 0.52
+				neutrality = 0.1
+			}
 		}
 		if = {
 			limit = {
@@ -4321,34 +4296,31 @@ country_event = { # we are flanders!
 			limit = {
 				BEL = { is_subject = yes }  
 			}
-			BEL = { 
-				OVERLORD = { 
-					puppet = VLA						 
-				} 
+			OVERLORD = {
+				set_country_flag = bel_overlord				 
+			} 
+		}		
+		random_owned_controlled_state = {
+			VLA = { transfer_state = PREV }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = bel_overlord
 			}
+			puppet = VLA
 		}
 		
 		VLA = {
 			set_politics = {
 				ruling_party = neutrality
 				elections_allowed = no
-				parties = {
-					neutrality = {
-						popularity = 51
-					}
-					democratic = { 
-						popularity = 33
-					}
-
-					fascism = {
-						popularity = 14
-					}
-					
-					communism = {
-						popularity = 2
-					}
-				}
-			}		
+			}
+			set_popularities = {
+				democratic = 0.33
+				fascism = 0.14
+				communism = 0.2
+				neutrality = 0.51
+			}
 		}
 		if = {
 			limit = {
@@ -4585,22 +4557,6 @@ country_event = { # we are wallonia!
 				set_politics = {
 					ruling_party = neutrality
 					elections_allowed = no
-					parties = {
-						neutrality = {
-							popularity = 73
-						}
-						democratic = { 
-							popularity = 10
-						}
-
-						fascism = {
-							popularity = 15
-						}
-						
-						communism = {
-							popularity = 2
-						}
-					}
 				}
 				create_country_leader = {
 					name = "Pierre Ryckmans"
@@ -4610,43 +4566,45 @@ country_event = { # we are wallonia!
 					ideology = despotism
 					traits = {
 					}
-				}				
+				}
+				set_popularities = {
+					democratic = 0.10
+					fascism = 0.15
+					communism = 0.2
+					neutrality = 0.73
+				}
 			}
 		}
 		WLL = { annex_country = { target = BEL transfer_troops = yes } change_tag_from = BEL }	
-		
+
 		if = {
 			limit = {
 				BEL = { is_subject = yes }  
 			}
-			BEL = { 
-				OVERLORD = { 
-					puppet = WLL						 
-				} 
-			}
+			OVERLORD = {
+				set_country_flag = bel_overlord				 
+			} 
+		}		
+		random_owned_controlled_state = {
+			WLL = { transfer_state = PREV }
 		}
-		
+		random_country = {
+			limit = {
+				has_country_flag = bel_overlord
+			}
+			puppet = WLL
+		}		
 		WLL = {
 			set_politics = {
 				ruling_party = democratic
 				elections_allowed = yes
-				parties = {
-					neutrality = {
-						popularity = 1
-					}
-					democratic = { 
-						popularity = 69
-					}
-
-					fascism = {
-						popularity = 18
-					}
-					
-					communism = {
-						popularity = 12
-					}
-				}
-			}		
+			}
+			set_popularities = {
+				democratic = 0.69
+				fascism = 0.18
+				communism = 0.12
+				neutrality = 0.1
+			}
 		}
 		if = {
 			limit = {
@@ -4954,34 +4912,31 @@ country_event = { # we are wallonia!
 			limit = {
 				BEL = { is_subject = yes }  
 			}
-			BEL = { 
-				OVERLORD = { 
-					puppet = WLL						 
-				} 
-			}
+			OVERLORD = {
+				set_country_flag = bel_overlord				 
+			} 
 		}		
+		random_owned_controlled_state = {
+			WLL = { transfer_state = PREV }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = bel_overlord
+			}
+			puppet = WLL
+		}	
 	
 		WLL = {
 			set_politics = {
 				ruling_party = fascism
 				elections_allowed = no
-				parties = {
-					neutrality = {
-						popularity = 5
-					}
-					democratic = { 
-						popularity = 31
-					}
-
-					fascism = {
-						popularity = 62
-					}
-					
-					communism = {
-						popularity = 2
-					}
-				}
-			}		
+			}
+			set_popularities = {
+				democratic = 0.31
+				fascism = 0.62
+				communism = 0.2
+				neutrality = 0.5
+			}
 		}
 		if = {
 			limit = {
@@ -5289,34 +5244,31 @@ country_event = { # we are wallonia!
 			limit = {
 				BEL = { is_subject = yes }  
 			}
-			BEL = { 
-				OVERLORD = { 
-					puppet = WLL						 
-				} 
+			OVERLORD = {
+				set_country_flag = bel_overlord				 
+			} 
+		}		
+		random_owned_controlled_state = {
+			WLL = { transfer_state = PREV }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = bel_overlord
 			}
+			puppet = WLL
 		}		
 	
 		WLL = {
 			set_politics = {
 				ruling_party = communism
 				elections_allowed = no
-				parties = {
-					neutrality = {
-						popularity = 1
-					}
-					democratic = { 
-						popularity = 33
-					}
-
-					fascism = {
-						popularity = 14
-					}
-					
-					communism = {
-						popularity = 52
-					}
-				}
-			}		
+			}
+			set_popularities = {
+				democratic = 33
+				fascism = 14
+				communism = 52
+				neutrality = 1
+			}
 		}
 		if = {
 			limit = {
@@ -5609,34 +5561,31 @@ country_event = { # we are wallonia!
 			limit = {
 				BEL = { is_subject = yes }  
 			}
-			BEL = { 
-				OVERLORD = { 
-					puppet = WLL						 
-				} 
+			OVERLORD = {
+				set_country_flag = bel_overlord				 
+			} 
+		}		
+		random_owned_controlled_state = {
+			WLL = { transfer_state = PREV }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = bel_overlord
 			}
+			puppet = WLL
 		}		
 		
 		WLL = {
 			set_politics = {
 				ruling_party = neutrality
 				elections_allowed = no
-				parties = {
-					neutrality = {
-						popularity = 51
-					}
-					democratic = { 
-						popularity = 25
-					}
-
-					fascism = {
-						popularity = 12
-					}
-					
-					communism = {
-						popularity = 10
-					}
-				}
-			}		
+			}
+			set_popularities = {
+				democratic = 25
+				fascism = 12
+				communism = 10
+				neutrality = 51
+			}
 		}
 		if = {
 			limit = {
@@ -6137,12 +6086,17 @@ country_event = { # experimental event for cosmetic tag COG disguised as an intr
 	fire_only_once = yes
 	mean_time_to_happen = {
 		days = 0
+	}
+	immediate = {
+		set_global_flag = unlock_congo_tree
+		country_event = { id = tblra.177 days = 1 }		
 	}		
 	option = {
 		name = tblra.164.a	#Accept
 		ai_chance = {
 			factor = 100
 		}	
+		add_political_power = -12
 		#set_cosmetic_tag = COG_BEL
 	}		
 }
@@ -6619,3 +6573,25 @@ country_event = {
 		drop_cosmetic_tag = yes
 	}
 }
+country_event = {  
+	id = tblra.177
+	title = tblra.177.t
+	desc = tblra.177d
+	picture = GFX_report_event_estalliance
+
+	hidden = yes
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		load_focus_tree = congo_focus
+	}
+
+	option = {
+		name = tblra.176.a
+	
+	}
+}
+

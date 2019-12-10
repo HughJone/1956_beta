@@ -16,9 +16,9 @@ Armenian_question_category = {
 		}
 
 		cost = 75
-		
+
 		fire_only_once = yes
-		
+
 		days_remove = 30
 
 		ai_will_do = {
@@ -41,14 +41,14 @@ Armenian_question_category = {
 					NOT = {
 						has_global_flag = armenian_national_council_neutral_democratic
 					}
-				}				
+				}
 			}
 		}
 
 		complete_effect = {
-			
+
 		}
-		
+
 		remove_effect = {
 			if = {
 				limit = {
@@ -67,7 +67,7 @@ Armenian_question_category = {
 				set_global_flag = armenian_national_council_neutral_democratic
 				set_country_flag = armenian_national_council_neutral_democratic
 			}
-		}		
+		}
 	}
 	ARM_establish_armenian_legion = {
 
@@ -81,7 +81,7 @@ Armenian_question_category = {
 			}
 			ARM = {
 				exists = no
-			}			
+			}
 			NOT = {
 				has_global_flag = armenian_government
 			}
@@ -91,14 +91,14 @@ Armenian_question_category = {
 		}
 
 		fire_only_once = yes
-		
+
 		custom_cost_text = ARM_establish_armenian_legion_cost
 		custom_cost_trigger = {
 			command_power > 24
 			has_army_experience > 9
-			has_political_power > 24			
+			has_political_power > 24
 		}
-		
+
 		days_remove = 90
 
 		ai_will_do = {
@@ -112,7 +112,7 @@ Armenian_question_category = {
 			}
 		}
 		complete_effect = {
-			army_experience = -10		
+			army_experience = -10
 			add_political_power = -25
 			add_command_power = -25
 		}
@@ -133,27 +133,27 @@ Armenian_question_category = {
 				support = {
 					recon = { x = 0 y = 0 }
 					artillery = { x = 0 y = 1 }
-				}	
-			}		
+				}
+			}
 #			if = { #not sure if it's really necessary to add more chances to get a SS revolt
 #				limit = {
 #					original_tag = GER
 #				}
 #				add_to_variable = { var = wehrmacht_anger value = 5}
 #				subtract_from_variable = { var = SS_anger value = 5}
-#				SS_resolve_effects_wehrmacht = yes				
+#				SS_resolve_effects_wehrmacht = yes
 #			}
-				
-			random_owned_controlled_state = {	
+
+			random_owned_controlled_state = {
 				create_unit = {
-					division = "name = \"Armenian Legion\" division_template = \"Armenian Volunteers\" start_experience_factor = 1.0 start_equipment_factor = 0.01" 
+					division = "name = \"Armenian Legion\" division_template = \"Armenian Volunteers\" start_experience_factor = 1.0 start_equipment_factor = 0.01"
 					owner = ROOT
 				}
 			}
 			set_country_flag = armenian_legion
-							
+
 		}
-	}	
+	}
 	ARM_establish_national_armenian_government = {
 
 		icon = generic_independence
@@ -176,9 +176,9 @@ Armenian_question_category = {
 		}
 
 		cost = 100
-		
+
 		fire_only_once = yes
-		
+
 		days_remove = 15
 
 		ai_will_do = {
@@ -197,7 +197,7 @@ Armenian_question_category = {
 						has_government = neutrality
 					}
 					has_global_flag = armenian_national_council_neutral_democratic
-				}				
+				}
 			}
 		}
 
@@ -228,28 +228,18 @@ Armenian_question_category = {
 					set_politics = {
 						ruling_party = fascism
 						elections_allowed = no
-						parties = {
-							neutrality = {
-								popularity = 6
-							}
-							democratic = { 
-								popularity = 2
-							}
-
-							fascism = {
-								popularity = 62
-							}
-							
-							communism = {
-								popularity = 30
-							}
-						}
-					}						
+					}
+					set_popularities = {
+						democratic = 2
+						fascism = 62
+						communism = 30
+						neutrality = 6
+					}
 				}
 				ROOT = {
 					puppet = ARM
 				}
-				
+
 				set_global_flag = armenian_national_council_fascist
 			}
 			else_if = {
@@ -262,32 +252,22 @@ Armenian_question_category = {
 						set_politics = {
 							ruling_party = fascism
 							elections_allowed = no
-							parties = {
-								neutrality = {
-									popularity = 6
-								}
-								democratic = { 
-									popularity = 2
-								}
-
-								fascism = {
-									popularity = 62
-								}
-								
-								communism = {
-									popularity = 30
-								}
-							}
+						}
+						set_popularities = {
+							democratic = 2
+							fascism = 62
+							communism = 30
+							neutrality = 6
 						}
 						complete_national_focus = ARM_return_from_exile
 					}
 				}
-				
+
 				ROOT = {
 					puppet = ARM
 				}
 				set_global_flag = armenian_national_council_fascist
-			}			
+			}
 			else_if = {
 				limit = {
 					has_government = neutrality
@@ -310,22 +290,12 @@ Armenian_question_category = {
 					set_politics = {
 						ruling_party = neutrality
 						elections_allowed = no
-						parties = {
-							neutrality = {
-								popularity = 60
-							}
-							democratic = { 
-								popularity = 12
-							}
-
-							fascism = {
-								popularity = 3
-							}
-							
-							communism = {
-								popularity = 25
-							}
-						}
+					}
+					set_popularities = {
+						democratic = 12
+						fascism = 3
+						communism = 25
+						neutrality = 60
 					}
 					complete_national_focus = ARM_return_from_exile
 					ROOT = {give_guarantee = ARM}
@@ -342,23 +312,13 @@ Armenian_question_category = {
 						set_politics = {
 							ruling_party = neutrality
 							elections_allowed = no
-							parties = {
-								neutrality = {
-									popularity = 60
-								}
-								democratic = { 
-									popularity = 12
-								}
-
-								fascism = {
-									popularity = 3
-								}
-								
-								communism = {
-									popularity = 25
-								}
-							}
-						}						
+						}
+						set_popularities = {
+							democratic = 12
+							fascism = 3
+							communism = 25
+							neutrality = 60
+						}
 					}
 					complete_national_focus = ARM_return_from_exile
 				}
@@ -377,22 +337,11 @@ Armenian_question_category = {
 						set_politics = {
 							ruling_party = democratic
 							elections_allowed = no
-							parties = {
-								neutrality = {
-									popularity = 0
-								}
-								democratic = { 
-									popularity = 65
-								}
-
-								fascism = {
-									popularity = 1
-								}
-								
-								communism = {
-									popularity = 34
-								}
-							}
+						}
+						set_popularities = {
+							democratic = 65
+							fascism = 1
+							communism = 34
 						}
 						complete_national_focus = ARM_return_from_exile
 					}
@@ -401,7 +350,7 @@ Armenian_question_category = {
 					start_civil_war = { ideology = democratic size = 1 }
 					ROOT = {give_guarantee = ARM}
 				}
-				
+
 				set_global_flag = armenian_national_council_democratic
 			}
 			else_if = {
@@ -415,18 +364,18 @@ Armenian_question_category = {
 					complete_national_focus = ARM_return_from_exile
 				}
 				ROOT = {give_guarantee = ARM}
-				
+
 				set_global_flag = armenian_national_council_democratic
 			}
 			ARM = {
 				add_opinion_modifier = { target = ROOT modifier = ARM_liberators }
 			}
-			
+
 		}
-	}	
+	}
 }
 armenian_monarchism_category = {
-	ARM_crown_the_claimant = { # 
+	ARM_crown_the_claimant = { #
 
 		icon = generic_civil_support
 
@@ -437,9 +386,13 @@ armenian_monarchism_category = {
 		ai_will_do = {
 			factor = 100
 		}
-		
+
+		allowed = {
+			tag = ARM
+		}
+
 		cost = 100
-		
+
 		visible = {
 			has_completed_focus = ARM_the_last_claimant
 			NOT = {
@@ -450,12 +403,12 @@ armenian_monarchism_category = {
 		complete_effect = {
 			set_politics = { ruling_party = neutrality elections_allowed = yes }
 		}
-		
+
 		remove_effect = {
 
-		}		
+		}
 	}
-	ARM_suspend_the_electoral_process = { # 
+	ARM_suspend_the_electoral_process = { #
 
 		icon = generic_civil_support
 
@@ -467,10 +420,14 @@ armenian_monarchism_category = {
 			factor = 0.5
 		}
 
+		allowed = {
+			tag = ARM
+		}
+
 		fire_only_once = yes
-		
+
 		cost = 100
-		
+
 		visible = {
 			has_completed_focus = ARM_the_last_claimant
 			has_government = neutrality
@@ -481,14 +438,14 @@ armenian_monarchism_category = {
 			set_politics = { ruling_party = neutrality elections_allowed = no }
 			add_stability = -0.1
 		}
-		
+
 		remove_effect = {
 
-		}		
-	}	
-}	
+		}
+	}
+}
 armenian_army_category = {
-	ARM_exiled_generals = { #if great purge has not begun: more Armenian generals available 
+	ARM_exiled_generals = { #if great purge has not begun: more Armenian generals available
 
 		icon = generic_army_support
 
@@ -504,10 +461,14 @@ armenian_army_category = {
 			factor = 100
 		}
 
+		allowed = {
+			tag = ARM
+		}
+
 		fire_only_once = yes
-		
+
 		visible = {
-		
+
 		}
 
 		complete_effect = {
@@ -518,13 +479,13 @@ armenian_army_category = {
 							focus_progress = {
 								focus = SOV_great_purge
 								progress > 80
-							}						
+							}
 						}
 					}
 				}
 				create_corps_commander = {
 					name = "Movses Silikyan"
-					portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Armenia_Movses_Silikyan.dds"
+					portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Movses_Silikyan.dds"
 					traits = { homeland_connoisseur caring_leader trait_mountaineer}
 					skill = 3
 					attack_skill = 2
@@ -534,14 +495,14 @@ armenian_army_category = {
 				}
 				create_corps_commander = {
 					name = "Christopher Araratyan"
-					portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Armenia_Christopher_Araratyan.dds"
+					portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Christopher_Araratyan.dds"
 					traits = { career_officer meticulous homeland_connoisseur hill_fighter}
 					skill = 3
 					attack_skill = 3
 					defense_skill = 3
 					planning_skill = 2
 					logistics_skill = 2
-				}				
+				}
 			}
 			if = {
 				limit = {
@@ -550,14 +511,14 @@ armenian_army_category = {
 							focus_progress = {
 								focus = SOV_great_purge
 								progress > 80
-							}						
+							}
 						}
 					}
 					has_government = democratic
 				}
 				create_field_marshal = {
 					name = "Ruben Ter-Minasian"
-					portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Armenia_Ruben_Ter-Minasian.dds"
+					portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Ruben_Ter-Minasian.dds"
 					traits = { defensive_doctrine }
 					skill = 2
 					attack_skill = 1
@@ -567,22 +528,28 @@ armenian_army_category = {
 				}
 				create_corps_commander = {
 					name = "Jaques Bagratuni"
-					portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Armenia_Jaques_Bagratuni.dds"
+					portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Jaques_Bagratuni.dds"
 					traits = { politically_connected trickster}
 					skill = 2
 					attack_skill = 1
 					defense_skill = 2
 					planning_skill = 1
 					logistics_skill = 3
-				}				
-			}			
+				}
+			}
 			if = {
 				limit = {
+					SOV = {
+						focus_progress = {
+							focus = SOV_great_purge
+							progress > 80
+						}
+					}				
 					has_government = democratic
 				}
 				create_corps_commander = {
 					name = "Jaques Bagratuni"
-					portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Armenia_Jaques_Bagratuni.dds"
+					portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Jaques_Bagratuni.dds"
 					traits = { politically_connected trickster}
 					skill = 2
 					attack_skill = 1
@@ -594,11 +561,17 @@ armenian_army_category = {
 			}
 			if = {
 				limit = {
+					SOV = {
+						focus_progress = {
+							focus = SOV_great_purge
+							progress > 80
+						}
+					}				
 					has_government = neutrality
 				}
 				create_field_marshal = {
 					name = "Jaques Bagratuni"
-					portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Armenia_Jaques_Bagratuni.dds"
+					portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Jaques_Bagratuni.dds"
 					traits = { politically_connected trickster defensive_doctrine}
 					skill = 2
 					attack_skill = 1
@@ -606,25 +579,33 @@ armenian_army_category = {
 					planning_skill = 1
 					logistics_skill = 3
 				}
-			}			
+			}
 
 			create_navy_leader = {
 				name = "Migran Petrosian"
-				portrait_path = "gfx/leaders/SOV/Portrait_Soviet_Generic_navy_2.dds"
+				portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
 				traits = { spotter }
 				skill = 2
+				attack_skill = 1
+				defense_skill = 2
+				maneuvering_skill = 3
+				coordination_skill = 1				
 			}
 			create_navy_leader = {
 				name = "Artavazd Sadoyan"
 				portrait_path = "gfx/leaders/SOV/Portrait_Soviet_Generic_navy_1.dds"
 				traits = { blockade_runner }
 				skill = 1
-			}		
+				attack_skill = 1
+				defense_skill = 1
+				maneuvering_skill = 1
+				coordination_skill = 1				
+			}
 		}
-		
+
 		remove_effect = {
 
-		}		
+		}
 	}
 	ARM_ultra_nationalist_generals = {
 
@@ -638,27 +619,31 @@ armenian_army_category = {
 			}
 		}
 
+		allowed = {
+			tag = ARM
+		}
+
 		ai_will_do = {
 			factor = 100
 		}
 
 		fire_only_once = yes
-		
+
 		visible = {
-			
+
 		}
 
 		complete_effect = {
 			create_field_marshal = {
 				name = "Drastamat Kanayan"
-				portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Armenia_Drastamat_Kanayan.dds"
+				portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Drastamat_Kanayan.dds"
 				traits = { infantry_leader }
 				skill = 2
-				attack_skill = 3
+				attack_skill = 2
 				defense_skill = 1
 				planning_skill = 2
 				logistics_skill = 2
-			}		
+			}
 			create_corps_commander = {
 				name = "Wartan Sarkisian"
 				portrait_path = "gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
@@ -666,14 +651,14 @@ armenian_army_category = {
 				skill = 2
 				attack_skill = 3
 				defense_skill = 2
-				planning_skill = 2
+				planning_skill = 1
 				logistics_skill = 1
-			}			
+			}
 		}
-		
+
 		remove_effect = {
 
-		}		
+		}
 	}
 	ARM_contact_garegin_nzhdeh = {
 
@@ -686,33 +671,37 @@ armenian_army_category = {
 			}
 		}
 
+		allowed = {
+			tag = ARM
+		}
+
 		ai_will_do = {
 			factor = 100
 		}
 
 		fire_only_once = yes
-		
+
 		visible = {
-		
+
 		}
 
 		complete_effect = {
 			create_corps_commander = {
 				name = "Gagerin Nzdeh"
-				portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Armenia_Garegin_Nzhdeh.dds"
+				portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Garegin_Nzhdeh.dds"
 				traits = { career_officer trait_mountaineer }
 				skill = 4
 				attack_skill = 4
 				defense_skill = 3
 				planning_skill = 4
 				logistics_skill = 2
-			}		
+			}
 		}
-		
+
 		remove_effect = {
 
-		}		
-	}	
+		}
+	}
 	ARM_rehabilitate_ultra_nationalist_generals = {
 
 		icon = generic_nationalism
@@ -733,17 +722,21 @@ armenian_army_category = {
 		ai_will_do = {
 			factor = 1
 		}
-		
-		visible = {
-		
+
+		allowed = {
+			tag = ARM
 		}
-		
+
+		visible = {
+
+		}
+
 		fire_only_once = yes
 
 		cost = 150
-		
+
 		days_remove = 60
-		
+
 		complete_effect = {
 			add_stability = -0.05
 			add_popularity = {
@@ -751,13 +744,13 @@ armenian_army_category = {
 				popularity = 0.05
 			}
 		}
-		
+
 		remove_effect = {
 			set_country_flag = ARM_rehabilitate_ultra_nationalists
 
-			
-		}		
-	}	
+
+		}
+	}
 	ARM_communist_generals = {
 
 		icon = generic_army_support
@@ -771,23 +764,27 @@ armenian_army_category = {
 			factor = 100
 		}
 
+		allowed = {
+			tag = ARM
+		}
+
 		visible = {
-		
+
 		}
 
 		fire_only_once = yes
-		
+
 		complete_effect = {
 			create_field_marshal = {
 				name = "Hovhannes Bagramian"
-				portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Armenia_Hovhannes_Bagramyan.dds"
+				portrait_path = "gfx/leaders/ARM/r56_portrait_ARM_Hamazasp_Babadzhanian.dds"
 				traits = { armor_officer }
 				skill = 3
 				attack_skill = 3
 				defense_skill = 1
 				planning_skill = 4
 				logistics_skill = 2
-			}		
+			}
 			create_corps_commander = {
 				name = "Hmayak Grigoryevich Babayan"
 				portrait_path = "gfx/leaders/SOV/Portrait_Soviet_Generic_land_4.dds"
@@ -808,25 +805,33 @@ armenian_army_category = {
 				planning_skill = 3
 				logistics_skill = 1
 			}
-			
+
 			create_navy_leader = {
 				name = "Zarmair Azvanov"
 				portrait_path = "gfx/leaders/SOV/Portrait_Soviet_Generic_navy_2.dds"
 				traits = { spotter }
 				skill = 3
+				attack_skill = 3
+				defense_skill = 2
+				maneuvering_skill = 3
+				coordination_skill = 2					
 			}
 			create_navy_leader = {
 				name = "Ivan Galustov"
 				portrait_path = "gfx/leaders/SOV/Portrait_Soviet_Generic_navy_3.dds"
 				traits = { superior_tactician }
 				skill = 2
-			}			
+				attack_skill = 1
+				defense_skill = 1
+				maneuvering_skill = 2
+				coordination_skill = 3					
+			}
 		}
-		
+
 		remove_effect = {
 
-		}		
-	}	
+		}
+	}
 }
 armenian_national_liberation_category = {
 
@@ -841,10 +846,14 @@ armenian_national_liberation_category = {
 			}
 		}
 
+		allowed = {
+			tag = ARM
+		}
+
 		cost = 25
-		
+
 		fire_only_once = yes
-		
+
 		days_remove = 10
 
 		ai_will_do = {
@@ -858,12 +867,12 @@ armenian_national_liberation_category = {
 		}
 
 		complete_effect = {
-			
+
 		}
-		
+
 		remove_effect = {
 			add_stability = 0.03
-		}		
+		}
 	}
 	ARM_expulsion_from_trabzon = {
 
@@ -873,10 +882,14 @@ armenian_national_liberation_category = {
 			has_full_control_of_state = 354
 		}
 
+		allowed = {
+			tag = ARM
+		}
+
 		cost = 150
-		
+
 		fire_only_once = yes
-		
+
 		days_remove = 150
 
 		ai_will_do = {
@@ -897,15 +910,15 @@ armenian_national_liberation_category = {
 			}
 		}
 		complete_effect = {
-			
+
 		}
-		
+
 		remove_effect = {
 			TUR = {
 				random_owned_controlled_state = {
 					prioritize = { 49 346 }
 					add_manpower = 256000
-				}	
+				}
 				remove_state_core = 354
 				add_state_claim = 354
 				set_country_flag = TUR_expulsion_from_trabzon
@@ -913,8 +926,8 @@ armenian_national_liberation_category = {
 			}
 			354 = {
 				add_manpower = -256000
-			}	
-		}		
+			}
+		}
 	}
 	ARM_return_to_trabzon = {
 
@@ -927,10 +940,14 @@ armenian_national_liberation_category = {
 			}
 		}
 
+		allowed = {
+			tag = ARM
+		}
+
 		cost = 150
-		
+
 		fire_only_once = yes
-		
+
 		days_remove = 150
 
 		ai_will_do = {
@@ -951,14 +968,14 @@ armenian_national_liberation_category = {
 			}
 		}
 		complete_effect = {
-			
+
 		}
-		
+
 		remove_effect = {
 			ARM = {
 				add_state_core = 354
-			}	
-		}		
+			}
+		}
 	}
 	ARM_expulsion_from_erzurum = {
 
@@ -968,10 +985,14 @@ armenian_national_liberation_category = {
 			has_full_control_of_state = 353
 		}
 
+		allowed = {
+			tag = ARM
+		}
+
 		cost = 150
-		
+
 		fire_only_once = yes
-		
+
 		days_remove = 150
 
 		ai_will_do = {
@@ -992,9 +1013,9 @@ armenian_national_liberation_category = {
 			}
 		}
 		complete_effect = {
-			
+
 		}
-		
+
 		remove_effect = {
 			TUR = {
 				random_owned_controlled_state = {
@@ -1006,12 +1027,12 @@ armenian_national_liberation_category = {
 				set_country_flag = TUR_expulsion_from_erzurum
 				add_popularity = {ideology = fascism popularity = 0.02}
 				add_war_support = 0.05
-				
+
 			}
 			353 = {
 				add_manpower = -98400
-			}	
-		}		
+			}
+		}
 	}
 	ARM_return_to_erzurum = {
 
@@ -1024,10 +1045,14 @@ armenian_national_liberation_category = {
 			}
 		}
 
+		allowed = {
+			tag = ARM
+		}
+
 		cost = 150
-		
+
 		fire_only_once = yes
-		
+
 		days_remove = 150
 
 		ai_will_do = {
@@ -1051,14 +1076,14 @@ armenian_national_liberation_category = {
 			}
 		}
 		complete_effect = {
-			
+
 		}
-		
+
 		remove_effect = {
 			ARM = {
 				add_state_core = 353
-			}	
-		}		
+			}
+		}
 	}
 	ARM_expulsion_from_van = {
 
@@ -1068,10 +1093,14 @@ armenian_national_liberation_category = {
 			has_full_control_of_state = 352
 		}
 
+		allowed = {
+			tag = ARM
+		}
+
 		cost = 150
-		
+
 		fire_only_once = yes
-		
+
 		days_remove = 150
 
 		ai_will_do = {
@@ -1092,9 +1121,9 @@ armenian_national_liberation_category = {
 			}
 		}
 		complete_effect = {
-			
+
 		}
-		
+
 		remove_effect = {
 			TUR = {
 				random_owned_controlled_state = {
@@ -1106,12 +1135,12 @@ armenian_national_liberation_category = {
 				set_country_flag = TUR_expulsion_from_van
 				add_popularity = {ideology = fascism popularity = 0.02}
 				add_war_support = 0.05
-				
+
 			}
 			352 = {
 				add_manpower = -72400
-			}	
-		}		
+			}
+		}
 	}
 	ARM_return_to_van = {
 
@@ -1121,10 +1150,14 @@ armenian_national_liberation_category = {
 			has_full_control_of_state = 352
 		}
 
+		allowed = {
+			tag = ARM
+		}
+
 		cost = 150
-		
+
 		fire_only_once = yes
-		
+
 		days_remove = 150
 
 		ai_will_do = {
@@ -1135,7 +1168,7 @@ armenian_national_liberation_category = {
 			has_completed_focus = ARM_strong_hand
 			TUR = {
 				has_country_flag = TUR_expulsion_from_van
-			}			
+			}
 		}
 		cancel_trigger = {
 			OR = {
@@ -1152,11 +1185,11 @@ armenian_national_liberation_category = {
 				set_country_flag = TUR_expulsion_from_van
 			}
 		}
-		
+
 		remove_effect = {
 			ARM = {
 				add_state_core = 352
-			}	
-		}		
-	}	
+			}
+		}
+	}
 }

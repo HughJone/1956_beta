@@ -9,7 +9,7 @@ if = {
 	}
 }
 
-set_research_slots = 3
+set_research_slots = 4
 set_stability = 0.9
 set_war_support = 0.1
 
@@ -19,6 +19,7 @@ set_technology = {
 	etax_doctrine = 1
 	camo = 1
 	gw_armored_car = 1
+	steel_production_1 = 1
 	
 
 	infantry_weapons = 1
@@ -166,48 +167,28 @@ if = {
 
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 97
-		}
-
-		fascism = {
-			popularity = 1
-		}
-		
-		communism = {
-			popularity = 2
-		}
-	}
-	
 	ruling_party = democratic
 	last_election = "1935.10.22"
 	election_frequency = 48
 	elections_allowed = yes
 }
+set_popularities = {
+	democratic = 97
+	fascism = 1
+	communism = 2
+}
 
 1939.1.1 = {
 	set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 97
-			}
-
-			fascism = {
-				popularity = 1
-			}
-			
-			communism = {
-				popularity = 2
-			}
-		}
-		
 		ruling_party = democratic
 		last_election = "1939.4.3"
 		election_frequency = 48
 		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 97
+		fascism = 1
+		communism = 2
 	}
 }
 
@@ -278,7 +259,7 @@ create_corps_commander = {
 	skill = 2
 	attack_skill = 2
 	defense_skill = 1
-	planning_skill = 3
+	planning_skill = 2
 	logistics_skill = 2
 
 }
@@ -302,6 +283,16 @@ create_navy_leader = {
 	attack_skill = 1
 	defense_skill = 2
 	maneuvering_skill = 3
+	coordination_skill = 1
+}
+create_navy_leader = {
+	name = "Aage Helgesen Vedel"
+	portrait_path = "gfx/leaders/DEN/r56_portrait_DEN_Vedel.dds"
+	traits = { lancer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 1
 	coordination_skill = 2
 }
 ### VARIANTS ###

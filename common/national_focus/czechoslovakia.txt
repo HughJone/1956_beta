@@ -32,7 +32,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 		CZE = { country_event = { id = czke.100 days = 1 } }
 		custom_effect_tooltip = report_reward
 		custom_effect_tooltip = CZKE_great_depression_aftermath_tooltip_reward
-
 		}
 	}
 
@@ -116,7 +115,7 @@ continuous_focus_position = { x = 0 y = 1250 }
 					instant_build = yes
 				}
 			}
-		}	
+		}
 		}
 	}
 
@@ -292,7 +291,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 		CZE = { country_event = { id = czke.108 days = 1 } }
 		custom_effect_tooltip = decision_reward
 		custom_effect_tooltip = CZKE_explosives_production_tooltip_reward
-
 		}
 	}
 
@@ -314,7 +312,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 		CZE = { country_event = { id = czke.109 days = 1 } }
 		custom_effect_tooltip = report_reward
 		custom_effect_tooltip = CZKE_cvut_tooltip_reward
-
 		}
 	}
 
@@ -336,7 +333,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 		CZE = { country_event = { id = czke.110 days = 1 } }
 		custom_effect_tooltip = decision_reward
 		custom_effect_tooltip = CZKE_commercial_uranium_mining_tooltip_reward
-
 		}
 	}
 
@@ -359,8 +355,7 @@ continuous_focus_position = { x = 0 y = 1250 }
 				bonus = 1
 				uses = 2
 				category = nuclear
-			}	
-
+			}
 		}
 	}
 
@@ -412,10 +407,9 @@ continuous_focus_position = { x = 0 y = 1250 }
 		CZE = { country_event = { id = czke.200 days = 1 } }
 		custom_effect_tooltip = decision_reward
 		custom_effect_tooltip = CZKE_ministry_of_defense_tooltip_reward
-
 		}
 	}
-
+	
 	focus = {
 		id = CZKE_rop
 		icon = GFX_goal_generic_fortify_city
@@ -439,7 +433,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 		CZE = { country_event = { id = czke.201 days = 1 } }
 		custom_effect_tooltip = report_reward
 		custom_effect_tooltip = CZKE_rop_tooltip_reward
-
 		}
 	}
 
@@ -483,7 +476,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 		CZE = { country_event = { id = czke.207 days = 1 } }
 		custom_effect_tooltip = decision_reward
 		custom_effect_tooltip = CZKE_military_education_tooltip_reward
-
 		}
 	}
 
@@ -506,7 +498,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 		CZE = { country_event = { id = czke.208 days = 1 } }
 		custom_effect_tooltip = report_reward
 		custom_effect_tooltip = CZKE_border_brigades_tooltip_reward
-
 		}
 	}
 
@@ -569,7 +560,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 		CZE = { country_event = { id = czke.210 days = 1 } }
 		custom_effect_tooltip = report_reward
 		custom_effect_tooltip = CZKE_military_science_institute_tooltip_reward		
-
 		}
 	}
 
@@ -585,6 +575,15 @@ continuous_focus_position = { x = 0 y = 1250 }
 		cost = 5
 
 		ai_will_do = { factor = 1 }
+
+		bypass = {
+			OR = {
+				has_idea = low_economic_mobilisation
+				has_idea = partial_economic_mobilisation
+				has_idea = war_economy
+				has_idea = tot_economic_mobilisation
+			}
+		}
 
 		completion_reward = {
 
@@ -720,7 +719,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 			CZE = { country_event = { id = czke.217 days = 1 } }
 			custom_effect_tooltip = decision_reward
 			custom_effect_tooltip = CZKE_new_tanks_tooltip_reward
-
 		}
 	}
 
@@ -829,7 +827,7 @@ continuous_focus_position = { x = 0 y = 1250 }
 			custom_effect_tooltip = report_reward
 			custom_effect_tooltip = CZKE_air_is_our_sea_tooltip_reward
 		}
-	}	
+	}
 
 	focus = {
 		id = CZKE_czechoslovak_airforce
@@ -858,7 +856,7 @@ continuous_focus_position = { x = 0 y = 1250 }
 		cost = 5
 		ai_will_do = {
 			factor = 0.3
-		}		
+		}	
 
 		bypass = {
 				AND = {
@@ -1048,7 +1046,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 			CZE = { country_event = { id = czke.301 days = 1 } }
 			custom_effect_tooltip = decision_reward
 			custom_effect_tooltip = CZKE_reorganize_general_staff_tooltip_reward
-
 		}
 	}
 
@@ -1187,11 +1184,10 @@ continuous_focus_position = { x = 0 y = 1250 }
 			custom_effect_tooltip = CZKE_infiltrate_abwehr_tooltip_reward
 		}
 	}
-
-
+	
 	focus = {
 		id = CZKE_sabotage_anchluss
-		icon = GFX_goal_generic_position_armies
+		icon = GFX_r56_goal_cze_sabotage_austro_german_alliance
 
 		prerequisite = { focus = CZKE_infiltrate_abwehr }
 
@@ -1250,8 +1246,7 @@ continuous_focus_position = { x = 0 y = 1250 }
 			}
 		}
 	}
-
-
+	
 	focus = {
 		id = CZKE_soviet_intelligence
 
@@ -1273,7 +1268,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 			CZE = { country_event = { id = czke.310 days = 1 } }
 			custom_effect_tooltip = report_reward	
 			custom_effect_tooltip = CZKE_soviet_intelligence_tooltip_reward
-
 		}
 	}
 
@@ -1317,7 +1311,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 					exists = no
 					is_puppet = yes
 				}
-
 			}
 		}
 
@@ -1337,7 +1330,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 		CZE = { country_event = { id = czke.315 days = 1 } }
 		custom_effect_tooltip = decision_reward
 		custom_effect_tooltip = CZKE_french_military_mission_tooltip_reward
-
 		}
 	}
 
@@ -1402,9 +1394,18 @@ continuous_focus_position = { x = 0 y = 1250 }
 		icon = GFX_focus_generic_russian_deal_communist
 		prerequisite = { focus = CZKE_soviet_treaties }
  
+		bypass = {
+			is_puppet_of = SOV
+		}
+
 		available = {
 			country_exists = SOV
-			NOT = { has_government = fascism has_government = neutrality }
+			NOT = {
+				OR = {
+					has_government = fascism 
+					has_government = neutrality
+				} 
+			}
 			OR = {
 				threat > 0.30
 			}
@@ -1420,18 +1421,21 @@ continuous_focus_position = { x = 0 y = 1250 }
 		custom_effect_tooltip = diplomatic_reward	
 		custom_effect_tooltip = CZKE_acquire_access_for_soviets_tooltip_reward
 		}
-
 	}
 
 ####### LITTLE-ENTENTE BRANCH ###############
 
 	focus = {
 		id = CZKE_revive_little_entente
-		icon = GFX_focus_generic_little_entente
+		icon = GFX_r56_goal_cze_revive_the_little_entente
 		prerequisite = { focus = CZKE_france_alliance }
 		mutually_exclusive = { focus = CZKE_soviet_treaties }
 		available = {
-			 NOT = { has_government = communism has_government = fascism }
+			 NOT = {
+			 	OR = {
+			 		has_government = communism has_government = fascism
+			 	} 
+			 }
 			is_puppet = no
 			is_in_faction = no
 			country_exists = ROM
@@ -1453,7 +1457,7 @@ continuous_focus_position = { x = 0 y = 1250 }
 
 	focus = {
 		id = CZKE_invite_yugoslavia
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_r56_goal_cze_invite_yugoslavia
 		prerequisite = { focus = CZKE_revive_little_entente }
 		x = 19
 		y = 4
@@ -1472,10 +1476,8 @@ continuous_focus_position = { x = 0 y = 1250 }
 					has_war = yes
 					is_in_faction = yes
 				}
-
 			}
 		}
-
 
 		ai_will_do = { factor = 0.3 }
 		completion_reward = {
@@ -1484,13 +1486,12 @@ continuous_focus_position = { x = 0 y = 1250 }
 				YUG = { country_event = czke.331 }
 				custom_effect_tooltip = diplomatic_reward
 				custom_effect_tooltip = CZKE_invite_yugoslavia_tooltip_reward
-
 		}
 	}
 
 	focus = {
 		id = CZKE_invite_romania
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_r56_goal_cze_invite_romania
 		prerequisite = { focus = CZKE_revive_little_entente }
 		x = 21
 		y = 4
@@ -1511,10 +1512,8 @@ continuous_focus_position = { x = 0 y = 1250 }
 					has_war = yes
 					is_in_faction = yes
 				}
-
 			}
 		}
-
 
 		ai_will_do = { factor = 0.7 }	
 		completion_reward = {
@@ -1585,7 +1584,7 @@ continuous_focus_position = { x = 0 y = 1250 }
 
 	focus = {
 		id = CZKE_czechoslovak_government_reform
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_r56_goal_cze_reform_czechoslovak_government
 
 		x = 30
 		y = 0
@@ -1642,12 +1641,19 @@ continuous_focus_position = { x = 0 y = 1250 }
 
 	focus = {
 		id = CZKE_sokol_movement
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_r56_goal_cze_support_sokol_movement
 
 		prerequisite = { focus = CZKE_czechoslovak_government_reform }
 		mutually_exclusive = { focus = CZKE_empower_internationalism }
 
-		available = { NOT = { has_government = communism  has_government = fascism } }
+		available = { 
+			NOT = { 
+				OR = {
+					has_government = communism
+					has_government = fascism
+				} 
+			} 
+		}
 		
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -1663,7 +1669,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 			CZE = { country_event = { id = czke.403 days = 1 } }
 			custom_effect_tooltip = decision_reward
 			custom_effect_tooltip = CZKE_sokol_movement_tooltip_reward
-
 		}
 	}
 
@@ -1674,7 +1679,14 @@ continuous_focus_position = { x = 0 y = 1250 }
 		prerequisite = { focus = CZKE_czechoslovak_government_reform }
 		mutually_exclusive = { focus = CZKE_sokol_movement }
 
-		available = { NOT = { has_government = fascism has_government = neutrality } }
+		available = { 
+			NOT = { 
+				OR = {
+					has_government = fascism 
+					has_government = neutrality 
+				} 
+			}
+		}
 		
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -1683,7 +1695,13 @@ continuous_focus_position = { x = 0 y = 1250 }
 		y = 1
 		cost = 5
 
-		ai_will_do = { factor = 0.3 }
+		ai_will_do = {
+			factor = 0.7
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+		}
 
 		completion_reward = {
 			custom_effect_tooltip = new_decision
@@ -1723,18 +1741,23 @@ continuous_focus_position = { x = 0 y = 1250 }
 		prerequisite = { focus = CZKE_empower_internationalism focus = CZKE_sokol_movement }
 		mutually_exclusive = { focus = CZKE_state_defense_law focus = CZKE_boycott_press_law }
 
-		available = { AND = { has_government = democratic NOT = { has_country_flag = czke_karlsbad_program } } }
+		available = { 
+			has_government = democratic 
+			NOT = { 
+				has_country_flag = czke_karlsbad_program 
+			} 
+		}
 
-			bypass = {
+		bypass = {
 			GER = { has_country_flag = sudetenland_acquired }
 			custom_trigger_tooltip = {
 				tooltip = CZKE_join_allies_tt
-					OR = {
+				OR = {
 					ENG = { is_in_faction_with = CZE }
 					FRA = { is_in_faction_with = CZE }
-					}
 				}
 			}
+		}
 
 		continue_if_invalid = no
 		cancel_if_invalid = yes
@@ -1800,7 +1823,7 @@ continuous_focus_position = { x = 0 y = 1250 }
 
 	focus = {
 		id = CZKE_national_unity_government
-		icon = GFX_goal_support_democracy
+		icon = GFX_goal_morale_bonus
 
 		prerequisite = { focus = CZKE_state_defense_law focus = CZKE_democratic_reforms }
 
@@ -1921,7 +1944,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 				 remove_ideas = CZKE_unruly_minorities
 				 remove_ideas = CZKE_unruly_minorities_2
 				 remove_ideas = CZKE_fifth_column
-
 			}
 
 			custom_effect_tooltip = new_idea
@@ -1980,10 +2002,13 @@ continuous_focus_position = { x = 0 y = 1250 }
 
 		mutually_exclusive = { focus = CZKE_partial_mobilization }
 
-		bypass = { OR = { has_idea = CZKE_radola_gajda
-						  is_in_faction_with = GER
-						  has_government = fascism
-						  has_government = neutrality }
+		bypass = { 
+			OR = { 
+				has_idea = CZKE_radola_gajda
+				is_in_faction_with = GER
+				has_government = fascism
+				has_government = neutrality 
+			}
 		}
 
 		x = 30
@@ -2107,11 +2132,21 @@ continuous_focus_position = { x = 0 y = 1250 }
 
 	focus = {    ###### Requires changes in germany.40 event in order to work properly
  		id = CZKE_petition_league_of_nations
- 		icon = GFX_goal_generic_alliance
+ 		icon = GFX_r56_goal_cze_petition_league_of_nations
 
  		prerequisite = { focus = CZKE_sudetenland_autonomy }
  		
- 		available = { country_exists = ENG country_exists = FRA	has_government = democratic has_war = no GER = { NOT = { has_country_flag = sudetenland_acquired } } }		
+ 		available = { 
+ 			country_exists = ENG 
+ 			country_exists = FRA	
+ 			has_government = democratic 
+ 			has_war = no 
+ 			GER = { 
+ 				NOT = { 
+ 					has_country_flag = sudetenland_acquired 
+ 				} 
+ 			} 
+ 		}		
 
 			bypass = {
 			GER = { has_country_flag = sudetenland_acquired }
@@ -2144,7 +2179,12 @@ continuous_focus_position = { x = 0 y = 1250 }
 
  		prerequisite = { focus = CZKE_petition_league_of_nations }
  		
- 		available = { country_exists = ENG country_exists = FRA has_government = democratic is_in_faction = no }
+ 		available = { 
+ 			country_exists = ENG 
+ 			country_exists = FRA 
+ 			has_government = democratic 
+ 			is_in_faction = no 
+ 		}
 
 		bypass = {
 		custom_trigger_tooltip = {
@@ -2165,7 +2205,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 			ENG = { country_event = { id = czke.439 days = 1 } }
 		custom_effect_tooltip = diplomatic_reward	
 		custom_effect_tooltip = CZKE_join_allies_tooltip_reward
-
  		}
  	}
 
@@ -2190,8 +2229,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 			custom_effect_tooltip = CZKE_strengthen_communism_tooltip_reward
 		}
 	}
-
-
 
 	focus = {
 		id = CZKE_peoples_revolution
@@ -2219,8 +2256,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 		}
 	}
 
-
-
 	focus = {
 		id = CZKE_join_commitern
 		icon = GFX_focus_generic_join_comintern
@@ -2240,7 +2275,7 @@ continuous_focus_position = { x = 0 y = 1250 }
 					SOV = { is_in_faction_with = CZE }
 				}
 			}
-
+			
 		completion_reward = {
 			custom_effect_tooltip = new_diplomatic_event
 			SOV = { country_event = { id = czke.444 days = 1 } }
@@ -2248,7 +2283,6 @@ continuous_focus_position = { x = 0 y = 1250 }
 			custom_effect_tooltip = CZKE_join_commitern_tooltip_reward
 		}
 	}
-
 
 ####### FACTION RESEARCH BONUS #########
 
@@ -2290,4 +2324,5 @@ continuous_focus_position = { x = 0 y = 1250 }
 				category = heavy_air
 			}
  		}
- 	}
+	 }
+}

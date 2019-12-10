@@ -2,45 +2,39 @@
 
 oob = "AUS_1936"
 
-set_research_slots = 3
+set_research_slots = 4
 
 add_ideas = {
 	AUS_austrian_neutrality
 }
 
 set_technology = {
+	etax_doctrine = 1
+	camo = 1
+	gw_armored_car = 1
+	steel_production_1 = 1
+
+
+
 	infantry_weapons = 1
 	tech_recon = 1
 	tech_engineers = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_mountaineers = 1
 	gw_artillery = 1
 }
 
 set_politics = {
-
-	parties = {
-		neutrality = { 
-			popularity = 0
-		}
-
-		fascism = {
-			popularity = 60
-		}
-
-		democratic = {
-			popularity = 20
-		}
-		
-		communism = {
-			popularity = 20
-		}
-	}
-	
 	ruling_party = fascism
 	last_election = "1930.11.9"
 	election_frequency = 48
 	elections_allowed = no
+}
+set_popularities = {
+	democratic = 20
+	fascism = 55
+	communism = 20
+	neutrality = 5
 }
 
 set_stability = 0.50
@@ -51,7 +45,7 @@ if = {
 		desc = "POLITICS_OTTO_VON_HABSBURG_DESC"
 		picture = "gfx/leaders/AUS/r56_portrait_AUS_Otto_von_Habsburg.dds"
 		expire = "2011.1.1"
-		ideology = despotism
+		ideology = absolute_monarchism
 		traits = {
 			#
 		}
@@ -64,7 +58,7 @@ if = {
 		desc = "POLITICS_OTTO_VON_HABSBURG_DESC"
 		picture = GFX_Portrait_hungary_otto_von_hapsburg
 		expire = "2011.1.1"
-		ideology = despotism
+		ideology = absolute_monarchism
 		traits = {
 			#
 		}
@@ -73,7 +67,7 @@ if = {
 create_country_leader = {
 	name = "Karl Renner"
 	desc = "POLITICS_KARL_RENNER_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	picture = "r56_portrait_AUS_Karl_Renner.dds"
 	expire = "1965.1.1"
 	ideology = socialism
 	traits = {
@@ -95,7 +89,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Alfred Klahr"
 	desc = "POLITICS_ALFRED_KLAHR_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+	picture = "r56_portrait_AUS_Alfred_Klahr.tga"
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
@@ -103,16 +97,6 @@ create_country_leader = {
 	}
 }
 
-create_field_marshal = {
-	name = "Franz Böhme"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
-	traits = { trickster }
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 4
-	logistics_skill = 2
-}
 create_field_marshal = { #resigned under German pressure because he prepared the defense of Austria against a German invasion
 	name = "Alfred Jansa"
 	portrait_path = "gfx/leaders/AUS/r56_portrait_AUS_Alfred_Jansa.dds"
@@ -123,14 +107,15 @@ create_field_marshal = { #resigned under German pressure because he prepared the
 	planning_skill = 2
 	logistics_skill = 2
 }
-create_corps_commander = { #that's not a pic of Valentin Feurstein, that's Eduard Barger
-	name = "Valentin Feurstein"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_4.dds"
-	traits = { trait_mountaineer }
+
+create_field_marshal = {
+	name = "Franz Böhme"
+	portrait_path = "gfx/leaders/AUS/r56_portrait_AUS_franz_bohme.tga"
+	traits = { trickster }
 	skill = 3
-	attack_skill = 3
+	attack_skill = 2
 	defense_skill = 3
-	planning_skill = 3
+	planning_skill = 4
 	logistics_skill = 2
 }
 
@@ -147,7 +132,7 @@ create_corps_commander = { #stats are placeholder, should not be included into t
 
 create_corps_commander = {
 	name = "Karl Eglseer"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
+	portrait_path = "gfx/leaders/AUS/r56_portrait_AUS_karl_eglseer.tga"
 	traits = { trait_mountaineer trickster }
 	skill = 3
 	attack_skill = 2
@@ -157,88 +142,19 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Eduard Dietl"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 1
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Emil Vogel"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	name = "Lothar Rendulic"
+	portrait_path = "gfx/leaders/AUS/r56_portrait_AUS_lothar_rendulic.tga"
+	traits = { trait_mountaineer trickster }
 	skill = 3
 	attack_skill = 2
-	defense_skill = 3
+	defense_skill = 4
 	planning_skill = 2
 	logistics_skill = 3
 }
 
 create_corps_commander = {
-	name = "Ferdinand Jodl"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Ferdinand Schorner"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_4.dds"
-	skill = 3
-	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 3
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Georg Ritter von Hengl"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
-	skill = 2
-	attack_skill = 1
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 2
-}
-
-create_corps_commander = {
-	name = "Hans Kreysing"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_6.dds"
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 3
-}
-
-create_corps_commander = {
-	name = "Hans Schlemmer"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Hubert Lanz"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
 	name = "Julius Ringel"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	portrait_path = "gfx/leaders/AUS/r56_portrait_AUS_julius_ringel.tga"
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
@@ -247,8 +163,8 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Karl von Le Suire"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+	name = "Anton Kienbauer"
+	portrait_path = "gfx/leaders/AUS/r56_portrait_AUS_Anton_Kienbauer.tga"
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
@@ -257,28 +173,42 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Kurt Versock"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_4.dds"
-	skill = 1
-	attack_skill = 1
+	name = "Wilhelm Zehner"
+	portrait_path = "gfx/leaders/AUS/r56_portrait_AUS_wilhelm_zehner.tga"
+	skill = 2
+	attack_skill = 2
 	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
-}
-
-create_corps_commander = {
-	name = "Rudolf Konrad"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_5.dds"
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
+	planning_skill = 2
+	logistics_skill = 3
 }
 
 create_navy_leader = {
 	name = "Georg von Trapp"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+	portrait_path = "gfx/leaders/AUS/r56_portrait_AUS_Georg_von_Trapp.tga.dds"
 	traits = { seawolf }
 	skill = 4
+	attack_skill = 3
+	defense_skill = 4
+	maneuvering_skill = 3
+	coordination_skill = 4
+}
+
+create_corps_commander = {
+	name = "Sigismund Schilhawsky"
+  portrait_path = "gfx/leaders/AUS/r56_portrait_AUS_sigismund_schilhawsky.tga"
+	skill = 3
+  attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Eduard von Böhm-Ermolli"
+	portrait_path = "gfx/leaders/AUS/r56_portrait_AUS_eduard_bohm_ermolli.tga"
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
 }

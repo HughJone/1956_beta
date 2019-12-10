@@ -2,7 +2,7 @@
 
 oob = "HUN_1936"
 
-set_research_slots = 3
+set_research_slots = 4
 set_stability = 0.7
 set_war_support = 0.6
 
@@ -13,10 +13,11 @@ set_technology = {
 	etax_doctrine = 1
 	camo = 1
 	gw_armored_car = 1
-	
+	steel_production_1 = 1
+
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_support = 1		
+	tech_support = 1
 	tech_recon = 1
 	gw_artillery = 1
 	gwtank = 1
@@ -60,7 +61,7 @@ if = {
 		complete_national_focus = HUN_demand_southern_slovakia
 		complete_national_focus = HUN_mobile_focus
 		complete_national_focus = HUN_license_foreign_designs
-		
+
 		#Handle this manually
 		unlock_national_focus = HUN_renounce_the_treaty_of_trianon
 		add_ideas = {
@@ -74,25 +75,25 @@ if = {
 		else = {
 			#generic focuses
 			complete_national_focus = ABC_establish_a_general_staff
-			 
+
 			complete_national_focus = ABC_motorization_effort
 			complete_national_focus = GEN_Aviation_Effort
 			complete_national_focus = GEN_Military_Buildup
 			complete_national_focus = GEN_Industrial_Start
 			complete_national_focus = GEN_Expand_Infra
-			complete_national_focus = GEN_Military_Buildup		
+			complete_national_focus = GEN_Military_Buildup
 		}
 	}
-	
+
 	oob = "HUN_1939"
-	
+
 	# Starting tech
 	set_technology = {
 
 		# Extended Technologies
 		etax_doctrine = 1
 		camo = 1
-	
+
 		fighter1 = 1
 		early_bomber = 1
 		tactical_bomber1 = 1
@@ -137,31 +138,32 @@ if = {
 }
 
 set_politics = {
-	parties = {
-		democratic = { 
-			popularity = 25
-		}
-		fascism = {
-			popularity = 31
-		}
-		neutrality = {
-			popularity = 44
-		}
-		communism = {
-			popularity = 0
-		}
-	}
-	
 	ruling_party = neutrality
 	last_election = "1935.3.31"
 	election_frequency = 48
 	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 25
+	fascism = 31
+	neutrality = 44
 }
 
 #Start Horty as neutral if DOD
 if = {
 	limit = {
 		has_dlc = "Death or Dishonor"
+	}
+	#only way to get him should be to remove horthy from power by puppeting by another non aligned nation
+	create_country_leader = { 
+		name = "János Zichy"
+		desc = "POLITICS_MIKLOS_HORTHY_DESC"
+		picture = "gfx/leaders/Europe/portrait_europe_generic_5.dds"
+		expire = "1965.1.1"
+		ideology = moderatism
+		traits = {
+
+		}
 	}
 	create_country_leader = {
 		name = "Miklós Horthy"
@@ -172,10 +174,36 @@ if = {
 		traits = {
 			fascist_sympathies
 			anti_communist
+			retired_admiral
+			regent_without_a_king
 		}
-		id = 500 #Horthy Neutral
 	}
+	create_country_leader = {
+		name = "Miklós Horthy"
+		desc = "POLITICS_MIKLOS_HORTHY_DESC"
+		picture = "Portrait_Hungary_Miklos_Horthy.dds"
+		expire = "1965.1.1"
+		ideology = fascism_ideology
+		traits = {
+			anti_communist
+			retired_admiral
+			regent_without_a_king
+		}			
+	}
+
+
+
 	else = {
+		create_country_leader = { 
+			name = "János Zichy"
+			desc = "POLITICS_MIKLOS_HORTHY_DESC"
+			picture = "gfx/leaders/Europe/portrait_europe_generic_5.dds"
+			expire = "1965.1.1"
+			ideology = moderatism
+			traits = {
+
+			}
+		}
 		create_country_leader = {
 			name = "Miklós Horthy"
 			desc = "POLITICS_MIKLOS_HORTHY_DESC"
@@ -183,6 +211,7 @@ if = {
 			expire = "1965.1.1"
 			ideology = despotism
 		}
+
 		create_country_leader = {
 			name = "Miklós Horthy"
 			desc = "POLITICS_MIKLOS_HORTHY_DESC"
@@ -207,7 +236,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Árpád Szakasits"
 	desc = "POLITICS_ARPAD_SZAKASITS_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+	picture = "r56_portrait_HUN_Arpad_Szakasits.dds"
 	expire = "1965.1.1"
 	ideology = socialism
 	traits = {
@@ -231,30 +260,20 @@ create_country_leader = {
 			traits = {
 				anti_communist
 			}
-			id = 503 #Horty fascist
+			#id = 503 #Horty fascist
 		}
 	}
 
 	set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 27
-			}
-
-			fascism = {
-				popularity = 70
-			}
-			
-			communism = {
-				popularity = 3
-			}
-		}
-		
 		ruling_party = fascism
 		last_election = "1939.5.29"
 		election_frequency = 48
 		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 27
+		fascism = 70
+		communism = 3
 	}
 
 }

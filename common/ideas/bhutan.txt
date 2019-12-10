@@ -50,6 +50,12 @@ ideas = {
 		}
 		idea_BHU_maintain_the_monarchy = {
 			picture = generic_neutrality_drift_bonus
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+			}
 			modifier = {
 				neutrality_drift = 0.10
 			}			
@@ -85,6 +91,13 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_pp_unity_bonus
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+			}
 
 			modifier = {
 				neutrality_drift = -0.03
@@ -162,7 +175,7 @@ ideas = {
 			
 			modifier = {
 				production_speed_buildings_factor = 0.03
-				research_speed_factor = 0.01
+				research_speed_factor = 0.03 #buffed due to 1.6
 			}		
 		}
 	}
@@ -176,6 +189,10 @@ ideas = {
 	
 			available = {
 				has_completed_focus = BHU_new_ideas
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}				
 			}
 	
 			do_effect = {
@@ -196,6 +213,10 @@ ideas = {
 			picture = generic_political_advisor_asia_1
 			available = {
 				has_completed_focus = BHU_new_ideas
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}				
 			}
 			
 			traits = { communist_revolutionary }
@@ -223,6 +244,10 @@ ideas = {
 			picture = generic_army_asia_6
 			available = {
 				has_completed_focus = BHU_new_ideas
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}				
 			}
 			
 			traits = { fascist_demagogue }
@@ -248,6 +273,10 @@ ideas = {
 			allowed = {
 				original_tag = BHU
 			}
+
+			ai_will_do = {
+				factor = 4
+			}			
 			
 			traits = { silent_workhorse }
 		}
@@ -455,7 +484,7 @@ ideas = {
 				has_completed_focus = BHU_create_an_army
 			}			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }

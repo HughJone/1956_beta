@@ -958,8 +958,8 @@ technologies = {
 		}		
 
 		category_light_infantry = {
-			acclimatization_cold_climate_gain_factor = 0.03
-			default_morale = 0.2
+			acclimatization_cold_climate_gain_factor = 0.30
+			default_morale = 0.05
 		}
 		
 		modifier = {
@@ -975,6 +975,7 @@ technologies = {
 		
 		categories = {
 			infantry_weapons
+			winter_clothing_tech
 		}
 		
 		ai_will_do = {
@@ -990,8 +991,8 @@ technologies = {
 		}		
 
 		category_light_infantry = {
-			acclimatization_cold_climate_gain_factor = 0.05
-			default_morale = 0.2
+			acclimatization_cold_climate_gain_factor = 0.5
+			default_morale = 0.05
 		}
 		
 		modifier = {
@@ -1007,6 +1008,7 @@ technologies = {
 		
 		categories = {
 			infantry_weapons
+			winter_clothing_tech
 		}
 		
 		ai_will_do = {
@@ -1022,8 +1024,8 @@ technologies = {
 		}
 
 		category_light_infantry = {
-			acclimatization_cold_climate_gain_factor = 0.05
-			default_morale = 0.2
+			acclimatization_cold_climate_gain_factor = 0.5
+			default_morale = 0.05
 		}
 		
 		modifier = {
@@ -1039,6 +1041,7 @@ technologies = {
 		
 		categories = {
 			infantry_weapons
+			winter_clothing_tech
 		}
 		
 		ai_will_do = {
@@ -1049,8 +1052,8 @@ technologies = {
 	winter_clothes_1944 = {
 
 		category_light_infantry = {
-			acclimatization_cold_climate_gain_factor = 0.05
-			default_morale = 0.2
+			acclimatization_cold_climate_gain_factor = 0.5
+			default_morale = 0.05
 		}
 		
 		modifier = {
@@ -1066,6 +1069,7 @@ technologies = {
 		
 		categories = {
 			infantry_weapons
+			winter_clothing_tech
 		}
 		
 		ai_will_do = {
@@ -1082,8 +1086,8 @@ technologies = {
 		}		
 
 		category_light_infantry = {
-			acclimatization_hot_climate_gain_factor = 0.03
-			default_morale = 0.2
+			acclimatization_hot_climate_gain_factor = 0.3
+			default_morale = 0.05
 		}
 		
 		modifier = {
@@ -1099,6 +1103,7 @@ technologies = {
 		
 		categories = {
 			infantry_weapons
+			summer_clothing_tech
 		}
 		
 		ai_will_do = {
@@ -1114,8 +1119,8 @@ technologies = {
 		}		
 
 		category_light_infantry = {
-			acclimatization_hot_climate_gain_factor = 0.05
-			default_morale = 0.2
+			acclimatization_hot_climate_gain_factor = 0.5
+			default_morale = 0.05
 		}
 		
 		modifier = {
@@ -1131,6 +1136,7 @@ technologies = {
 		
 		categories = {
 			infantry_weapons
+			summer_clothing_tech
 		}
 		
 		ai_will_do = {
@@ -1146,8 +1152,8 @@ technologies = {
 		}
 
 		category_light_infantry = {
-			acclimatization_hot_climate_gain_factor = 0.05
-			default_morale = 0.2
+			acclimatization_hot_climate_gain_factor = 0.5
+			default_morale = 0.05
 		}
 		
 		modifier = {
@@ -1163,6 +1169,7 @@ technologies = {
 		
 		categories = {
 			infantry_weapons
+			summer_clothing_tech
 		}
 		
 		ai_will_do = {
@@ -1174,8 +1181,8 @@ technologies = {
 
 
 		category_light_infantry = {
-			acclimatization_hot_climate_gain_factor = 0.05
-			default_morale = 0.2
+			acclimatization_hot_climate_gain_factor = 0.5
+			default_morale = 0.05
 		}
 		
 		modifier = {
@@ -1191,6 +1198,7 @@ technologies = {
 		
 		categories = {
 			infantry_weapons
+			summer_clothing_tech
 		}
 		
 		ai_will_do = {

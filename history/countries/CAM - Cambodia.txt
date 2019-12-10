@@ -48,42 +48,32 @@ set_technology = {
 }
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 40
-		}
-		
-		communism = {
-			popularity = 25
-		}
-		neutrality = {
-			popularity = 35
-		}
-	}
-
-	ruling_party = democratic
-	last_election = "1933.2.16"
-	election_frequency = 36
+	ruling_party = neutrality
 	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 20
+	communism = 25
+	neutrality = 55
 }
 
 create_country_leader = {
-	name = "Pol Pot" 
+	name = "Tou Samouth" 
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_warlord1.dds"
 	expire = "1953.3.1"
-	ideology = anarchist_communism #insanity
+	ideology = leninism
 	traits = {
 		
 	}
 }
+#Son Ngoc Minh communist politician
 
 #non standard english alphabet character
 create_country_leader = {
 	name = "Sisowath Youtévong"
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
+	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_democracy.dds"
 	expire = "1953.3.1"
 	ideology = liberalism
 	traits = {
@@ -92,11 +82,22 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Norodom Sihanouk" 
+	name = "Sisowath Monivong" 
+	desc = ""
+	picture = "gfx/leaders/CAM/r56_portrait_CAM_Sisowath_Monivong.tga"
+	expire = "1953.3.1"
+	ideology = despotism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Son Ngoc Thanh" 
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_2.dds"
 	expire = "1953.3.1"
-	ideology = conservatism
+	ideology = fascism_ideology
 	traits = {
 		
 	}
@@ -104,3 +105,24 @@ create_country_leader = {
 
 #couldnt find anything historical on fascism
 
+create_field_marshal = {
+	name = "Sisowath Monivong"
+	portrait_path = "gfx/leaders/CAM/r56_portrait_CAM_Sisowath_Monivong.tga"
+	traits = { politically_connected defensive_doctrine }
+	skill = 2
+    attack_skill = 2
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Dap Chhuon"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
+	traits = { guerilla_fighter }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 3
+}

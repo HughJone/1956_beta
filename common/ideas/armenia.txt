@@ -111,7 +111,7 @@ ideas = {
 			}							
 		}		
 		ARM_infantry_anti_tank_tactics_idea = {
-			picture = hun_secret_rearmament
+			picture = tblra_tank_destroyers_expertise
 			allowed = {
 				tag = ARM
 			}
@@ -199,6 +199,13 @@ ideas = {
 				has_government = neutrality
 			}
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+			}
+
 			removal_cost = -1
 			 
 			modifier = {
@@ -213,6 +220,13 @@ ideas = {
 
 			allowed_civil_war = {
 				has_government = democratic
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
 			}
 
 			removal_cost = -1
@@ -232,6 +246,13 @@ ideas = {
 
 			allowed_civil_war = {
 				has_government = fascism
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
 			}
 
 			removal_cost = -1
@@ -711,7 +732,7 @@ ideas = {
 	high_command = {
 		ARM_hamazasp_babadzhanian2 = {
 
-			picture = "gfx/leaders/ARM/r56_portrait_ARM_hamazasp_babadzhanian.dds"
+			picture = ARM_hamazasp_babadzhanian
 			
 			allowed = {
 				original_tag = ARM
@@ -886,7 +907,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -902,7 +923,7 @@ ideas = {
 				has_government = communism
 			}		
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -918,10 +939,17 @@ ideas = {
 			cost = 250
 			
 			research_bonus = {
-				cat_mobile_warfare = 0.10
+				cat_mobile_warfare = 0.15
 			}
 			
 			traits = { mobile_warfare_expert }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_tech = mobile_warfare
+					add = 1
+				}
+			}			
 		}		
 		ARM_vladimir_saakian = {
 
@@ -932,7 +960,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }
@@ -947,7 +975,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -967,7 +995,7 @@ ideas = {
 			}			
 			
 			research_bonus = {
-				nuclear = 0.10
+				nuclear = 0.15
 			}
 			
 			traits = { nuclear_scientist }
@@ -988,7 +1016,7 @@ ideas = {
 				has_completed_focus = ARM_motorization		
 			}			
 			research_bonus = {
-				motorized_equipment = 0.10
+				motorized_equipment = 0.15
 			}
 			
 			traits = { motorized_equipment_manufacturer }
@@ -1009,8 +1037,8 @@ ideas = {
 			}
 			
 			research_bonus = {
-				industry = 0.05
-				synth_resources = 0.1
+				industry = 0.10
+				synth_resources = 0.15
 			}
 			
 			traits = { refinery_concern }
@@ -1029,7 +1057,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				industry = 0.10
+				industry = 0.15
 				
 			}
 			
@@ -1051,7 +1079,7 @@ ideas = {
 			removal_cost = 10
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { light_aircraft_manufacturer }

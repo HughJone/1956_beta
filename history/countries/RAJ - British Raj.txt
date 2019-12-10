@@ -22,7 +22,9 @@ set_technology = {
 	trench_warfare = 1
 	fleet_in_being = 1
 	CAS1 = 1
-	
+	early_fighter = 1
+	fuel_silos = 1
+	fuel_refining = 1
 }
 
 if = {
@@ -79,6 +81,17 @@ set_cosmetic_tag = RAJ_UK # British Raj
 		low_economic_mobilisation
 	}
 
+	create_country_leader = {
+		name = "Lord Linlithgow"
+		desc = "POLITICS_LORD_LINLITHGOW_DESC"
+		picture = "gfx/leaders/RAJ/Portrait_British_Raj_Lord_Linlithgow.dds"
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {
+			
+		}
+	}
+
 	
 	set_technology = {
 
@@ -116,9 +129,7 @@ set_cosmetic_tag = RAJ_UK # British Raj
 		basic_machine_tools = 1
 		improved_machine_tools = 1
 		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		oil_processing = 1
-		improved_oil_processing = 1
+		fuel_refining2 = 1
 		construction1 = 1
 		construction2 = 1
 		construction3 = 1
@@ -129,35 +140,33 @@ set_cosmetic_tag = RAJ_UK # British Raj
 }
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 17
-		}
-
-		fascism = {
-			popularity = 2
-		}
-		
-		communism = {
-			popularity = 1
-		}
-
-		neutrality = {
-			popularity = 80
-		}
-	}
-	
 	ruling_party = neutrality
 	last_election = "1935.11.14"
 	election_frequency = 48
 	elections_allowed = no
+}
+set_popularities = {
+	democratic = 17
+	fascism = 2
+	communism = 1
+	neutrality = 80
 }
 
 create_country_leader = {
 	name = "Lord Linlithgow"
 	desc = "POLITICS_LORD_LINLITHGOW_DESC"
 	picture = "gfx/leaders/RAJ/Portrait_British_Raj_Lord_Linlithgow.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Lord Willingdon"
+	desc = "POLITICS_LORD_Willingdon_DESC"
+	picture = "gfx/leaders/RAJ/r56_portrait_RAJ_Freeman_Freeman_Thomas.tga"
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = {
@@ -240,15 +249,4 @@ create_navy_leader = {
 	defense_skill = 2
 	maneuvering_skill = 1
 	coordination_skill = 2
-}
-
-create_corps_commander = {
-	name = "Jackie Smyth"
-	portrait_path = "gfx/leaders/ENG/Portrait_Britain_John_Jackie_Smyth.dds"
-	traits = { old_guard }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
 }

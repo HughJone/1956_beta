@@ -16,6 +16,19 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_fascism_drift_bonus
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					OR = {
+						is_puppet_of = ENG
+						is_subject_of = ENG
+					}
+				}
+			}
 			
 			modifier = {
 				fascism_drift = 0.1
@@ -160,7 +173,7 @@ ideas = {
 			picture = generic_production_bonus
 
 			modifier = {
-				industrial_capacity_factory = 0.2
+				industrial_capacity_factory = 0.08
 			}
 		}
 		
@@ -914,6 +927,14 @@ ideas = {
 				always = yes
 			}
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				has_government = fascism
+			}
+
 			modifier = {
 				fascism_drift = -0.02
 			}
@@ -945,6 +966,14 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				has_government = fascism
 			}
 
 			modifier = {
@@ -979,6 +1008,14 @@ ideas = {
 				fascism_drift = -0.02
 			}
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				has_government = fascism
+			}
+
 			targeted_modifier = {
 				tag = ITA
 				attack_bonus_against = 0.1
@@ -1005,6 +1042,14 @@ ideas = {
 
 			modifier = {
 				democratic_drift = -0.02
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				has_government = democratic
 			}
 
 			targeted_modifier = {
@@ -1153,6 +1198,16 @@ ideas = {
 				always = yes
 			}
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = communism
+				}
+			}
+
 			modifier = {
 				communism_drift = 0.02
 				stability_weekly = -0.002
@@ -1267,6 +1322,19 @@ ideas = {
 				always = yes
 			}
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					OR = {
+						is_subject_of = ENG
+						is_puppet_of = ENG
+					}
+				}
+			}
+
 			modifier = {
 				fascism_drift = 0.3
 			}
@@ -1285,6 +1353,19 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					OR = {
+						is_subject_of = ENG
+						is_puppet_of = ENG
+					}
+				}
 			}
 
 			modifier = {
@@ -1325,6 +1406,13 @@ ideas = {
 
 			allowed_civil_war = {
 				always = yes
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
 			}
 
 			modifier = {
@@ -2041,6 +2129,7 @@ ideas = {
 						has_dlc = "Man the Guns"
 					}
 					OR = {
+						has_completed_focus = ENG_organize_the_blackshirts
 						has_completed_focus = ENG_right_wing_rhetoric
 						has_government = fascism
 					}
@@ -2540,6 +2629,19 @@ ideas = {
 		
 	# MILITARY
 	army_chief = {
+		ENG_john_dill = {
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = ENG
+			}
+
+			traits = { army_chief_old_guard }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
 		john_vereker = {
 			allowed = {
 				original_tag = ENG
@@ -2883,7 +2985,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { battlefleet_designer }
@@ -2902,7 +3004,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { raiding_fleet_naval_manufacturer }
@@ -2923,7 +3025,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { convoy_escort_naval_manufacturer }
@@ -2954,7 +3056,7 @@ ideas = {
 
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { pacific_fleet_naval_manufacturer }
@@ -2969,7 +3071,7 @@ ideas = {
 
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { atlantic_fleet_naval_manufacturer }
@@ -2993,7 +3095,7 @@ ideas = {
 
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { coastal_defence_naval_manufacturer }
@@ -3013,7 +3115,7 @@ ideas = {
 
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { light_aircraft_manufacturer }
@@ -3031,14 +3133,54 @@ ideas = {
 
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { CAS_manufacturer } 
 			
 			modifier = {
 			}
-		}	
+		}
+		ENG_bristol = {
+			
+			picture = generic_air_manufacturer_3
+
+			allowed = {
+				OR = {
+					original_TAG = AST
+					original_TAG = CAN 
+					original_TAG = ENG
+				}
+				
+			}
+			available = {
+				if = {
+					limit = {
+						original_tag = CAN
+						has_dlc = "Together for Victory"
+					}
+					has_completed_focus = CAN_fund_fairchilds_development
+				}
+				if = {
+					limit = {
+						original_tag = CAN
+						NOT = {
+							has_dlc = "Together for Victory"
+						}
+					}
+					has_completed_focus = GEN_Aircraft_England
+				}				
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+			
+			modifier = {
+			}
+		}		
 		de_havilland = {
 			
 			allowed = {
@@ -3048,10 +3190,10 @@ ideas = {
 
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
-			traits = { medium_aircraft_manufacturer }
+			traits = { cheap_medium_aircraft_manufacturer }
 			
 			modifier = {
 			}
@@ -3066,7 +3208,7 @@ ideas = {
 
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { heavy_aircraft_manufacturer }
@@ -3084,7 +3226,7 @@ ideas = {
 
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { naval_aircraft_manufacturer }
@@ -3109,7 +3251,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { efficient_bomber_manufacturer }
@@ -3120,7 +3262,81 @@ ideas = {
 
 			modifier = {
 			}
-		}					
+		}
+		ENG_blackburn_aircraft = {
+			
+			picture = generic_air_manufacturer_3
+
+			allowed = {
+				OR = {
+					original_tag = ENG
+					original_tag = SCO
+				}
+				
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { flying_ship_manufacturer }
+		}
+		ENG_general_aircraft_limited = {
+			
+			picture = generic_air_manufacturer_1
+
+			allowed = {
+				original_tag = ENG
+			}
+
+			available = {
+				has_tech = paratroopers
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { glider_manufacturer }
+			
+			modifier = {
+				paradrop_organization_factor = 0.1
+				paratrooper_aa_defense = 0.1
+				extra_paratrooper_supply_grace = 48
+			}
+			ai_will_do = {
+				factor = 0
+			}			
+		}
+		ENG_gloster_aircraft = {
+		
+			picture = generic_air_manufacturer_3
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+			available = {
+				date > 1943.06.01
+			}
+			
+			research_bonus = {
+				rocketry = 0.1
+				jet_technology = 0.15
+			}
+			
+			traits = { jet_aircraft_manufacturer }
+			
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 0
+					NOT = {
+						has_tech = experimental_rockets
+					}
+				}
+			}
+		}												
 	}
 	
 	materiel_manufacturer = {
@@ -3136,7 +3352,7 @@ ideas = {
 
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.15
 			}
 			
 			traits = { infantry_equipment_manufacturer }
@@ -3154,7 +3370,7 @@ ideas = {
 
 			
 			research_bonus = {
-				motorized_equipment = 0.10
+				motorized_equipment = 0.15
 			}
 			
 			traits = { motorized_equipment_manufacturer }
@@ -3172,7 +3388,7 @@ ideas = {
 
 			
 			research_bonus = {
-				artillery = 0.10
+				artillery = 0.15
 			}
 			
 			traits = { artillery_manufacturer }
@@ -3182,7 +3398,7 @@ ideas = {
 		}
 	}
 	industrial_concern = {
-				
+		
 		aioc = {
 			
 			allowed = {
@@ -3190,8 +3406,8 @@ ideas = {
 			}
 			
 			research_bonus = {
-				industry = 0.05
-				synth_resources = 0.1
+				industry = 0.10
+				synth_resources = 0.155
 			}
 			
 			traits = { refinery_concern }
@@ -3209,7 +3425,7 @@ ideas = {
 
 			
 			research_bonus = {
-				electronics = 0.10
+				electronics = 0.15
 			}
 			
 			traits = { electronics_concern }
@@ -3217,7 +3433,42 @@ ideas = {
 			modifier = {
 			}
 		}
-		
+		ENG_guest_keen_baldwins = { # Guest Keen Baldwins
+
+			picture = generic_industrial_concern_1
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+			research_bonus = {
+				industry = 0.15
+			}
+			
+			traits = { industrial_concern }
+			
+			modifier = {
+			}
+		}		
+		ENG_barrow_hematite_steel_company = {
+
+			picture = generic_industrial_concern_2
+			
+			allowed = {
+				original_tag = ENG
+			}
+			
+			research_bonus = {
+				industry = 0.10
+				naval_armor_tech = 0.15
+			}
+			
+			traits = { industrial_concern }
+			
+			modifier = {
+				production_speed_steel_mill_factor = 0.10 
+			}
+		}		
 	}	
 
 	
@@ -3226,6 +3477,7 @@ ideas = {
 		#Vulcan Foundry Matilda 2
 		#Harland and Wolff - and Vauxhall : Churchill tanks
 		#Leyland Motors Comet
+		#ROF NOTTINGHAM converted Fireflies
 		vickers_armstrong_eng = {
 			
 			allowed = {
@@ -3235,7 +3487,7 @@ ideas = {
 
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { medium_tank_manufacturer }
@@ -3254,14 +3506,58 @@ ideas = {
 
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { infantry_tank_manufacturer }
 			
 			modifier = {
 			}
-		}		
+		}
+		ENG_ROF_nottingham = { #converted shermans into fireflies
+
+			cost = 150
+
+			picture = generic_tank_manufacturer_2
+
+			available = {
+				has_completed_focus = ENG_tank_focus
+				has_completed_focus = royal_ordinance_focus
+			}
+			
+			allowed = {
+				original_tag = ENG
+				has_dlc = "Death or Dishonor"
+			}
+			
+			research_bonus = {
+				armor = 0.1
+			}
+			
+			traits = { tank_manufacturer }
+
+			equipment_bonus = {
+				light_tank_destroyer_equipment = {
+					reliability = 0.15
+					hard_attack = 0.05
+					ap_attack = 0.05
+				}
+				medium_tank_destroyer_equipment = {
+					reliability = 0.15
+					hard_attack = 0.05
+					ap_attack = 0.05
+				}
+				heavy_tank_destroyer_equipment = {
+					reliability = 0.15
+					hard_attack = 0.05
+					ap_attack = 0.05
+				}				
+			}
+			
+			modifier = {
+				equipment_conversion_speed = 0.1
+			}
+		}				
 	}
 	
 	theorist = {	
@@ -3274,7 +3570,7 @@ ideas = {
 			cost = 100
 			
 			research_bonus = {
-				computing_tech = 0.1
+				computing_tech = 0.15
 				encryption_tech = 0.1
 				decryption_tech	= 0.1
 			}
@@ -3292,10 +3588,17 @@ ideas = {
 			cost = 250
 			
 			research_bonus = {
-				cat_grand_battle_plan = 0.10
+				cat_grand_battle_plan = 0.15
 			}
 			
 			traits = { grand_battle_plan_expert }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_tech = trench_warfare
+					add = 1
+				}
+			}			
 		}
 		
 		harold_alexander = {
@@ -3307,7 +3610,7 @@ ideas = {
 
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -3322,10 +3625,17 @@ ideas = {
 			cost = 250
 			
 			research_bonus = {
-				cat_fleet_in_being = 0.10
+				cat_fleet_in_being = 0.15
 			}
 			
 			traits = { grand_fleet_proponent }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_tech = fleet_in_being
+					add = 1
+				}
+			}			
 		}
 		
 		tom_phillips = {
@@ -3337,7 +3647,7 @@ ideas = {
 
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }
@@ -3352,7 +3662,7 @@ ideas = {
 
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -3367,10 +3677,17 @@ ideas = {
 			cost = 250
 			
 			research_bonus = {
-				cat_strategic_destruction = 0.10
+				cat_strategic_destruction = 0.15
 			}
 			
 			traits = { victory_through_airpower }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_tech = air_superiority
+					add = 1
+				}
+			}			
 		}
 		
 		james_chadwick = {
@@ -3382,7 +3699,7 @@ ideas = {
 
 			
 			research_bonus = {
-				nuclear = 0.10
+				nuclear = 0.15
 			}
 			
 			traits = { nuclear_scientist }
@@ -3395,7 +3712,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				rocketry = 0.10
+				rocketry = 0.15
 			}
 			
 			traits = { rocket_scientist }
@@ -3415,7 +3732,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.1
 			}
 			
 			traits = { blitzkrieg_theorist }
@@ -3440,7 +3757,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				rocketry = 0.05
+				rocketry = 0.075
 			}
 			
 			traits = { little_rocket_man }
@@ -3458,7 +3775,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				nuclear = 0.05
+				nuclear = 0.075
 			}
 			
 			traits = { nuclear_enthusiast }

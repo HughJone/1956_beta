@@ -10,8 +10,8 @@ if = {
 }
 
 set_war_support = 0.5
-set_stability = 0.6 
-set_research_slots = 3
+set_stability = 0.6
+set_research_slots = 4
 set_convoys = 10
 
 
@@ -42,7 +42,7 @@ set_technology = {
 	# Extended Technologies
 	etax_doctrine = 1
 	camo = 1
-	
+
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	tech_support = 1
@@ -55,10 +55,10 @@ set_technology = {
 1939.1.1 = {
 
 	add_political_power = 1198
-	
+
 	#generic focuses
 	complete_national_focus = LAT_sellier_and_bellot_ammunitions
-	 
+
 	complete_national_focus = LAT_general_modernization_plan
 	complete_national_focus = LAT_draw_new_mobilization_plans
 	complete_national_focus = LAT_rely_on_foreign_attaches
@@ -70,9 +70,9 @@ set_technology = {
 	complete_national_focus = LAT_devaluate_the_lats
 	complete_national_focus = LAT_increase_research_budget
 	complete_national_focus = LAT_save_ford_vairogs
-	complete_national_focus = LAT_State_Matter
-	complete_national_focus = LAT_Strenghten_dictatorship
-	
+	complete_national_focus = LAT_enforce_the_succession_law
+	complete_national_focus = LAT_ulmanis_in_control_of_the_government
+
 	oob = "LAT_1939"
 	if = {
 		limit = { has_dlc = "Man the Guns" }
@@ -81,14 +81,14 @@ set_technology = {
 			set_naval_oob = "LAT_1939_naval_legacy"
 		}
 	}
-	
+
 	set_technology = {
 
 		# Extended Technologies
 		etax_doctrine = 1
 		camo = 1
-	
-		tech_support = 1		
+
+		tech_support = 1
 		tech_engineers = 1
 		gw_artillery = 1
 		interwar_artillery = 1
@@ -126,79 +126,43 @@ set_technology = {
 }
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 30
-		}
-
-		fascism = {
-			popularity = 15
-		}
-		
-		communism = {
-			popularity = 15
-		}
-		
-		neutrality = { 
-			popularity = 50
-		}
-	}
-	
 	ruling_party = neutrality
 	last_election = "1931.10.3"
 	election_frequency = 108
 	elections_allowed = no
 }
+set_popularities = {
+	democratic = 30
+	fascism = 10
+	communism = 10
+	neutrality = 50
+}
 
 1939.1.1 = {# probably needs some adjustment before nazi occupation in 1940
 	set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 30
-			}
-
-			fascism = {
-				popularity = 15
-			}
-			
-			communism = {
-				popularity = 15
-			}
-			
-			neutrality = { 
-				popularity = 50
-			}
-		}
-		
 		ruling_party = neutrality
 		last_election = "1931.10.3"
 		election_frequency = 108
 		elections_allowed = no
 	}
+	set_popularities = {
+		democratic = 20
+		fascism = 15
+		communism = 15
+		neutrality = 50
+	}
 }
 
-create_country_leader = {
-	name = "Margers Skujenieks"
-	desc = ""
-	picture = "r56_portrait_LAT_Margers_Skujenieks.dds"
-	expire = "1965.1.1"
-	ideology = socialism
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "Karlis Ulmanis"
-	desc = ""
-	picture = "GFX_Portrait_latvia_karlis_ulmanis"
-	expire = "1965.1.1"
-	ideology = oligarchism
-	traits = {
-		#
-	}
-}
+#create_country_leader = {
+#	name = "Margers Skujenieks"
+#	desc = ""
+#	picture = "r56_portrait_LAT_Margers_Skujenieks.dds"
+#	expire = "1965.1.1"
+#	ideology = socialism
+#	traits = {
+#		#
+#	}
+#}
 create_country_leader = {
 	name = "Alberts Kviesis"
 	desc = ""
@@ -206,31 +170,21 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = oligarchism
 	traits = {
-		#
+		LAT_ulmanis_puppet
 	}
 }
 
-create_country_leader = { #stalinist leader was Jan Berzin (Janis Kalnberzins) before
-	name = "Vilis Lācis"
-	desc = ""
-	picture = "portrait_lat_vilis_lacis.dds"
-	expire = "1965.1.1"
-	ideology = stalinism
-	traits = {
-		#
-	}
-}
 
-create_country_leader = {
-	name = "Fricis Menders"
-	desc = ""
-	picture = "portrait_lat_fricis_menders.dds"
-	expire = "1965.1.1"
-	ideology = leninism
-	traits = {
-		#
-	}
-}
+#create_country_leader = {
+#	name = "Fricis Menders"
+#	desc = ""
+#	picture = "portrait_lat_fricis_menders.dds"
+#	expire = "1965.1.1"
+#	ideology = leninism
+#	traits = {
+#		#
+#	}
+#}
 
 create_country_leader = {
 	name = "Gustavs Celmins"
@@ -239,7 +193,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {
-		#
+		fascist_militia_leader
 	}
 }
 create_field_marshal = {
@@ -259,9 +213,9 @@ create_field_marshal = {
 }
 create_corps_commander = {
 	name = "Žanis Bahs"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+	portrait_path = "gfx/leaders/LAT/r56_portrait_LAT_zanis_bahs.tga"
 	traits = {
-		meticulous
+		decided_planner
 	}
 	skill = 2
 	attack_skill = 3
@@ -271,19 +225,33 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Oto Grosbarts"
-	portrait_path = "gfx/leaders/Europe/Portrait_europe_generic_land_6.dds"
+	portrait_path = "gfx/leaders/LAT/r56_portrait_LAT_oto_grosbarts.tga"
 	traits = {
 		armor_officer
 	}
 	skill = 2
-	attack_skill = 1
+	attack_skill = 3
 	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Ludvigs Bolšteins"
+	portrait_path = "gfx/leaders/LAT/r56_portrait_LAT_Ludvigs_Bolsteins.tga"
+	traits = {
+		trait_cautious
+		infantry_officer
+		guerilla_fighter
+	}
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
 	planning_skill = 2
-	logistics_skill = 3
+	logistics_skill = 1
 }
 create_corps_commander = {
 	name = "Nikolajs Dūze"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_13.dds"
+	portrait_path = "gfx/leaders/LAT/r56_portrait_LAT_Nikolajs_Duze.dds"
 	traits = {
 		homeland_connoisseur
 	}
@@ -295,7 +263,7 @@ create_corps_commander = {
 }
 create_navy_leader = {
 	name = "Teodors Spāde"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+	portrait_path = "gfx/leaders/LAT/r56_portrait_LAT_Teodors_Spade.tga"
 	traits = { bold superior_tactician }
 	skill = 2
 	attack_skill = 2
@@ -323,7 +291,18 @@ if = {
 	limit = { has_dlc = "Man the Guns" }
 	# Submarines #
 	create_equipment_variant = {
-		name = "Delfinul Class"				
+		name = "Ronis Class"
+		type = ship_hull_submarine_1
+		name_group = LAT_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Delfinul Class"
 		type = ship_hull_submarine_2
 		name_group = ROM_SS_HISTORICAL
 		parent_version = 0
@@ -335,7 +314,7 @@ if = {
 	}
 	# Destroyers #
 	create_equipment_variant = {
-		name = "Marasti Class"				
+		name = "Marasti Class"
 		type = ship_hull_light_1
 		name_group = ROM_DD_HISTORICAL
 		parent_version = 0
@@ -352,7 +331,7 @@ if = {
 		obsolete = yes
 	}
 	create_equipment_variant = {
-		name = "Regele Ferdinand Class"	
+		name = "Regele Ferdinand Class"
 		type = ship_hull_light_1
 		name_group = ROM_DD_HISTORICAL
 		parent_version = 0

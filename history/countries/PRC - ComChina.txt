@@ -2,11 +2,6 @@
 
 oob = "PRC_1936"
 
-add_state_core = 322
-add_state_core = 326
-add_state_core = 329
-add_state_core = 330
-
 # Starting tech
 set_technology = {
 
@@ -96,50 +91,24 @@ set_cosmetic_tag = GCDguerilla
 }
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 0
-		}
-
-		fascism = {
-			popularity = 0
-		}
-		
-		communism = {
-			popularity = 100
-			#banned = no #default is no
-		}
-	}
-	
 	ruling_party = communism
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
+set_popularities = {
+	communism = 100
+}
 
 1939.1.1 = {
 	set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 0
-			}
-
-			fascism = {
-				popularity = 0
-			}
-			
-			communism = {
-				popularity = 100
-				#banned = no #default is no
-			}
-		}
-		
 		ruling_party = communism
 		last_election = "1936.1.1"
 		election_frequency = 48
 		elections_allowed = no
+	}
+	set_popularities = {
+		communism = 100
 	}
 }
 
@@ -340,4 +309,4 @@ create_corps_commander = {
 	logistics_skill = 2	
 	id = 1074
 }
-set_research_slots = 1
+set_research_slots = 2

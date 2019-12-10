@@ -264,7 +264,7 @@ technologies = {
 		equipment_conversion_speed = 0.40
 
 		research_cost = 1.5
-		start_year = 1941
+		start_year = 1939
 		
 		folder = {
 			name = industry_folder
@@ -533,8 +533,8 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
-		equipment_conversion_speed = 0.20			   
-		industry_air_damage_factor = -0.1
+		equipment_conversion_speed = 0.20
+		industry_air_damage_factor = -0.12
 		global_building_slots_factor = 0.2
 		
 		path = {
@@ -608,7 +608,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
-		industry_air_damage_factor = -0.1
+		industry_air_damage_factor = -0.12
 		global_building_slots_factor = 0.2
 		
 		path = {
@@ -649,7 +649,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
-		industry_air_damage_factor = -0.1
+		industry_air_damage_factor = -0.12
 		global_building_slots_factor = 0.2
 		
 		path = {
@@ -690,7 +690,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
-		industry_air_damage_factor = -0.1
+		industry_air_damage_factor = -0.12
 		global_building_slots_factor = 0.2
 		
 		path = {
@@ -733,7 +733,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		line_change_production_efficiency_factor = 0.1
 		production_factory_start_efficiency_factor = 0.05
-		industry_air_damage_factor = -0.1
+		industry_air_damage_factor = -0.12
 		global_building_slots_factor = 0.2
 		
 		path = {
@@ -788,12 +788,13 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = industry_folder
-			position = { x = 4 y = 0 }
+			position = { x = 2 y = 1 }
 		}
 		
 		categories = {
 			industry
 			synth_resources
+			refining_tech
 		}
 		
 		ai_will_do = {
@@ -884,6 +885,7 @@ technologies = {
 		categories = {
 			industry
 			synth_resources
+			refining_tech
 		}
 		
 		ai_will_do = {
@@ -949,6 +951,7 @@ technologies = {
 		categories = {
 			industry
 			synth_resources
+			refining_tech
 		}
 		
 		ai_will_do = {
@@ -1005,6 +1008,7 @@ technologies = {
 		categories = {
 			industry
 			synth_resources
+			refining_tech
 		}
 		
 		ai_will_do = {
@@ -1052,6 +1056,7 @@ technologies = {
 		categories = {
 			industry
 			synth_resources
+			refining_tech
 		}
 		
 		ai_will_do = {
@@ -1095,6 +1100,7 @@ technologies = {
 		categories = {
 			industry
 			synth_resources
+			refining_tech
 		}
 		
 		ai_will_do = {
@@ -1142,7 +1148,7 @@ technologies = {
 		start_year = 1936
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 0 }
+			position = { x = 0 y = 1 }
 		}
 		
 		categories = {
@@ -1446,6 +1452,7 @@ technologies = {
 		categories = {
 			industry
 			construction_tech
+			excavation_tech
 		}
 		
 		folder = {
@@ -1533,6 +1540,7 @@ technologies = {
 		categories = {
 			industry
 			construction_tech
+			excavation_tech
 		}
 		
 		folder = {
@@ -1632,6 +1640,7 @@ technologies = {
 		categories = {
 			industry
 			construction_tech
+			excavation_tech
 		}
 		
 		folder = {
@@ -1719,6 +1728,7 @@ technologies = {
 		categories = {
 			industry
 			construction_tech
+			excavation_tech
 		}
 		
 		folder = {
@@ -2259,6 +2269,7 @@ technologies = {
 				rubber > 30
 			}			
 		}
+		show_effect_as_desc = yes
 	}
 	
 	rubber_plant_c = {

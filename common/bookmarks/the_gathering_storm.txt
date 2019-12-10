@@ -20,9 +20,9 @@ bookmarks = {
 				FRA_protected_by_the_maginot_line
 			}
 			focuses = {
-				FRA_status_quo
-				FRA_economic_reforms
-				FRA_radicalize_front
+				FRA_support_daladier
+				FRA_brumaire_movement
+				FRA_cagoule_coup
 			}
 		}
 		
@@ -106,13 +106,14 @@ bookmarks = {
 			history = "ITA_GATHERING_STORM_DESC"
 			ideology = fascism
 			ideas = {
-				vittoria_mutilata
-				victor_emmanuel
+				ITA_excessive_regia_marina_budget
+				ITA_bloated_military_bureaucracy
+				ITA_lack_of_powered_planes
 			}
 			focuses = {
-				ITA_pact_of_steel
-				ITA_italy_first
-				ITA_underground
+				ITA_revive_the_stresa_front
+				ITA_militarize_the_rome_protocols
+				ITA_cooperation_with_germany
 			}
 		}
 		
@@ -123,7 +124,7 @@ bookmarks = {
 				state_shintoism
 				JAP_zaibatsus
 				JAP_militarism
-			}	
+			}
 			focuses = {
 				JAP_purge_the_kodoha_faction
 				JAP_intervene_in_china
@@ -154,22 +155,6 @@ bookmarks = {
 		
 		###---> Minors <><> <><> <><>
 		
-		"CHI" = {
-			minor = yes
-			history = "CHI_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				CHI_communist_uprisings
-				KMT_warlord_cliques_pre_war
-				incompetent_industry_fake
-			}
-			focuses = {
-				KMT_external_defense
-				KMT_internal_stability
-				KMT_government_reform
-			}
-		}
-		
 		"PRC" = {
 			minor = yes
 			history = "PRC_GATHERING_STORM_DESC"
@@ -186,63 +171,79 @@ bookmarks = {
 			}
 		}
 		
-		"BEL" = {
+		"SIA" = {
 			minor = yes
-			history = "BEL_GATHERING_STORM_DESC"
-			ideology = democratic
+			history = "SIA_GATHERING_STORM_DESC"
+			ideology = neutrality
 			ideas = {
-				tblra_recovery_from_the_great_depression1
-				tblra_pillarized_society
-				tblra_leopold3
+				SIA_civilian_wing_opposition
+				SIA_small_depression_effects
+				SIA_fascist_sympathies_in_the_army
 			}
 			focuses = {
-				tblra_go_left
-				tblra_form_coalition_government
-				tblra_go_right
+				SIA_the_democratic_cause
+        		SIA_restore_rama_vii
+        		SIA_choosing_a_side
 			}
 		}
 		
 		"GRE" = {
 			minor = yes
 			history = "GRE_GATHERING_STORM_DESC"
-			ideology = neutrality
+			ideology = democratic
 			ideas = {
 				GRE_depression_1
+				GRE_government_crisis
 				GRE_shadow_of_1921
-				GRE_divided_nation
 			}
 			focuses = {
 				GRE_reinforce_4th_of_august_regime
-                GRE_surprise_attack_italy
-				GRE_megali_idea
+				GRE_third_hellenic_civilization
+				GRE_Reinforce_the_hierarchy
 			}
 		}
 		
-		"IRE" = {
+		"PER" = {
 			minor = yes
-			history = "IRE_GATHERING_STORM_DESC"
-			ideology = democratic
-			ideas = {
-				IRE_ira
-			}
-			focuses = {
-				IRE_coa
-				IRE_1stamend
-				IRE_demo
-			}
-		}
-		
-		"LAT" = {
-			minor = yes
-			history = "LAT_GATHERING_STORM_DESC"
+			history = "PER_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-				LAT_overevaluated_currency_idea
+				PER_anglo_iranian_oil_company
+				PER_corrupted_bureaucracy
 			}
 			focuses = {
-				LAT_VEF_radio_production
-				LAT_general_modernization_plan
-				LAT_kegums_power_plant
+				PER_continue_government_purges
+				PER_appoint_zahedi
+				PER_restore_constitutionalism
+			}
+		}
+		
+		"CHI" = {
+			minor = yes
+			history = "CHI_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_communist_uprisings
+				KMT_warlord_cliques_pre_war
+				incompetent_industry_fake
+			}
+			focuses = {
+				KMT_external_defense
+				KMT_unitary_semi_presidential_republic 
+				KMT_democratic_republic
+			}
+		}
+		
+		"SAU" = {
+			minor = yes
+			history = "SAU_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+				SAU_al_hasa_oil_discovery
+        		SAU_concessions_to_standard_oil
+        		SAU_our_rightful_domain
 			}
 		}
 		

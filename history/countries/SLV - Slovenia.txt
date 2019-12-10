@@ -1,5 +1,5 @@
 ﻿capital = 102
-set_research_slots = 3
+set_research_slots = 4
 oob = "SLO_1939"
 
 set_technology = {
@@ -65,25 +65,15 @@ set_technology = {
 }
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 5
-		}
-
-		fascism = {
-			popularity = 90
-		}
-		
-		communism = {
-			popularity = 5
-		}
-	}
-	
 	ruling_party = fascism
 	last_election = "1933.3.5"
 	election_frequency = 48
 	elections_allowed = no
+}
+set_popularities = {
+	democratic = 5
+	fascism = 90
+	communism = 5
 }
 
 create_country_leader = {
@@ -122,13 +112,25 @@ create_country_leader = {
 create_country_leader = {
 	name = "Dinko Puc"
 	desc = "Dinko Puc"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.tga"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
 	expire = "1965.1.1"
 	ideology = socialism
 	traits = {
 		#
 	}
 }
+
+create_country_leader = {
+	name = "Miha Krek"
+	desc = "Miha Krek"
+	picture = "gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
 create_field_marshal = {
 	name = "Leon Rupnik"
 	portrait_path = "gfx/leaders/SLV/r56_portrait_SLV_Leon_Rupnik.dds"

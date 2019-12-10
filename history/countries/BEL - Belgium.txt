@@ -2,7 +2,7 @@
 
 oob = "BEL_1936"
 
-set_research_slots = 3
+set_research_slots = 4
 set_stability = 0.65 #TODO_WTT_CD: If stability effects in tree, lower this accordings
 set_war_support = 0.2
 set_convoys = 80
@@ -25,6 +25,8 @@ set_technology = {
 	etax_doctrine = 1
 	camo = 1
 	gw_armored_car = 1
+	steel_production_1 = 1
+	jaegers = 1
 	
 	infantry_weapons = 1
 	infantry_weapons1 = 1
@@ -94,6 +96,9 @@ if = {
 		# Extended Technologies
 		etax_doctrine = 1
 		camo = 1
+		gw_armored_car = 1
+		steel_production_1 = 1	
+		jaegers = 1
 		
 		fighter1 = 1
 		CAS1 = 1
@@ -143,49 +148,29 @@ if = {
 
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 81
-		}
-
-		fascism = {
-			popularity = 13
-		}
-		
-		communism = {
-			popularity = 6
-		}
-	}
-	
 	ruling_party = democratic
 	last_election = "1932.5.24"
 	election_frequency = 48
 	elections_allowed = yes
 }
+set_popularities = {
+	democratic = 81
+	fascism = 13
+	communism = 6
+}
 
 1939.1.1 = {
 	set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 83
-			}
-
-			fascism = {
-				popularity = 11
-			}
-			
-			communism = {
-				popularity = 6
-			}
-		}
 		ruling_party = democratic
 		last_election = "1939.4.2"
 		election_frequency = 48
 		elections_allowed = yes
+	}
 	
-	
+	set_popularities = {
+		democratic = 83
+		fascism =11
+		communism = 6
 	}
 
 	create_country_leader = {
@@ -199,10 +184,6 @@ set_politics = {
 		}
 	}			
 }
-
-
-
-
 
 # DIPLOMACY
 if = {
@@ -232,7 +213,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Achille van Acker"
 	desc = "Achille van Acker"
-	picture = "Portrait_van_acker.dds"
+	picture = "r56_portrait_BEL_Achille_Van_Acker.tga"
 	expire = "1939.1.1"
     ideology = socialism
 	traits = {
@@ -253,7 +234,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Paul-Henri Spaak"
 	desc = "Paul-Henri Spaak"
-	picture = "gfx/leaders/BEL/Portrait_Spaak.dds"
+	picture = "gfx/leaders/BEL/r56_portrait_BEL_Paul_Henri_Spaak.tga"
 	expire = "1939.1.1"
     ideology = socialism
 	traits = {
@@ -283,7 +264,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Julien Lahaut"
 	desc = "Julien Lahaut"
-	picture = "LAHAUT_Julien.dds"
+	picture = "r56_portrait_BEL_Julien_Lahaut.tga"
 	expire = "1965.1.1"
 	ideology = stalinism
 	traits = {
@@ -293,7 +274,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Joseph Jacquemotte"
 	desc = "POLITICS_JOSEPH_JACQUEMOTTE_DESC"
-	picture = "COM_BEL_JACQUEMOTTE.dds"
+	picture = "r56_portrait_BEL_Joseph_Jacquemotte.dds"
 	expire = "1965.1.1"
 	ideology = stalinism
 	traits = {
@@ -329,7 +310,7 @@ create_field_marshal = {
 	attack_skill = 2
 	defense_skill = 2
 	planning_skill = 1
-	logistics_skill = 3	
+	logistics_skill = 2	
 	id = 11000
 }
 create_corps_commander = {

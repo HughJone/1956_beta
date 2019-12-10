@@ -72,30 +72,16 @@ set_convoys = 0
 }
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 10
-		}
-
-		fascism = {
-			popularity = 10
-		}
-		
-		communism = {
-			popularity = 5
-			#banned = no #default is no
-		}
-		
-		neutrality = { 
-			popularity = 75
-		}
-	}
-	
 	ruling_party = neutrality
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
+}
+set_popularities = {
+	democratic = 10
+	fascism = 10
+	communism = 5
+	neutrality = 75
 }
 
 create_country_leader = {
@@ -144,11 +130,21 @@ create_country_leader = {
 
 create_field_marshal = {
 	name = "Ihsan Nuri"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
 	traits = { trait_mountaineer }
 	skill = 2
 	attack_skill = 1
 	defense_skill = 3
 	planning_skill = 1
 	logistics_skill = 2	
+}
+create_corps_commander = { #parachutist trained in British levy, fought in Italy
+	name = "Karim Abdulwahid Haji Aziz"
+	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
+	traits = { commando }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1	
 }

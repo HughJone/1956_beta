@@ -5,7 +5,7 @@ oob = "KOR_1936"
 set_convoys = 5
 set_war_support = 0.2
 set_stability = 0.50 
-set_research_slots = 3
+set_research_slots = 4
 
 # Starting tech
 set_technology = {
@@ -20,35 +20,22 @@ set_technology = {
 
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 35
-		}
-
-		fascism = {
-			popularity = 25
-		}
-		
-		communism = {
-			popularity = 30
-			#banned = no #default is no
-		}
-		
-		neutrality = { 
-			popularity = 10
-		}
-	}
 	ruling_party = democratic
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
+set_popularities = {
+	democratic = 30
+	fascism = 20
+	communism = 25
+	neutrality = 25
+}
 
 create_country_leader = {
 	name = "Syngman Rhee"
 	desc = ""
-	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_democracy.dds"
+	picture = "gfx/leaders/KOR/r56_portrait_KOR_Syngman_Rhee.dds"
 	expire = "1965.1.1"
 	ideology = conservatism
 	traits = {
@@ -59,9 +46,9 @@ create_country_leader = {
 create_country_leader = {
 	name = "Yi Un"
 	desc = ""
-	picture = "gfx/leaders/KOR/Portrait_KOR_yi_un.dds"
+	picture = "gfx/leaders/KOR/r56_portrait_KOR_Yi_Un.dds"
 	expire = "1965.1.1"
-	ideology = despotism
+	ideology = absolute_monarchism
 	traits = {
 		#
 	}

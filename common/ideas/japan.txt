@@ -1,10 +1,46 @@
 ideas = {
 
 	country = {
+
+		JAP_revolutionary_fervour = {
+			
+			name = JAP_revolutionary_fervour
+
+			allowed = {
+				original_tag = JAP
+			}
+			
+			picture = FRA_scw_intervention_republicans_focus
+
+			removal_cost = -1	
+			
+			modifier = {
+				army_org_factor = 0.05
+				industrial_capacity_factory = 0.1
+			}			
+		}
+
+		JAP_rebuild_the_civil_service = {
+			
+			name = JAP_rebuild_the_civil_service
+
+			allowed = {
+				original_tag = JAP
+			}
+			
+			picture = worker_cluture
+
+			removal_cost = -1	
+			
+			modifier = {
+				political_power_factor = 0.2
+			}			
+		}
 	
 		jap_join_axis = {
 			
-			
+			name = jap_join_axis
+
 			allowed = {
 				original_tag = JAP
 			}
@@ -19,6 +55,9 @@ ideas = {
 		}
 
 		JAP_Coup = {
+
+			name = JAP_Coup
+
 			allowed = {
 				always = no
 			}
@@ -40,6 +79,9 @@ ideas = {
 		}
 		
 		JAP_Zaibatsu_Idea = {
+			
+			name = JAP_Zaibatsu_Idea
+
 			allowed = {
 				always = no
 			}
@@ -59,6 +101,9 @@ ideas = {
 		}
 
 		for_the_emperor_idea_sov = {
+
+			name = for_the_emperor_idea_sov
+
 			allowed = {
 				always = no
 			}
@@ -78,6 +123,9 @@ ideas = {
 		}
 		
 		Zaibatsu_Idea = {
+
+			name = Zaibatsu_Idea
+
 			allowed = {
 				always = no
 			}
@@ -95,6 +143,9 @@ ideas = {
 		}
 		
 		JAP_Zaibatsu_Idea_Bonus = {
+
+			name = JAP_Zaibatsu_Idea_Bonus
+
 			allowed = {
 				always = no
 			}
@@ -114,6 +165,8 @@ ideas = {
 		
 		daitoakyoeiken = {
 
+			name = daitoakyoeiken
+
 			allowed = {
 				always = no # Added via focus
 			}
@@ -128,6 +181,9 @@ ideas = {
 		}
 		
 		japanese_liscense_cost_int_one = {
+
+			name = japanese_liscense_cost_int_one
+
 			picture = generic_production_bonus
 			allowed = {
 				always = no
@@ -141,6 +197,9 @@ ideas = {
 		}
 		
 		japanese_liscense_cost_int_two = {
+
+			name = japanese_liscense_cost_int_two
+
 			picture = generic_production_bonus
 			allowed = {
 				always = no
@@ -154,6 +213,9 @@ ideas = {
 		}
 	
 		taiwan_returned = {
+
+			name = taiwan_returned
+
 			picture = FRA_matignon_agreements
 			allowed = {
 				always = no
@@ -174,6 +236,9 @@ ideas = {
 		}
 		
 		sino_jap_war_fail_naisen = {
+
+			name = sino_jap_war_fail_naisen
+
 			picture = FRA_scw_intervention_nationalists_focus
 			allowed = {
 				always = no
@@ -207,6 +272,9 @@ ideas = {
 		}
 		
 		sino_jap_war_fail_naisen_overthrow = {
+
+			name = sino_jap_war_fail_naisen_overthrow
+
 			picture = imperial_glory_idea
 			allowed = {
 				always = no
@@ -242,6 +310,9 @@ ideas = {
 		}
 		
 		unyielding_spirit = {
+
+			name = unyielding_spirit
+
 			picture = imperial_glory_idea
 			allowed = {
 				always = no
@@ -267,6 +338,9 @@ ideas = {
 		}
 		
 		JAP_kodoha_idea = {
+
+			name = JAP_kodoha_idea
+
 			picture = generic_manpower_bonus
 			allowed = {
 				always = no
@@ -293,6 +367,9 @@ ideas = {
 		}
 		
 		JAP_toseiha_idea = {
+
+			name = JAP_toseiha_idea
+
 			picture = generic_infantry_bonus
 			allowed = {
 				always = no
@@ -318,6 +395,9 @@ ideas = {
 		}
 	
 		state_shintoism = {
+
+			name = state_shintoism
+
 			allowed = {
 				always = no
 			}
@@ -341,6 +421,7 @@ ideas = {
 		# POLITICAL
 		student_mobilization_idea = {
 			
+			name = student_mobilization_idea
 			
 			allowed = {
 				always = no
@@ -362,6 +443,7 @@ ideas = {
 		}
 		imperial_austerity_idea = {
 			
+			name = imperial_austerity_idea
 			
 			allowed = {
 				always = no
@@ -380,7 +462,9 @@ ideas = {
 			}
 		}
 		spiritual_mobilization_idea = {
-					
+				
+			name = spiritual_mobilization_idea
+
 			allowed = {
 				always = no
 			}
@@ -399,6 +483,9 @@ ideas = {
 		}
 
 		the_long_lance = {
+
+			name = the_long_lance
+
 			allowed = {
 				always = no
 			}
@@ -410,12 +497,14 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				naval_torpedo_range_factor = 1 # double the range
+				naval_torpedo_screen_penetration_factor = 0.2
 			}
 		}
 		
 		imperial_glory_idea = {
 			
+			name = imperial_glory_idea
+
 			allowed = {
 				always = no
 			}
@@ -434,6 +523,8 @@ ideas = {
 		}
 		warrior_traditions_idea = {
 			
+			name = warrior_traditions_idea
+
 			allowed = {
 				always = no
 			}
@@ -451,6 +542,9 @@ ideas = {
 		}
 		
 		for_the_emperor_idea = {
+			
+			name = for_the_emperor_idea
+
 			allowed = {
 				always = no
 			}
@@ -471,6 +565,8 @@ ideas = {
 
 		JAP_first_air_fleet = {
 
+			name = JAP_first_air_fleet
+
 			allowed = {
 				always = no
 			}
@@ -489,6 +585,8 @@ ideas = {
 		}
 
 		JAP_zaibatsus = {
+
+			name = JAP_zaibatsus
 
 			allowed = {
 				always = no
@@ -515,6 +613,8 @@ ideas = {
 
 		JAP_nationalize_the_zaibatsus = {
 
+			name = JAP_nationalize_the_zaibatsus
+
 			allowed = {
 				always = no
 			}
@@ -535,6 +635,8 @@ ideas = {
 		}
 
 		JAP_guide_the_zaibatsus = {
+
+			name = JAP_guide_the_zaibatsus
 
 			allowed = {
 				always = no
@@ -562,6 +664,8 @@ ideas = {
 
 		JAP_zaibatsus_empowered = {
 
+			name = JAP_zaibatsus_empowered
+
 			allowed = {
 				always = no
 			}
@@ -587,6 +691,9 @@ ideas = {
 
 		JAP_zaibatsus_challenged = {
 
+
+			name = JAP_zaibatsus_challenged
+
 			allowed = {
 				always = no
 			}
@@ -609,6 +716,9 @@ ideas = {
 		}
 
 		JAP_duplicate_research_efforts = {
+
+			name = JAP_duplicate_research_efforts
+
 			allowed = {
 				always = no
 			}
@@ -625,6 +735,9 @@ ideas = {
 		}
 
 		JAP_militarism = {
+
+			name = JAP_militarism
+
 			allowed = {
 				always = no
 			}
@@ -641,7 +754,7 @@ ideas = {
 				war_support_factor = 0.2
 				mobilization_laws_cost_factor = -0.25
 				justify_war_goal_time = -0.2
-				research_speed_factor = 0.05
+				research_speed_factor = -0.05
 				production_speed_industrial_complex_factor = -0.1
 			}
 		}
@@ -666,7 +779,7 @@ ideas = {
 				war_support_factor = 0.3
 				mobilization_laws_cost_factor = -0.35
 				justify_war_goal_time = -0.2
-				research_speed_factor = 0.10
+				research_speed_factor = -0.10
 				production_speed_industrial_complex_factor = -0.1
 				production_speed_arms_factory_factor = 0.05
 			}
@@ -697,6 +810,9 @@ ideas = {
 		}
 
 		MAN_militarism = {
+
+			name = MAN_militarism
+
 			allowed = {
 				always = no
 			}
@@ -713,11 +829,14 @@ ideas = {
 				war_support_factor = 0.2
 				mobilization_laws_cost_factor = -0.25
 				justify_war_goal_time = -0.2
-				research_speed_factor = 0.05
+				research_speed_factor = -0.05
 			}
 		}
 
 		JAP_hirohito = {
+
+			name = JAP_hirohito
+
 			allowed = {
 				always = no
 			}
@@ -728,7 +847,7 @@ ideas = {
 			
 			removal_cost = -1
 
-			picture = jap_hirohito
+			picture = JAP_hirohito_idea
 			
 			modifier = {
 				stability_factor = 0.5
@@ -736,6 +855,9 @@ ideas = {
 		}
 
 		JAP_the_unthinkable_option = {
+			
+			name = JAP_the_unthinkable_option	
+
 			allowed = {
 				always = no
 			}
@@ -755,6 +877,9 @@ ideas = {
 		}
 
 		JAP_reeducation_campaign = {
+			
+			name = JAP_reeducation_campaign
+
 			allowed = {
 				always = no
 			}
@@ -775,6 +900,9 @@ ideas = {
 		}
 
 		JAP_red_brigades = {
+			
+			name = JAP_red_brigades
+
 			allowed = {
 				always = no
 			}
@@ -788,11 +916,15 @@ ideas = {
 			picture = generic_communist_army
 			
 			modifier = {
-				conscription = 0.02
+				conscription = 0.04
+				army_morale_factor = 0.05
 			}
 		}
 
 		JAP_communist_volunteers = {
+			
+			name = JAP_communist_volunteers
+ 
 			allowed = {
 				always = no
 			}
@@ -812,6 +944,9 @@ ideas = {
 		}
 
 		JAP_people_owned_mines = {
+			
+			name = JAP_people_owned_mines
+
 			allowed = {
 				always = no
 			}
@@ -830,6 +965,9 @@ ideas = {
 		}
 
 		JAP_liaison_conference = {
+			
+			name = JAP_liaison_conference
+
 			allowed = {
 				always = no
 			}
@@ -848,6 +986,9 @@ ideas = {
 		}
 
 		JAP_anti_communist_volunteers = {
+
+			name = JAP_anti_communist_volunteers
+
 			allowed = {
 				always = no
 			}
@@ -867,6 +1008,9 @@ ideas = {
 		}
 
 		JAP_interservice_rivalry_army_dominant = {
+
+			name = JAP_interservice_rivalry_army_dominant
+
 			allowed = {
 				always = no
 			}
@@ -894,6 +1038,9 @@ ideas = {
 		}
 
 		JAP_interservice_rivalry_army_strengthened = {
+
+			name = JAP_interservice_rivalry_army_strengthened
+
 			allowed = {
 				always = no
 			}
@@ -915,6 +1062,9 @@ ideas = {
 		}
 
 		JAP_interservice_rivalry_balanced = {
+
+			name = JAP_interservice_rivalry_balanced
+
 			allowed = {
 				always = no
 			}
@@ -929,6 +1079,9 @@ ideas = {
 		}
 		
 		JAP_interservice_rivalry_navy_strengthened = {
+
+			name = JAP_interservice_rivalry_navy_strengthened
+
 			allowed = {
 				always = no
 			}
@@ -950,6 +1103,9 @@ ideas = {
 		}
 
 		JAP_interservice_rivalry_navy_dominant = {
+
+			name = JAP_interservice_rivalry_navy_dominant
+
 			allowed = {
 				always = no
 			}
@@ -977,6 +1133,9 @@ ideas = {
 		}		
 
 		JAP_supremacy_of_technology = {
+
+			name = JAP_supremacy_of_technology
+
 			allowed = {
 				always = no
 			}
@@ -996,6 +1155,9 @@ ideas = {
 		}
 
 		JAP_superior_will = {
+
+			name = JAP_superior_will
+
 			allowed = {
 				always = no
 			}
@@ -1016,6 +1178,9 @@ ideas = {
 		}
 
 		JAP_expand_the_snlf = {
+
+			name = JAP_expand_the_snlf
+
 			allowed = {
 				always = no
 			}
@@ -1330,6 +1495,8 @@ ideas = {
 
 		JAP_ichi_go = {		
 
+			name = JAP_ichi_go
+
 			allowed = {
 				always = no
 			}
@@ -1343,13 +1510,51 @@ ideas = {
 			picture = jap_ichi_go
 			
 			targeted_modifier = {
-				tag = event_target:WTT_current_china_leader
+				tag = CHI
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				tag = PRC
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				tag = SHX
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				tag = XSM
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				tag = YUN
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				tag = GXC
+				attack_bonus_against = 0.2
+				defense_bonus_against = 0.05
+			}
+
+			targeted_modifier = {
+				tag = SIK
 				attack_bonus_against = 0.2
 				defense_bonus_against = 0.05
 			}
 		}
 
 		JAP_the_london_naval_treaty = {
+
+			name = JAP_the_london_naval_treaty
 
 			allowed = {
 				always = no
@@ -1371,6 +1576,8 @@ ideas = {
 
 		JAP_military_purges = {
 
+			name = JAP_military_purges
+
 			allowed = {
 				always = no
 			}
@@ -1390,6 +1597,8 @@ ideas = {
 
 		JAP_strengthen_civilian_government = {
 
+			name = JAP_strengthen_civilian_government
+
 			allowed = {
 				always = no
 			}
@@ -1408,6 +1617,8 @@ ideas = {
 		}
 
 		JAP_tora_tora_tora_idea = {
+
+			name = JAP_tora_tora_tora_idea
 
 			allowed = {
 				always = no
@@ -1432,6 +1643,9 @@ ideas = {
 		}
 
 		JAP_german_rocketry = {
+
+			name = JAP_german_rocketry
+
 			removal_cost = -1
 			
 			allowed = {
@@ -1445,11 +1659,14 @@ ideas = {
 			picture = generic_research_bonus
 			
 			modifier = {
-				research_speed_factor = 0.05
+				research_speed_factor = 0.07
 			}
 		}
 
 		JAP_prioritize_army_aircraft_construction = {
+
+			name = JAP_prioritize_army_aircraft_construction
+
 			removal_cost = -1
 			
 			allowed = {
@@ -1476,6 +1693,8 @@ ideas = {
 		JAP_prioritize_naval_aircraft_construction = {
 			removal_cost = -1
 			
+			name = "JAP_prioritize_naval_aircraft_construction"
+
 			allowed = {
 				always = no # Added via focus
 			}
@@ -1503,6 +1722,45 @@ ideas = {
 				}
 			}
 		}
+		JAP_germano_japanese_technological_exchange = { #stopgap to fix base game bug for non Tfv and DoD owners
+			removal_cost = -1
+			
+			name = JAP_germano_japanese_technological_exchange
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_research_bonus
+			
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		JAP_army_expansion_idea = { #boost army expansion focus
+			removal_cost = -1
+			
+			name = JAP_army_expansion_idea
+
+			allowed = {
+				always = no # Added via focus
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				high_command_cost_factor = -0.25
+				army_chief_cost_factor = -0.5
+			}
+		}				
 	}
 	
 	
@@ -1516,9 +1774,13 @@ ideas = {
 					}
 					has_completed_focus = JAP_the_unthinkable_option
 				}
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
 			}
 			allowed = {
-				original_tag = "JAP"
+				tag = "JAP"
 			}
 			
 
@@ -1545,10 +1807,14 @@ ideas = {
 					}
 					has_completed_focus = JAP_strengthen_civilian_government
 				}
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
 			}
 			
 			allowed = {
-				original_tag = "JAP"
+				tag = "JAP"
 			}
 			
 
@@ -1570,10 +1836,15 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = "JAP"
+				tag = "JAP"
 			}
 			
-
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
 			
 			traits = { fascist_demagogue }
 
@@ -1593,9 +1864,13 @@ ideas = {
 			picture = generic_political_advisor_asia_2
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
-			
+
+			ai_will_do = {
+				factor = 4
+			}
+
 			traits = { silent_workhorse }
 		}
 
@@ -1604,10 +1879,14 @@ ideas = {
 			picture = generic_political_advisor_asia_1
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 			traits = { prince_of_terror }
+
+			ai_will_do = {
+				factor = 0.3
+			}
 		}
 
 		JAP_chiune_sugihara = {
@@ -1615,7 +1894,7 @@ ideas = {
 			picture = generic_political_advisor_asia_3
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 			traits = { compassionate_gentleman }
@@ -1626,13 +1905,13 @@ ideas = {
 			picture = takuo_godo
 
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 
 			traits = { war_industrialist }
 
 			ai_will_do = {
-				factor = 2
+				factor = 3
 			}
 		}
 	}
@@ -1644,7 +1923,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1660,11 +1939,11 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 			available = {
-				always = yes
+				has_completed_focus = JAP_army_expansion
 			}
 			
 			traits = { army_chief_drill_3 }
@@ -1678,7 +1957,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1698,7 +1977,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1706,7 +1985,7 @@ ideas = {
 			traits = { navy_chief_naval_aviation_2 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}
 		
@@ -1714,7 +1993,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1722,7 +2001,7 @@ ideas = {
 			traits = { navy_chief_commerce_raiding_1 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}
 		
@@ -1730,7 +2009,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1738,7 +2017,7 @@ ideas = {
 			traits = { navy_chief_decisive_battle_2 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}
 	}
@@ -1749,7 +2028,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1765,7 +2044,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1781,7 +2060,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1801,7 +2080,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1817,7 +2096,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1839,7 +2118,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1855,7 +2134,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1871,7 +2150,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1887,7 +2166,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1903,7 +2182,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1919,7 +2198,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1935,7 +2214,7 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
@@ -1967,7 +2246,7 @@ ideas = {
 			cost = 75
 						
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { battlefleet_designer } # built Yamato
@@ -1981,7 +2260,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { pacific_fleet_naval_manufacturer } #built best CVs
@@ -1998,7 +2277,7 @@ ideas = {
 			}
 				
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { convoy_escort_naval_manufacturer } #destroyer R&D
@@ -2015,7 +2294,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { coastal_defence_naval_manufacturer } #used for many repairs and conversions
@@ -2033,7 +2312,7 @@ ideas = {
 		mitsubishi = {
 						
 			allowed = {
-				original_tag = JAP		
+				original_tag = JAP	
 			}
 			
 			available = {
@@ -2041,7 +2320,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { light_aircraft_manufacturer_2 }
@@ -2062,7 +2341,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { fuel_efficient_aircraft_manufacturer }
@@ -2075,7 +2354,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { heavy_aircraft_manufacturer }
@@ -2089,7 +2368,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { naval_aircraft_manufacturer }
@@ -2103,11 +2382,36 @@ ideas = {
 			}
 						
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { flying_ship_manufacturer }
-		}		
+		}
+		JAP_japan_international_aviation_industries = { # Japan International Aviation Industries Ltd (Nippon Kokusai Koku Kogyo K.K)
+			
+			picture = generic_air_manufacturer_2
+
+			allowed = {
+				original_tag = JAP
+			}
+						
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			available = {
+				has_tech = paratroopers
+			}			
+			traits = { glider_manufacturer }
+			
+			modifier = {
+				paradrop_organization_factor = 0.1
+				paratrooper_aa_defense = 0.1
+				extra_paratrooper_supply_grace = 48
+			}
+			ai_will_do = {
+				factor = 0
+			}			
+		}				
 	}
 	
 	
@@ -2120,7 +2424,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				industry = 0.10
+				industry = 0.15
 			}
 			
 			traits = { industrial_concern }
@@ -2134,7 +2438,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				electronics = 0.10
+				electronics = 0.15
 			}
 			
 			traits = { electronics_concern }
@@ -2149,12 +2453,56 @@ ideas = {
 			}
 						
 			research_bonus = {
-				industry = 0.05
-				synth_resources = 0.1
+				industry = 0.10
+				synth_resources = 0.15
 			}
 			
 			traits = { refinery_concern }
 		}
+		JAP_nippon_oil = {
+			
+			picture = generic_refining_concern_1
+
+			allowed = { 
+				original_tag = JAP			
+			}
+			
+			research_bonus = {
+				industry = 0.10
+				refining_tech = 0.25
+			}
+			modifier = {
+				fuel_gain_factor = 0.1
+			}			
+			
+			traits = { refinery_concern }
+	
+			ai_will_do = {
+				factor = 1
+			}			
+		}		
+		JAP_japan_steel_works = {
+
+			picture = generic_industrial_concern_1
+			
+			allowed = {
+				original_tag = JAP
+			}
+			
+			research_bonus = {
+				industry = 0.10
+				naval_gunnery_tech = 0.15
+			}
+			
+			traits = { industrial_concern }
+			
+			modifier = {
+				production_speed_steel_mill_factor = 0.10 
+			}
+			ai_will_do = {
+				factor = 0
+			}			
+		}		
 	}
 	
 	materiel_manufacturer = {
@@ -2168,7 +2516,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.15
 			}
 			
 			traits = { infantry_equipment_manufacturer }
@@ -2181,7 +2529,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				motorized_equipment = 0.10
+				motorized_equipment = 0.15
 			}
 			
 			traits = { motorized_equipment_manufacturer }
@@ -2200,7 +2548,7 @@ ideas = {
 			}
 				
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { tank_manufacturer }
@@ -2212,26 +2560,33 @@ ideas = {
 		tomoyuki_yamashita = {
 						
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 			cost = 250
 						
 			research_bonus = {
-				cat_grand_battle_plan = 0.10
+				cat_grand_battle_plan = 0.15
 			}
 			
 			traits = { grand_battle_plan_expert }
+			ai_will_do = {
+				factor = 0			
+				modifier = {
+					has_tech = trench_warfare
+					add = 1
+				}
+			}			
 		}
 		
 		hisaichi_terauchi = {
 						
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 						
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -2240,26 +2595,33 @@ ideas = {
 		isoroku_yamamoto = {
 						
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 			cost = 250
 						
 			research_bonus = {
-				cat_base_strike = 0.10
+				cat_base_strike = 0.15
 			}
 			
 			traits = { naval_aviation_pioneer }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_tech = base_strike
+					add = 1
+				}
+			}			
 		}
 		
 		minoru_genda = {
 						
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 						
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }
@@ -2268,26 +2630,33 @@ ideas = {
 		yoshitoshi_tokugawa = {
 						
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 			cost = 250
 			
 			research_bonus = {
-				cat_operational_integrity = 0.10
+				cat_operational_integrity = 0.15
 			}
 			
 			traits = { assault_avaition }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_tech = force_rotation
+					add = 1
+				}
+			}			
 		}
 		
 		hino_kumazo = {
 						
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}	
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -2297,13 +2666,13 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
 			
 			research_bonus = {
-				nuclear = 0.10
+				nuclear = 0.15
 			}
 			
 			traits = { nuclear_scientist }
@@ -2313,13 +2682,13 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = JAP
+				tag = JAP
 			}
 			
 
 			
 			research_bonus = {
-				rocketry = 0.10
+				rocketry = 0.15
 			}
 			
 			traits = { rocket_scientist }

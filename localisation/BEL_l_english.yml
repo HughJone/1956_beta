@@ -1,13 +1,11 @@
 ﻿l_english:
  scw_over:0 "The Spanish Civil War is Over"
+ unlock_congo_tree:0 "The Congo tree will be unlocked on the 14th of January"
  
  COG_italian_research_name:0 "Congolese-Italian Research Collaboration"
  
  recruit_dutch_generals_tooltip:0 "While the decision is active, up to 3 generals will be offered to join our cause."
  recruit_generals_tooltip:0 "While the decision is active, up to 3 generals will be offered to join our cause."
- 
- VICTORY_POINTS_516:0 "Brussel-Bruxelles"
- VICTORY_POINTS_1950:0 "Stanleyville" 
  
  BEL_communism_party:0 "PCB/PKB"
  BEL_communism_party_long:0 "Parti communiste de Belgique/Kommunistische Partij van België"
@@ -244,7 +242,7 @@
  tblra_colonial_claims:0 "Claim the Greater Congo Basin"
  tblra_colonial_claims_desc:0 "At the Berlin conference the true extent of Congo was restrained by the hypocritical "great powers". It's time revise those decisions and apply the plan exposed by Stanley: a great Congo, linking both oceans to ensure the triumph of civilization in the heart of Africa."
  tblra_germany_millitary_coop:0 "Military Cooperation with Germany"
- tblra_germany_millitary_coop_desc:0 "With the rise of the national awakening in our country and our ideological closeness with Germany, we could establish a military cooperation with them."
+ tblra_germany_millitary_coop_desc:0 "With the rise of the national awakening in our country and our ideological closeness with Germany, we could establish a military cooperation pact with them."
  tblra_belgium_first:0 "God Protects Free Belgium and its King"
  tblra_belgium_first_desc:0 ""Dieu Protège la Libre Belgique et son Roi" comes from "Vers l'Avenir" (Towards the future), the Rexist hymn. In it's name Rex was very royalist and Léopold III itself was not clearly against a strong executive. This "indecision" lead to the "royal question", the regency of the Prince Charles and the abdication of the king after the war."
  tblra_propaganda_ministry:0 "Establish Propaganda Ministry"
@@ -743,7 +741,7 @@
  tblra.3.d:0 "[From.GetNameDef] has accepted our alliance offer and is now part of the [Root.GetFactionName]"
  tblra.3.a:0 "Great News"
  tblra.3.b:0 "We will do it ourselves then!"
- tblra.4.t:0 "[From.GetNameDef] offers a pact"
+ tblra.4.t:0 "[BEL.GetName] offers a pact"
  tblra.4.d:0 "Realizing that our tank designs are superior to their own, [From.GetNameDef] has proposed that we share our designs so they can stand as a bastion of communism in Western Europe"
  tblra.4.a:0 "Accept"
  tblra.4.b:0 "Refuse"
@@ -813,8 +811,8 @@
  tblra.40.d:0 "The communist party announced the sudden death of its leader Joseph Jacquemotte. He had lead the Belgian communist party for more than 10 years. A troïka composed of Julien Lahaut, Xavier Relecom and Georges Van den Boom will rule the party in the near future."
  tblra.40.a:0 "Relecom is the choice of Moscow, he will rule the party."
  tblra.40.b:0 "Julien Lahaut should lead the communists in Belgium." 
- tblra.41.t:0 "Demission of Rexist Representatives Force Partial Election. Paul Van Zeeland Will Run Against Léon Degrelle!"
- tblra.41.d:0 "In a political manoeuvre comparable to the resignation of the POB representatives in 1935, Rexist representatives from Brussels all resigned at the same time, forcing the organization of a partial election. In order to counter the Rexist threat, especially the news of the candidacy of Léon Degrelle in person, Paul Van Zeeland was chosen in order to run against him. He was supported by all the other parties, including the communists."
+ tblra.41.t:0 "The Demission of Rexist Representatives Force Partial Election. Paul Van Zeeland Will Run Against Léon Degrelle!"
+ tblra.41.d:0 "In a political manoeuvre comparable to the resignation of the POB representatives in 1935, Rexist representatives from Brussels all resigned at the same time, forcing the organization of a partial election. In order to counter the Rexist threat, especially the news of the candidacy of Léon Degrelle in person, Paul Van Zeeland chose to run against him. This transformed the electoral campaign into a duel. The prime minister was supported by all the other parties, including the communists. This lead the Rexists to call Van Zeeland, an ex-banker leading the catholic conservative party a puppet of the Reds."
  tblra.41.a:0 "L'union fait la force - Eendracht maakt macht!" 
  tblra.41.b:0 "For a Clean Regime, Vote Degrelle!" 
  tblra.41.c:0 "A Great Victory Against Fascism!"  
@@ -1149,7 +1147,8 @@
  tblra.136.t:0 "The Force Publique Requests Modern Rifles"
  tblra.136.desc:0 "The Force Publique, the security force of the Belgian Congo, hasn't received modern equipment for years. Not only they are gradually becoming obsolete as a fighting force, but they now have difficulties to perform their day to day tasks of law enforcement in the remote regions of the colony. \n In order to change the situation, modern equipment has been requested as part of a general plan to restore the capabilities of the colonial force."
  tblra.136.a:0 "Send instructions to the logistics department"
- tblra.136.b:0 "We can't spare any rifle."
+ tblra.136.b:0 "We will send them technical documentation."
+ tblra.136.c:0 "We can't spare any rifles."
  tblra.137.t:0 "Belgium Accepts to Ship Modern Rifles."
  tblra.137.desc:0 "The Belgian government has agreed to send part of the requested FN rifles in order to modernize the equipment of the Force Publique."
  tblra.137.a:0 "This is great news."
@@ -1228,8 +1227,8 @@
  tblra.158.desc:0 "Due to the loss of the Walloon territory, the former Belgian government collapsed. Due to the breaking of the linguistic equilibrium (favoring the French speaking population) over the now overwhelming majority of Flemish citizens, the country decided to rebuilt itself as Flanders. Flemish nationalist leaders have called this the second greatest day of Flanders since the Battle of the Golden Spurs of 1302."
  tblra.158.a:0 "Interesting" 
  
- tblra.159.t:0 "The Walloon Congress Declares the Reform of Belgium"
- tblra.159.desc:0 "With the loss of the Flemish territories including its former capital of Brussels, the Belgian government is in disarray. In order to adapt to the new political realities, a Walloon congress has been united in Liège in order to lay the basis of a Walloon state."
+ tblra.159.t:0 "The Walloon Congress Declares the Reformation of Belgium"
+ tblra.159.desc:0 "\n\nWith the loss of the Flemish territories including its former capital of Brussels, the Belgian government is in disarray. In order to adapt to the new political realities, a Walloon congress has been united in Liège in order to lay the basis of a Walloon state."
  tblra.159.a:0 "Interesting" 
  
  tblra.160.t:0 "Adapting Fall Gelb"
@@ -1324,11 +1323,13 @@
  BEL_miesse:0 "Miesse"
  BEL_miesse_tank:0 "Miesse Tanks"
  BEL_familleureux:0 "Familleureux"
- BEL_chrysler:0 "Chrysler Antwerp" 
+ BEL_chrysler:0 "Chrysler Antwerp"
+ BEL_mae:0 "Manufacture d'Armes de l'État"
  mecar:0 "Mecar"
  zeebrugge_smederijen:0 "Zeebrugge Smederijen"
  katoen_natie:0 "Katoen Natie" 
  WLL_ACEC:0 "Ateliers de Constructions Electriques de Charleroi"
+ BEL_petrofina:0 "Petrofina"
  
  
  tblra_GER_attack_eben_emael:0 "Attack the Fort of Eben-Emael"
@@ -1847,6 +1848,8 @@
  bel_cityfall.9.b:0 "It proves that no god protects the Pope!"
  
  
+ BEL_neutrality:0 "Kingdom of Belgium"
+ BEL_neutrality_DEF:0 "The Kingdom of Belgium"  
  #Zuid-Dietsland (if the netherlands is not controlled by BEL)
  BEL2_fascism:0 "Zuid-Dietsland"
  BEL2_fascism_DEF:0 "Zuid-Dietsland"
@@ -1937,7 +1940,7 @@
  v_campaign_tooltip:0 "The V campaign will progressively spread to other occupied countries in the same faction as the British. \n"
  tblra_signal_company_tech_bonus_tooltip:0 "The bonus for signal companies may not shows up above the tech icon for some reason but don't worry, you will still get the discount.\n"
  tblra_motorised_support_tooltip:0 "The research discount for logistics and medic companies may not shows up above the tech icons for some reason but don't worry, you will still get the bonus.\n"
- tblra_puppet_netherlands_tootip:0 "§RThe Netherlands and other countries may respond aggressively to this course of events.§ \n"
+ tblra_puppet_netherlands_tootip:0 "§RThe Netherlands and other countries may respond aggressively to this course of events.§! \n"
  advisor_require_democracy_tooltip:0 "§RThis advisor requires a democratic government§. \n"
  available_political_advisor_democratic:0 "Available as a Democratic or Non-Aligned §YPolitical Advisor§!:\n"
  frc_tanks_tooltip:0 "Unlock the §YFonderie Royale de Canons§  §Was a tank designer§.\n"
@@ -2092,7 +2095,7 @@
  VLA_conservatism_focus:0 "Catholic Influence"
  VLA_conservatism_focus_desc:0 "Catholic Influence."
  VLA_welfare_focus:0 "Social Reforms"
- VLA_remarmament_agreement:0 "Rearmament Agreement"
+ VLA_rearmament_agreement:0 "Rearmament Agreement"
  VLA_conservatism_focus_desc:0 "Social Reforms." 
  VLA_political_coalition_focus:0 "Political Coalition"
  VLA_political_coalition_focus_desc:0 "Political Coalition." 
@@ -2232,7 +2235,7 @@
  WLL_conservatism_focus:0 "Catholic Influence"
  WLL_conservatism_focus_desc:0 "Catholic Influence."
  WLL_welfare_focus:0 "Social Reforms"
- WLL_remarmament_agreement:0 "Rearmement Agreement"
+ WLL_rearmament_agreement:0 "Rearmament Agreement"
  WLL_conservatism_focus_desc:0 "Social Reforms." 
  WLL_political_coalition_focus:0 "Political Coalition"
  WLL_political_coalition_focus_desc:0 "Political Coalition." 

@@ -21,6 +21,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.01
+				mobilization_speed = 0.01
 			}
 			
 			cancel_if_invalid = no
@@ -72,6 +73,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.015
+				mobilization_speed = 0.015
 			}
 			
 			default = yes
@@ -136,10 +138,19 @@ ideas = {
 					}
 					NOT = { has_idea = HUN_treaty_of_triannon }
 				}
+				if = {
+					limit = {
+						original_tag = ENG
+						has_dlc = "Man the Guns"
+						has_completed_focus = ENG_concessions_to_the_trade_unions
+					}
+					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
+				}
 			}
 
 			modifier = {
 				conscription = 0.025
+				mobilization_speed = 0.025
 			}
 			
 			ai_will_do = {
@@ -148,6 +159,11 @@ ideas = {
 					#Prio if low on manpower
 					factor = 20
 					manpower_per_military_factory <  1000
+				}
+				modifier = {
+					tag = ENG
+					has_idea_with_trait = military_theorist
+					factor = 20
 				}
 			}
 			
@@ -223,6 +239,14 @@ ideas = {
 					}
 				NOT = { has_idea = isolation }
 				}
+				if = {
+					limit = {
+						original_tag = ENG
+						has_dlc = "Man the Guns"
+						has_completed_focus = ENG_concessions_to_the_trade_unions
+					}
+					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
+				}
 			}
 
 			ai_will_do = {
@@ -247,6 +271,7 @@ ideas = {
 			
 			modifier = {
 				conscription = 0.05
+				mobilization_speed = 0.05
 				#industrial_capacity_factory = -0.1
 				#production_speed_buildings_factor = -0.1
 				training_time_factor = 0.1
@@ -314,6 +339,14 @@ ideas = {
 					}
 					NOT = { has_idea = HUN_treaty_of_triannon }
 				}
+				if = {
+					limit = {
+						original_tag = ENG
+						has_dlc = "Man the Guns"
+						has_completed_focus = ENG_concessions_to_the_trade_unions
+					}
+					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
+				}
 				if = { 
 					limit = {
 					 	original_tag = SWI
@@ -350,6 +383,7 @@ ideas = {
 					#Block has plenty manpower
 					factor = 0
 					NOT = { tag = CHI }
+					NOT = { tag = SOV }
 					manpower_per_military_factory >  3000
 				}
 
@@ -359,6 +393,18 @@ ideas = {
 					tag = CHI
 					has_manpower < 200000
 				}
+				modifier = { # germany needs this before russia, badly
+					factor = 10
+
+					original_tag = GER
+					has_manpower < 2000000
+				}
+				modifier = {
+					factor = 1000
+					original_tag = SOV
+					has_war = yes
+					check_variable = { manpower_k < 1200 }
+				}
 			}
 			
 			cost = 150
@@ -367,6 +413,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.1
+				mobilization_speed = 0.1
 				industrial_capacity_factory = -0.1
 				industrial_capacity_dockyard = -0.1   
 				production_speed_buildings_factor = -0.1
@@ -443,6 +490,14 @@ ideas = {
 				}
 				if = {
 					limit = {
+						original_tag = ENG
+						has_dlc = "Man the Guns"
+						has_completed_focus = ENG_concessions_to_the_trade_unions
+					}
+					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
+				}
+				if = {
+					limit = {
 						original_tag = SAU
 					}
 				NOT = { has_idea = isolation }
@@ -474,6 +529,12 @@ ideas = {
 					tag = CHI
 					has_manpower < 200000
 				}
+				modifier = {
+					factor = 10
+					original_tag = SOV
+					date > 1943.1.1
+					has_manpower < 2000000	
+				}
 			}
 		
 			cost = 150
@@ -482,6 +543,7 @@ ideas = {
 			
 			modifier = {
 				conscription = 0.2
+				mobilization_speed = 0.2
 				industrial_capacity_factory = -0.3
 				industrial_capacity_dockyard = -0.3
 				production_speed_buildings_factor = -0.3
@@ -564,6 +626,14 @@ ideas = {
 					}
 				NOT = { has_idea = isolation }
 				}
+				if = {
+					limit = {
+						original_tag = ENG
+						has_dlc = "Man the Guns"
+						has_completed_focus = ENG_concessions_to_the_trade_unions
+					}
+					NOT = { has_country_flag = ENG_cannot_increase_conscription_law }
+				}
 			}
 
 			ai_will_do = {
@@ -591,6 +661,7 @@ ideas = {
 
 			modifier = {
 				conscription = 0.25
+				mobilization_speed = 0.25
 				industrial_capacity_factory = -0.4
 				industrial_capacity_dockyard = -0.4
 				production_speed_buildings_factor = -0.4

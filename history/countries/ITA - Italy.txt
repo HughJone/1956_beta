@@ -8,7 +8,9 @@ set_war_support = 0.7
 
 add_ideas = {
 	victor_emmanuel
-	vittoria_mutilata
+	ITA_bloated_military_bureaucracy
+	ITA_lack_of_powered_planes
+	ITA_excessive_regia_marina_budget
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
@@ -22,14 +24,22 @@ set_technology = {
 	etax_doctrine = 1
 	camo = 1
 	gw_armored_car = 1
-	
+	steel_production_1 = 1
+
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_support = 1		
+	support_weapons = 1
+	tech_recon = 1
+	tech_support = 1
 	tech_engineers = 1
-	tech_mountaineers = 1
+	tech_military_police = 1
+	tech_maintenance_company = 1
+	tech_field_hospital = 1
+	tech_logistics_company = 1
 	motorised_infantry = 1
 	gw_artillery = 1
+	interwar_antiair = 1
+	interwar_antitank = 1
 	gwtank = 1
 	basic_light_tank = 1
 	#basic_heavy_tank = 1  # PLACEHOLDER
@@ -68,6 +78,11 @@ if = {
 		basic_battery = 1
 		basic_secondary_battery = 1
 		basic_cruiser_armor_scheme = 1
+		basic_heavy_battery = 1
+		basic_medium_battery = 1
+		basic_light_battery = 1
+		improved_secondary_battery = 1
+		basic_heavy_armor_scheme = 1
 		early_ship_hull_submarine = 1
 		basic_ship_hull_submarine = 1
 		early_ship_hull_light = 1
@@ -99,13 +114,11 @@ if = {
 1939.1.1 = {
 
 	add_political_power = 1198
-	
+
 	#white_peace = ETH
 
 	#adding ministers
 	add_ideas = {
-		ITA_giovanni_marinelli
-		ITA_giacomo_acerbo
 		emilio_de_bono
 		vittorio_ambrosio
 		fiat
@@ -116,24 +129,38 @@ if = {
 		extensive_conscription
 	}
 
-	complete_national_focus = ITA_ethiopian_war_logistics
-	complete_national_focus = ITA_industrial_effort
-	complete_national_focus = ITA_industrial_effort_2
-	complete_national_focus = ITA_victoryinETH
-	complete_national_focus = ITA_yugoslavia_friend
-	unlock_national_focus = ITA_albania_war_goal
-	complete_national_focus = ITA_submarine_effort
-	complete_national_focus = ITA_bulgaria_friend
-	complete_national_focus = ITA_pact_of_steel
-	
+	#-> 1939: Focuses Completed <><>
+	complete_national_focus = ITA_expand_the_iri_role
+	complete_national_focus = ITA_restructure_the_divisions
+	complete_national_focus = ITA_regia_marina_2
+	complete_national_focus = ITA_cavagnari_plan
+	complete_national_focus = ITA_auxiliary_cruisers
+	complete_national_focus = ITA_the_backbone_of_the_party
+	complete_national_focus = ITA_general_equipment_modernization
+	complete_national_focus = ITA_expand_hydroelectricity_production
+	complete_national_focus = ITA_increase_marble_exportations
+	complete_national_focus = ITA_colonial_investments
+	complete_national_focus = ITA_finish_the_litoranea_libica
+	complete_national_focus = ITA_leave_the_league_of_nations
+	complete_national_focus = ITA_modernize_ethiopian_roads
+	complete_national_focus = ITA_the_stab_in_the_back
+	complete_national_focus = ITA_move_toward_autarky
+	complete_national_focus = ITA_increase_wheat_production
+	complete_national_focus = ITA_expand_the_elite_forces
+	complete_national_focus = ITA_cannone_da_47_32
+	complete_national_focus = ITA_alpini
+	complete_national_focus = ITA_ultimatum_to_albania
+	complete_national_focus = ITA_cooperation_with_germany
+	complete_national_focus = ITA_review_the_military_budget
+
 	oob = "ITA_1939"
-	
+
 	set_technology = {
 
 		# Extended Technologies
 		etax_doctrine = 1
 		camo = 1
-	
+
 		fighter1 = 1
 		fighter2 = 1
 		tactical_bomber1 = 1
@@ -151,7 +178,7 @@ if = {
 		prepared_defense = 1
 		battlefleet_concentration = 1
 		submarine_operations = 1
-		
+
 		#Air
 		force_rotation = 1
 		fighter_baiting = 1
@@ -208,7 +235,7 @@ if = {
 		}
 		set_naval_oob = "ITA_1939_naval_mtg"
 	}
-	
+
 	set_stability = 0.8
 	GER = { add_to_faction = ITA }
 }
@@ -217,25 +244,16 @@ if = {
 set_convoys = 200
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 22
-		}
-
-		fascism = {
-			popularity = 76
-		}
-		
-		communism = {
-			popularity = 2
-		}
-	}
-	
 	ruling_party = fascism
 	last_election = "1934.3.26"
 	election_frequency = 60
 	elections_allowed = no
+}
+set_popularities = {
+	democratic = 13
+	fascism = 75
+	communism = 9
+	neutrality = 3
 }
 
 
@@ -244,11 +262,11 @@ set_politics = {
 create_country_leader = {
 	name = "Benito Mussolini"
 	desc = "POLITICS_BENITO_MUSSOLINI_DESC"
-	picture = "Portrait_Italy_Benito_Mussolini.dds"
+	picture = "r56_portrait_ITA_bennito_mussolini.dds"
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {
-		
+		Duce
 	}
 }
 
@@ -259,7 +277,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = socialism
 	traits = {
-		
+
 	}
 }
 
@@ -270,7 +288,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
-		
+
 	}
 }
 
@@ -281,30 +299,30 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = despotism
 	traits = {
-		
+		soldier_king
 	}
 }
 
 create_field_marshal = {
 	name = "Pietro Badoglio"
-	picture = "Portrait_Italy_Pietro_Badoglio.dds"
+	picture = "portrait_italy_pietro_badoglio.dds"
 	traits = { defensive_doctrine old_guard politically_connected inflexible_strategist }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
 }
 
 create_field_marshal = {
 	name = "Emilio De Bono"
 	picture = "portrait_italy_emilio_de_bono.dds"
-	traits = { defensive_doctrine old_guard politically_connected trait_cautious }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
+	traits = { defensive_doctrine old_guard politically_connected  }
+	skill = 3
+	attack_skill = 4
+	defense_skill = 3
 	planning_skill = 1
-	logistics_skill = 1
+	logistics_skill = 2
 }
 
 create_corps_commander = {
@@ -317,7 +335,7 @@ create_corps_commander = {
 	attack_skill = 1
 	defense_skill = 1
 	planning_skill = 2
-	logistics_skill = 3
+	logistics_skill = 1
 }
 
 create_corps_commander = {
@@ -337,10 +355,11 @@ create_corps_commander = {
 	picture = "r56_portrait_ITA_Ettore_Bastico.dds"
 	traits = { politically_connected inflexible_strategist decided_planner }
 
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
+	skill = 2
+	rank = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
 	logistics_skill = 1
 }
 
@@ -352,6 +371,16 @@ create_corps_commander = {
 	skill = 1
 	attack_skill = 1
 	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Giulio Martinat"
+	picture = "r56_portrait_ITA_Giulio_Martinat.dds"
+	traits = {  trait_mountaineer winter_specialist  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 1
 }
@@ -359,11 +388,11 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Ubaldo Soddu"
 	picture = "Portrait_Italy_Ubaldo_Soddu.dds"
-	traits = { career_officer trait_cautious }
+	traits = { career_officer bearer_of_artillery }
 
 	skill = 1
 	attack_skill = 1
-	defense_skill = 1
+	defense_skill = 2
 	planning_skill = 1
 	logistics_skill = 1
 }
@@ -371,12 +400,13 @@ create_corps_commander = {
 create_corps_commander = {
 	name = "Italo Balbo"
 	picture = "portrait_italy_italo_balbo.dds"
-	traits = { career_officer politically_connected }
+	traits = { air_force_ties career_officer politically_connected }
+	id = 6007
 
 	skill = 1
-	attack_skill = 2
+	attack_skill = 1
 	defense_skill = 1
-	planning_skill = 1
+	planning_skill = 2
 	logistics_skill = 1
 }
 
@@ -392,13 +422,46 @@ create_corps_commander = {
 	logistics_skill = 2
 }
 
+create_corps_commander = {
+	name = "Italo Gariboldi"
+	picture = "r56_portrait_ITA_Italo_Gariboldi.dds"
+	traits = { politically_connected infantry_officer }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Attilio Terruzzi"
+	portrait_path = "gfx/leaders/ITA/Portrait_Italy_Attilio_Teruzzi.dds"
+	traits = { politically_connected military_governor }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}
+
 create_field_marshal = {
 	name = "Rodolfo Graziani"
 	picture = "portrait_italy_radolfo_graziani.dds"
-	traits = { offensive_doctrine politically_connected trait_cautious }
+	traits = { offensive_doctrine politically_connected  }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+create_field_marshal = {
+	name = "Alfredo Guzzoni"
+	picture = "r56_portrait_ITA_Alfredo_Guzzoni.dds"
+	traits = { war_hero defensive_doctrine military_governor }
 	skill = 2
-	attack_skill = 2
-	defense_skill = 2
+	attack_skill = 1
+	defense_skill = 3
 	planning_skill = 2
 	logistics_skill = 1
 }
@@ -447,6 +510,17 @@ create_navy_leader = {
 }
 
 create_navy_leader = {
+	name = "Domenico Cavagnari"
+	portrait_path = "gfx/leaders/ITA/r56_portrait_ITA_Domenico_Cavagnari.dds"
+	traits = { seawolf old_guard_navy superior_tactician }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 1
+	maneuvering_skill = 3
+	coordination_skill = 1
+}
+
+create_navy_leader = {
 	name = "Angelo Iachino"
 		picture = "Portrait_Italy_Angelo_Iachino.dds"
 	traits = { bold navy_career_officer superior_tactician spotter }
@@ -467,7 +541,7 @@ create_equipment_variant = {
 		type = fighter_equipment_0
 		upgrades = {
 			plane_gun_upgrade = 1
-			plane_range_upgrade = 0  
+			plane_range_upgrade = 0
 			plane_engine_upgrade = 2
 			plane_reliability_upgrade = 1
 		}
@@ -559,7 +633,7 @@ if = {
 }
 if = {
 	limit = { has_dlc = "Man the Guns"}
-	### Battleship Variants	
+	### Battleship Variants
 	create_equipment_variant = {			# original configuration of class pre-refit (refit in 1937-40)
 		name = "Andrea Doria Class"
 		type = ship_hull_heavy_1
@@ -599,7 +673,7 @@ if = {
 			rear_1_custom_slot = ship_heavy_battery_1
 		}
 	}
-	### Heavy Cruiser Variants	
+	### Heavy Cruiser Variants
 	create_equipment_variant = {
 		name = "San Giorgio Class"
 		type = ship_hull_cruiser_coastal_defense_ship
@@ -676,7 +750,7 @@ if = {
 			rear_1_custom_slot = ship_anti_air_1
 		}
 	}
-	### Light Cruiser Variants	
+	### Light Cruiser Variants
 	create_equipment_variant = {
 		name = "Taranto Class"
 		type = ship_hull_cruiser_1
@@ -731,6 +805,25 @@ if = {
 			rear_1_custom_slot = ship_light_medium_battery_2
 		}
 	}
+	### Light Cruiser Variants
+	create_equipment_variant = {
+		name = "Duca degli Abruzzi Class"
+		type = ship_hull_cruiser_2
+		name_group = ITA_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			front_1_custom_slot = ship_anti_air_2
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_airplane_launcher_2
+			rear_1_custom_slot = ship_light_medium_battery_2
+		}
+	}
 	### Destroyer Variants
 	create_equipment_variant = {
 		name = "Curatone Class" 		#Represents the following WWI/1920s DDs/DEs: Curatone, Sauro/Sella, Turbine, Pilo, Audace, Siritori, La Masa, Palestro, Cantore
@@ -765,7 +858,7 @@ if = {
 			rear_1_custom_slot = ship_depth_charge_1
 		}
 		obsolete = yes
-	}	
+	}
 	create_equipment_variant = {
 		name = "Maestrale Class" 			#Represents the following WWI/1920s DDs: Freccia, Foglore, Mastrale, Oriani, Spica (and subclasses)
 		type = ship_hull_light_1
@@ -782,7 +875,26 @@ if = {
 			rear_1_custom_slot = ship_depth_charge_1
 		}
 	}
-	### Submarine Variants	
+	create_equipment_variant = {
+			name = "Littorio Class"
+			type = ship_hull_heavy_2
+			name_group = ITA_BB_HISTORICAL
+			parent_version = 0
+			modules = {
+				fixed_ship_battery_slot = ship_heavy_battery_2
+				fixed_ship_anti_air_slot = ship_anti_air_1
+				fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+				fixed_ship_radar_slot = empty
+				fixed_ship_engine_slot = heavy_ship_engine_2
+				fixed_ship_secondaries_slot = ship_secondaries_2
+				fixed_ship_armor_slot = ship_armor_bb_2
+				front_1_custom_slot = ship_anti_air_1
+				mid_1_custom_slot = ship_secondaries_2
+				mid_2_custom_slot = ship_airplane_launcher_2
+				rear_1_custom_slot = ship_heavy_battery_2
+			}
+		}
+	### Submarine Variants
 	create_equipment_variant = {
 		name = "Mameli Class"
 		type = ship_hull_submarine_1
@@ -794,7 +906,7 @@ if = {
 			rear_1_custom_slot = empty
 		}
 		obsolete = yes
-	}	
+	}
 	create_equipment_variant = {
 		name = "Bandiera Class"
 		type = ship_hull_submarine_1
@@ -849,7 +961,7 @@ if = {
 	}
 	if = {
 		limit = { has_dlc = "Man the Guns" }
-		### Battleship Variants	
+		### Battleship Variants
 		create_equipment_variant = {
 			name = "Caio Duilio Class"			# refit variant (refit in 1937-40)
 			type = ship_hull_heavy_1
@@ -889,7 +1001,7 @@ if = {
 				rear_1_custom_slot = ship_heavy_battery_2
 			}
 		}
-		### Light Cruiser Variants	
+		### Light Cruiser Variants
 		create_equipment_variant = {
 			name = "Duca degli Abruzzi Class"
 			type = ship_hull_cruiser_2
@@ -925,7 +1037,7 @@ if = {
 				rear_1_custom_slot = ship_depth_charge_1
 			}
 		}
-		### Submarine Variants	
+		### Submarine Variants
 		create_equipment_variant = {
 			name = "Marcello Class"
 			type = ship_hull_submarine_2

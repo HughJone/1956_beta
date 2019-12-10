@@ -12,7 +12,7 @@ if = {
 set_convoys = 110
 set_stability = 0.9
 set_war_support = 0.6
-set_research_slots = 3
+set_research_slots = 4
 
 add_ideas = {
 	en_svensk_tiger
@@ -28,10 +28,13 @@ set_technology = {
 	etax_doctrine = 1
 	camo = 1
 	gw_armored_car = 1
+	steel_production_1 = 1
+	jaegers = 1
 	
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	gw_artillery = 1
+	interwar_antitank = 1
 	tech_recon = 1
 	tech_support = 1		
 	tech_engineers = 1
@@ -153,58 +156,30 @@ if = {
 }
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 75
-		}
-
-		neutrality = {
-			popularity  = 14
-		}
-
-		communism = {
-			popularity = 8
-		}
-
-		fascism = {
-			popularity = 3
-		}
-		
-	}
-	
 	ruling_party = democratic
 	last_election = "1932.9.18"
 	election_frequency = 48
 	elections_allowed = yes
 }
+set_popularities = {
+	democratic = 75
+	fascism = 14
+	communism = 8
+	neutrality = 3
+}
 
 1939.1.1 = {
 	set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 85
-			}
-
-			neutrality = {
-				popularity  = 12
-			}
-
-			communism = {
-				popularity = 4
-			}
-
-			fascism = {
-				popularity = 1
-			}
-			
-		}
-		
 		ruling_party = democratic
 		last_election = "1936.9.20"
 		election_frequency = 48
 		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 85
+		fascism = 12
+		communism = 4
+		neutrality = 1
 	}
 }
 
@@ -222,7 +197,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Sven Olov Lindholm"
 	desc = "POLITICS_SVEN_OLOV_LINDHOLM_DESC"
-	picture = "gfx/leaders/SWE/r56_portrait_SWE_Sven_Olov_Lindblom.dds"
+	picture = "r56_portrait_SWE_Sven_Olov_Lindholm.tga"
 	expire = "1965.1.1"
 	ideology = nazism
 	traits = {
@@ -272,13 +247,13 @@ create_corps_commander = {
 	attack_skill = 3
 	defense_skill = 2
 	planning_skill = 1
-	logistics_skill = 2
+	logistics_skill = 1
 
 }
 
 create_corps_commander = {
 	name = "Viking Tamm"
-	portrait_path = "gfx/leaders/SWE/Portrait_Sweden_Generic_Winter.dds"
+	portrait_path = "gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_land_2.dds"
 	traits = { winter_specialist }
 	skill = 2
 	attack_skill = 1

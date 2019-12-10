@@ -4,7 +4,7 @@ capital = 3
 
 oob = "SWI_1936"
 
-set_research_slots = 3
+set_research_slots = 4
 set_stability = 0.8
 set_war_support = 0.65
 
@@ -131,56 +131,30 @@ set_country_flag = SWI_reliance_on_militia
 }
 
 set_politics = {
-	
-	parties = {
-		democratic = {
-			popularity = 64
-		}
-		
-		neutrality = {
-			popularity = 30
-		}
-		
-		fascism = {
-			popularity = 2
-		}
-		
-		communism = {
-			popularity = 4
-		}
-	}
-	
 	ruling_party = democratic
 	last_election = "1935.10.27"
 	election_frequency = 48
 	elections_allowed = yes
 }
+set_popularities = {
+	democratic = 64
+	fascism = 30
+	communism = 2
+	neutrality = 4
+}
 
 1939.1.1 = {
 	set_politics = {
-		
-		parties = {
-			democratic = {
-				popularity = 60
-			}
-			
-			neutrality = {
-				popularity = 28
-			}
-			
-			fascism = {
-				popularity = 6
-			}
-			
-			communism = {
-				popularity = 6
-			}
-		}
-		
 		ruling_party = democratic
 		last_election = "1935.10.27"
 		election_frequency = 48
 		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 60
+		fascism = 28
+		communism = 6
+		neutrality = 6
 	}
 }
 
@@ -243,7 +217,7 @@ create_country_leader = {
 
 create_corps_commander = {
 	name = "Renzo Lardelli"
-	portrait_path = "gfx/leaders/SWI/Portrait_SWI_Generic_land_2.dds"
+	portrait_path = "gfx/leaders/SWI/r56_portrait_SWI_Renzo_Lardelli.dds"
 	traits = { infantry_officer }
 	skill = 2
 	attack_skill = 1
@@ -253,7 +227,7 @@ create_corps_commander = {
 }
 create_corps_commander = {
 	name = "Friedrich Prisi"
-	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+	portrait_path = "gfx/leaders/Europe/r56_Portrait_SWI_Friedrich_Prisi.dds"
 	traits = { old_guard }
 	skill = 3
 	attack_skill = 3

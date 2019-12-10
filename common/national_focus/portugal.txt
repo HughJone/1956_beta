@@ -12,7 +12,7 @@ focus_tree = {
 	
 	default = no
 	
-	continuous_focus_position = { x = 0 y = 1200 }	
+	continuous_focus_position = { x = 800 y = 1000 }	
 
 	focus = {
 		id = POR_desenvolver_o_interior
@@ -814,8 +814,7 @@ focus_tree = {
 				name = special_bonus
 				bonus = 1
 				uses = 2
-				technology = paratroopers
-				technology = paratroopers2
+				category = r56_paratroops_infantry_tech
 			}
 			
 		}
@@ -987,10 +986,7 @@ focus_tree = {
 				name = cv_bonus
 				bonus = 1
 				uses = 2
-				technology = early_carrier
-				technology = basic_carrier
-				technology = improved_carrier
-				technology = advanced_carrier
+				category = cv_tech
 			}
 		}
 	}
@@ -1011,20 +1007,15 @@ focus_tree = {
 				name = bb_bonus
 				bonus = 1
 				uses = 2
-				technology = basic_battleship
-				technology = improved_battleship
-				technology = advanced_battleship
-				technology = heavy_battleship
-				technology = heavy_battleship2
+				category = bb_tech
+				category = bc_tech
 			}
 			add_tech_bonus = {
 				name = cr_bonus
 				bonus = 1
 				uses = 2
-				technology = improved_light_cruiser
-				technology = advanced_light_cruiser
-				technology = improved_heavy_cruiser
-				technology = advanced_heavy_cruiser
+				category = cl_tech
+				category = ca_tech
 			}
 		}
 	}
@@ -1135,9 +1126,7 @@ focus_tree = {
 				name = POR_marines_and_landing_craft
 				bonus = 1
 				uses = 1
-				technology = transport
-				technology = landing_craft
-				technology = tank_landing_craft
+				category = tp_tech
 			}
 		}
 	}
@@ -1200,9 +1189,7 @@ focus_tree = {
 				name = dd_bonus
 				bonus = 1
 				uses = 2
-				technology = basic_destroyer
-				technology = improved_destroyer
-				technology = advanced_destroyer
+				category = dd_tech
 			}
 			add_tech_bonus = {
 				name = con_def_bonus
@@ -1230,9 +1217,7 @@ focus_tree = {
 				name = POR_escort_effort
 				bonus = 1
 				uses = 1
-				technology = basic_destroyer
-				technology = improved_destroyer
-				technology = advanced_destroyer
+				category = dd_tech
 			}
 			add_tech_bonus = {
 				name = POR_escort_effort
@@ -1248,7 +1233,7 @@ focus_tree = {
 	focus = {
 		id = POR_submarine_effort
 		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = POR_light_ship_effort }
+		prerequisite = { focus = POR_escort_effort }
 		x = 12
 		y = 3
 		cost = 10
@@ -1260,9 +1245,7 @@ focus_tree = {
 				name = ss_bonus
 				bonus = 1
 				uses = 1
-				technology = basic_submarine
-				technology = improved_submarine
-				technology = advanced_submarine
+				category = ss_tech
 			}
 			add_tech_bonus = {
 				name = sub_op_bonus
@@ -1305,8 +1288,7 @@ focus_tree = {
 
 	focus = {
 		id = POR_salazar
-		icon = GFX_goal_salazar
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_r56_goal_spr_befriend_portugal
 		x = 20
 		y = 0
 		cost = 10
@@ -1322,7 +1304,7 @@ focus_tree = {
 		id = POR_transpolar_flights
 		icon = GFX_goal_generic_air_fighter2
 		prerequisite = { focus = POR_salazar }
-		x = 19
+		x = 15
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -1343,7 +1325,7 @@ focus_tree = {
 		text = "Extra Research Slot II"
 		text = extra_tech_slot
 		prerequisite = { focus = POR_salazar }
-		x = 21
+		x = 25
 		y = 1
 		cost = 10
 		ai_will_do = {
@@ -1371,25 +1353,19 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 0
-				OR = {
-					is_historical_focus_on = yes
-					has_idea = neutrality_idea
-				}
-			}
+			factor = 50
+			
 		}
 
 		completion_reward = {
-			add_ideas = collectivist_ethos_focus
+			add_timed_idea = { idea = collectivist_ethos_focus days = 1095 }
 			add_ideas = por_portuguese_imperialism
 		}
 	}
 
 	focus = {
 		id = por_nationalism_focus2
-		icon = GFX_goal_support_fascism #icon = GFX_goal_tripartite_pact
+		icon = GFX_focus_por_support_mns
 		prerequisite = { focus = POR_collectivist_ethos }
 		mutually_exclusive = { focus = POR_internationalism_focus }
 		mutually_exclusive = { focus = POR_nationalism_focus }
@@ -1407,18 +1383,15 @@ focus_tree = {
 
 
 		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 2
-				any_neighbor_country = {
-					is_major = yes
-					has_government = fascism
+			factor = 50
+				modifier = {
+					factor = 0
+					is_historical_focus_on = yes
 				}
-			}
 		}
 
 		completion_reward = {
-			add_ideas = nationalism
+			add_timed_idea = { idea = nationalism days = 1095 }
 		}
 	}
 
@@ -1433,25 +1406,18 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
-			modifier = {
-				factor = 2
-				any_neighbor_country = {
-					is_major = yes
-					has_government = fascism
-				}
-			}
+			factor = 50
 		}
 
 		completion_reward = {
-			add_ideas = por_estado_novo
+			add_timed_idea = { idea = por_estado_novo days = 1095 }
 		}
 	}
 
 
 	focus = {
 		id = POR_internationalism_focus
-		icon = GFX_goal_support_communism #icon = GFX_goal_tripartite_pact
+		icon = GFX_r56_goal_POR_pcp
 		prerequisite = { focus = POR_collectivist_ethos }
 		mutually_exclusive = { focus = POR_nationalism_focus }
 		mutually_exclusive = { focus = por_nationalism_focus2 }
@@ -1460,24 +1426,21 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 5
+			factor = 50
 			modifier = {
-				factor = 2
-				any_neighbor_country = {
-					is_major = yes
-					has_government = communism
-				}
+				factor = 0
+				is_historical_focus_on = yes
 			}
 		}
 
 		completion_reward = {
-			add_ideas = internationalism
+			add_timed_idea = { idea = internationalism days = 1095 }
 		}
 	}	
 
 	focus = {
 		id = POR_liberty_ethos
-		icon = GFX_goal_support_democracy
+		icon = GFX_r56_goal_spr_support_democracy_portugal
 		prerequisite = { focus = POR_salazar }
 		mutually_exclusive = { focus = POR_collectivist_ethos }
 		x = 23
@@ -1485,22 +1448,10 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 95
+			factor = 50
 			modifier = {
-				factor = 0.1
-				any_neighbor_country = {
-					is_major = yes
-					OR = {
-						has_government = communism
-						has_government = fascism
-					}
-				}
-				NOT = {
-					any_neighbor_country = {
-						is_major = yes
-						has_government = democratic
-					}
-				}
+				factor = 0
+				is_historical_focus_on = yes
 			}
 		}
 
@@ -1512,7 +1463,7 @@ focus_tree = {
 
 	focus = {
 		id = POR_militarism
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_mex_restore_the_army_of_christ
 		prerequisite = { focus = por_nationalism_focus2 }
 		x = 16
 		y = 3
@@ -1532,7 +1483,6 @@ focus_tree = {
 		id = POR_political_correctness
 		icon = GFX_goal_generic_dangerous_deal
 		prerequisite = { focus = POR_internationalism_focus }
-		mutually_exclusive = { focus = POR_socialist_realism }
 		x = 18
 		y = 3
 		cost = 10
@@ -1566,7 +1516,6 @@ focus_tree = {
 		id = POR_socialist_realism
 		icon = GFX_goal_generic_forceful_treaty
 		prerequisite = { focus = POR_internationalism_focus }
-		mutually_exclusive = { focus = POR_political_correctness }
 		x = 20
 		y = 3
 		cost = 10
@@ -1580,7 +1529,7 @@ focus_tree = {
 
 	focus = {
 		id = POR_socialist_science
-		icon = GFX_goal_generic_national_unity
+		icon = gfx_socialist_science
 		prerequisite = { focus = POR_socialist_realism }
 		mutually_exclusive = { focus = POR_progress_cult }
 		x = 20
@@ -1603,6 +1552,9 @@ focus_tree = {
 		x = 23
 		y = 2
 		cost = 10
+		ai_will_do = {
+			factor = 3
+		}
 		completion_reward = {
 			if = {
 				limit = { NOT = { has_idea = neutrality_idea } }
@@ -1614,7 +1566,7 @@ focus_tree = {
 
 	focus = {
 		id = POR_interventionism_focus
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_goal_class_a_reservists
 		prerequisite = { focus = POR_liberty_ethos }
 		mutually_exclusive = { focus = POR_neutrality_focus }
 		x = 25
@@ -1622,11 +1574,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				has_idea = neutrality_idea
-			}
+			factor = 35
 		}
 
 		completion_reward = {
@@ -1641,7 +1589,7 @@ focus_tree = {
 
 	focus = {
 		id = POR_military_youth
-		icon = GFX_goal_mocidade
+		icon = GFX_mocidade
 		prerequisite = { focus = POR_policia_estado }
 		x = 14
 		y = 5
@@ -1709,7 +1657,7 @@ focus_tree = {
 
 	focus = {
 		id = POR_indoctrination_focus
-		icon = GFX_goal_generic_propaganda
+		icon = gfx_postive_heroism
 		prerequisite = { focus = POR_political_correctness }
 		x = 18
 		y = 4
@@ -1778,7 +1726,7 @@ focus = {
 
 	focus = {
 		id = POR_political_commissars
-		icon = GFX_goal_generic_forceful_treaty
+		icon = GFX_goal_focus_communist_army
 		prerequisite = { focus = POR_indoctrination_focus focus = POR_socialist_science focus = POR_progress_cult}
 		available = {
 		}
@@ -1994,7 +1942,7 @@ focus = {
 
 	focus = {
 		id = POR_join_comintern
-		icon = GFX_goal_generic_soviet_construction
+		icon = GFX_focus_chi_mission_to_the_soviet_union
 		prerequisite = { focus = POR_political_commissars }
 	
 
@@ -2024,7 +1972,7 @@ focus = {
 
 focus = {
 		id = POR_call_of_arms
-		icon = GFX_goal_generic_propaganda
+		icon = GFX_goal_portugalwar
 		x = 30
 		y = 0
 		cost = 5
@@ -2113,13 +2061,7 @@ focus = {
 			set_rule = { can_create_factions = yes }
 			create_faction = "Império Ibérico"
 			SPR = {
-				add_opinion_modifier = { target = POR modifier = POR_propaganda }
-				add_to_faction = SPR
-				add_ai_strategy = {
-						type = alliance
-						id = "POR"
-						value = 2000
-					}
+				country_event = generic.5
 				}
 			}
 	}
@@ -2289,7 +2231,7 @@ focus = {
 
 	focus = {
 		id = POR_brazil
-		icon = GFX_goal_portugalwar
+		icon = GFX_goal_ger_influence_brazil
 		prerequisite = { focus = POR_call_of_arms }
 		mutually_exclusive = { focus = POR_befriend_brazil }
 		x = 31
@@ -2342,13 +2284,7 @@ focus = {
 		completion_reward = {
 			
 			BRA = {
-				add_opinion_modifier = { target = POR modifier = POR_propaganda }
-				add_to_faction = BRA
-				add_ai_strategy = {
-						type = alliance
-						id = "POR"
-						value = 2000
-					}
+				country_event = generic.5
 				}
 			}
 	}

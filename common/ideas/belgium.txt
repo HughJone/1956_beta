@@ -11,9 +11,18 @@ ideas = {
 				has_government = communism
 			}
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+			}
+
 			removal_cost = -1
 
 			picture = generic_communism_drift_bonus
+
+			
 			
 			modifier = {
 				communism_drift = 0.1
@@ -27,6 +36,13 @@ ideas = {
 
 			allowed_civil_war = {
 				has_government = fascism
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
 			}
 
 			removal_cost = -1
@@ -68,6 +84,13 @@ ideas = {
 
 			allowed_civil_war = {
 				has_government = communism
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
 			}
 
 			removal_cost = -1
@@ -124,7 +147,7 @@ ideas = {
 			}
 
 			modifier = {
-				research_speed_factor = 0.02
+				research_speed_factor = 0.04
 			}
 
 			removal_cost = -1
@@ -207,6 +230,13 @@ ideas = {
 			allowed_civil_war = {
 				has_government = neutrality
 			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+			}
 			
 			modifier = {
 				neutrality_drift = 0.15
@@ -218,6 +248,13 @@ ideas = {
 
 			allowed_civil_war = {
 				has_government = neutrality
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
 			}
 			
 			modifier = {
@@ -288,6 +325,13 @@ ideas = {
 
 			allowed_civil_war = {
 				 has_government = democratic
+			}
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
 			}
 
 			removal_cost = -1
@@ -683,7 +727,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				nuclear = 0.10
+				nuclear = 0.15
 			}
 		}
 		tblra_church_support = {
@@ -792,6 +836,13 @@ ideas = {
 				}
 			}
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+			}
+
 			modifier = {
 				fascism_drift = -0.05
 			}
@@ -809,6 +860,13 @@ ideas = {
 			removal_cost = -1
 
 			picture = generic_infantry_bonus
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+			}
 
 			
 			modifier = {
@@ -970,6 +1028,12 @@ ideas = {
 				original_tag = WLL
 				}
 				
+			}
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}			
 			}		
 			traits = { communist_revolutionary }
 	
@@ -989,17 +1053,22 @@ ideas = {
 		}
 		BEL_achille_van_acker = {
 			allowed = {
-			OR = {
-				original_tag = BEL
-				original_tag = VLA
-				}
-				
+				OR = {
+					original_tag = BEL
+					original_tag = VLA
+				}	
+			}
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}			
 			}		
 			traits = { democratic_reformer }
 	
-			on_add = {
-				country_event = political.13
-			}
+			#on_add = {
+			#	country_event = political.13
+			#}
 	
 			do_effect = {
 				NOT = {
@@ -1017,7 +1086,11 @@ ideas = {
 				original_tag = BEL	
 			}
 			available = { 
-			NOT = {has_global_flag = van_severen_killed}	
+				NOT = {has_global_flag = van_severen_killed}
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
 			}			
 			traits = { fascist_demagogue }
 	
@@ -1044,10 +1117,14 @@ ideas = {
 				}
 			}
 			available = { 
-			OR = {
-				has_completed_focus = tblra_choose_Verdinaso
-				has_global_flag = van_severen_killed
-				original_tag = WLL
+				OR = {
+					has_completed_focus = tblra_choose_Verdinaso
+					has_global_flag = van_severen_killed
+					original_tag = WLL
+				}
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
 				}	
 			}			
 			traits = { fascist_demagogue }
@@ -1073,6 +1150,10 @@ ideas = {
 			}
 			available = { 
 				has_country_flag = tblra_king_martial_law
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}				
 			}			
 			traits = { staunch_monarchist }
 		}		
@@ -2272,7 +2353,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -2291,7 +2372,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -2312,14 +2393,18 @@ ideas = {
 			cost = 250
 			
 			research_bonus = {
-				cat_mobile_warfare = 0.10
+				cat_mobile_warfare = 0.15
 			}
 			
 
 			traits = { mobile_warfare_expert }
 			ai_will_do = {
 				factor = 0
-			}			
+				modifier = {
+					has_tech = mobile_warfare
+					add = 1
+				}
+			}		
 		}		
 		
 		BEL_robert_desmet = {
@@ -2332,7 +2417,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -2349,7 +2434,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -2372,7 +2457,7 @@ ideas = {
 				}	
 			}
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }
@@ -2392,14 +2477,14 @@ ideas = {
 			has_government = democratic
 				NOT ={
 					OR = {
-					has_war_with = USA
-					NOT = { country_exists = USA }
+						has_war_with = USA
+						NOT = { country_exists = USA }
 					}
 				}
 			}		
 			
 			research_bonus = {
-				rocketry = 0.10
+				rocketry = 0.15
 			}
 			
 			traits = { rocket_scientist }			
@@ -2423,7 +2508,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { medium_tank_manufacturer }
@@ -2443,7 +2528,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { fast_tank_manufacturer}
@@ -2454,7 +2539,7 @@ ideas = {
 		}		
 		BEL_familleureux = {
 
-			cost = 50
+			cost = 75
 
 			available = {
 				has_completed_focus = tblra_light_tank_destroyers
@@ -2468,31 +2553,31 @@ ideas = {
 			}
 			
 			research_bonus = {
-				armor = 0.05
+				armor = 0.15
 			}
 			
-			traits = { tank_manufacturer }
+			traits = { tank_manufacturer2 }
 
 			equipment_bonus = {
 				light_tank_destroyer_equipment = {
 					reliability = 0.2
-					hard_attack = 0.05
+					hard_attack = 0.1
 					ap_attack = 0.05
 				}
 				medium_tank_destroyer_equipment = {
 					reliability = 0.2
-					hard_attack = 0.05
+					hard_attack = 0.1
 					ap_attack = 0.05
 				}
 				heavy_tank_destroyer_equipment = {
 					reliability = 0.2
-					hard_attack = 0.05
+					hard_attack = 0.1
 					ap_attack = 0.05
 				}				
 			}
 			
 			modifier = {
-				equipment_conversion_speed = 0.1
+				
 			}
 		}		
 	}
@@ -2511,7 +2596,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { light_aircraft_manufacturer }
@@ -2545,7 +2630,7 @@ ideas = {
 				}			
 			}
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { experimental_light_aircraft_manufacturer }
@@ -2570,7 +2655,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { medium_aircraft_manufacturer }
@@ -2598,7 +2683,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 						
 			traits = { convoy_escort_naval_manufacturer }
@@ -2612,7 +2697,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 						
 			traits = { coastal_defence_naval_manufacturer }
@@ -2633,7 +2718,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.15
 			}
 			
 			traits = { infantry_equipment_manufacturer }
@@ -2642,6 +2727,34 @@ ideas = {
 				factor = 1
 			}			
 		}
+		BEL_mae = { #manufacture d'armes de l'état, state weapon manufacture, converted old rifles and whatnot
+
+			cost = 100
+
+			picture = generic_infantry_equipment_manufacturer_2
+
+			available = {
+				
+			}
+			
+			allowed = {
+				has_dlc = "Death or Dishonor"
+				OR = {
+					original_tag = BEL
+					original_tag = WLL
+				}
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+				equipment_conversion_speed = 0.1
+			}
+		}		
 		frc_BEL = {
 			
 			picture = generic_artillery_manufacturer_2
@@ -2654,7 +2767,7 @@ ideas = {
 				}
 			}
 			research_bonus = {
-				artillery = 0.10
+				artillery = 0.15
 			}
 			
 			traits = { artillery_manufacturer }
@@ -2684,7 +2797,7 @@ ideas = {
 				}			
 			}
 			research_bonus = {
-				motorized_equipment = 0.10
+				motorized_equipment = 0.15
 			}
 			
 			traits = { motorized_equipment_manufacturer }
@@ -2725,7 +2838,7 @@ ideas = {
 				}			
 			}			
 			research_bonus = {
-				motorized_equipment = 0.10
+				motorized_equipment = 0.15
 			}
 			
 			traits = { motorized_equipment_manufacturer }
@@ -2767,7 +2880,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				motorized_equipment = 0.10
+				motorized_equipment = 0.15
 			}
 			
 			traits = { motorized_equipment_manufacturer }
@@ -2806,7 +2919,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				motorized_equipment = 0.10
+				motorized_equipment = 0.15
 			}
 			
 			traits = { motorized_equipment_manufacturer }
@@ -2841,7 +2954,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				industry = 0.10
+				industry = 0.15
 			}
 			
 			traits = { industrial_concern }
@@ -2860,7 +2973,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				electronics = 0.10
+				electronics = 0.15
 			}
 			
 			traits = { electronics_concern }
@@ -2879,8 +2992,8 @@ ideas = {
 			}
 			
 			research_bonus = {
-				industry = 0.05
-				synth_resources = 0.1
+				industry = 0.10
+				synth_resources = 0.155
 			}
 			
 			traits = { refinery_concern }
@@ -2888,7 +3001,32 @@ ideas = {
 			ai_will_do = {
 				factor = 1
 			}			
-		}		
+		}
+		BEL_petrofina = {
+			
+			picture = generic_refining_concern_1
+
+			allowed = { 
+				OR = {
+					original_tag = BEL
+					original_tag = VLA
+				}
+			}
+			
+			research_bonus = {
+				industry = 0.10
+				refining_tech = 0.25
+			}
+			modifier = {
+				fuel_gain_factor = 0.1
+			}			
+			
+			traits = { refinery_concern }
+	
+			ai_will_do = {
+				factor = 1
+			}			
+		}				
 	}
 
 	

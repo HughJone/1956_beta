@@ -79,6 +79,17 @@ ideas = {
 				has_government = democratic
 			}
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = fascism
+				}
+				
+			}
+
 			removal_cost = -1
 
 			picture = generic_fascism_drift_bonus
@@ -120,6 +131,17 @@ ideas = {
 
 			picture = generic_fascism_drift_bonus
 			
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = fascism
+				}
+				
+			}
+
 			modifier = {
 				fascism_drift = 0.2
 			}
@@ -308,6 +330,17 @@ ideas = {
 				has_government = democratic
 			}
 
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = democratic
+				}
+				
+			}
+
 			removal_cost = -1
 
 			picture = generic_morale_bonus
@@ -327,6 +360,17 @@ ideas = {
 			}
 
 			removal_cost = -1
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = democratic
+				}
+				
+			}
 
 			picture = ast_abandon_the_westminster_system
 			
@@ -506,7 +550,7 @@ ideas = {
 			
 			research_bonus = {
 #				industry = 0.10
-#				electronics = 0.10
+#				electronics = 0.15
 #				land_doctrine = -0.5
 			}
 			
@@ -533,7 +577,6 @@ ideas = {
 			removal_cost = -1
 			
 			
-			
 			modifier = {	
 				#drift_defence_factor = 0.1	
 				#political_power_factor = 0.05
@@ -548,9 +591,20 @@ ideas = {
 				always = no
 			}
 
+			picture = kungen_gustaf_v
+
 			removal_cost = -1
-			
-			
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = democratic
+				}
+				
+			}
 			
 			modifier = {	
 				#drift_defence_factor = 0.5	
@@ -885,13 +939,40 @@ ideas = {
 			}
 
 			picture = generic_communism_drift_bonus
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = communism
+				}
+				
+			}
 			
 			modifier = {
 				communism_drift = 0.05
 			}
 		}
+		SWE_swedish_9_tactic = {
 		
-		
+			picture = air_support_focus
+
+			allowed = {
+				original_tag = SWE
+			}
+			
+			equipment_bonus = {
+
+				CAS_equipment = {
+					naval_strike_attack = 0.10	instant = yes
+				}
+				#nav_bomber_equipment = {
+				#	naval_strike_attack = 0.05	instant = yes
+				#}	
+			}
+		}
 	}
 	
 
@@ -988,9 +1069,9 @@ ideas = {
 			
 			traits = { democratic_reformer }
 	
-			on_add = {
-				country_event = political.13
-			}
+			#on_add = {
+			#	country_event = political.13
+			#}
 	
 			do_effect = {
 				NOT = {
@@ -1058,7 +1139,7 @@ ideas = {
 			cost = 150
 			
 			research_bonus = {
-				rocketry = 0.10
+				rocketry = 0.15
 			}
 			
 			traits = { rocket_scientist }
@@ -1095,10 +1176,17 @@ ideas = {
 			picture = generic_air_europe_1
 			
 			research_bonus = {
-				cat_battlefield_support = 0.10
+				cat_battlefield_support = 0.15
 			}
 			
 			traits = { close_air_support_proponent }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_tech = formation_flying
+					add = 1
+				}
+			}			
 		}
 		SWE_bengt_nordenskiold2 = {
 			
@@ -1109,10 +1197,17 @@ ideas = {
 			}
 		
 			research_bonus = {
-				cat_battlefield_support = 0.07
+				cat_battlefield_support = 0.10
 			}
 			
-			traits = { dive_bomber }		
+			traits = { dive_bomber }
+			ai_will_do = {
+				factor = 0
+				modifier = {
+					has_tech = formation_flying
+					add = 1
+				}
+			}				
 		}
 		
 		SWE_axel_ljungdahl2 = {
@@ -1124,7 +1219,7 @@ ideas = {
 			picture = SWE_axel_ljungdahl
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -1140,7 +1235,7 @@ ideas = {
 			picture = generic_army_europe_2
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -1156,7 +1251,7 @@ ideas = {
 			picture = generic_political_advisor_europe_1
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }
@@ -1434,7 +1529,7 @@ ideas = {
 		
 		designer = yes
 		
-		
+		#Jungner in Oskarshamn license czech tankette
 		volvo = {
 			
 			allowed = {
@@ -1442,7 +1537,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { fast_tank_manufacturer }
@@ -1457,7 +1552,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { medium_tank_manufacturer }
@@ -1466,7 +1561,25 @@ ideas = {
 				# notable tanks L-120 and L-60, lighter tanks as well as the medium tank Stridsvagn m/42, that was mobile and well protected.
 			}
 		}
+		scania_tank = {
+	
+			name = scania
+			picture = scania
 
+			allowed = {
+				original_tag = SWE
+			}
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { heavy_tank_manufacturer }
+			
+			modifier = {
+				# notable tanks L-120 and L-60, lighter tanks as well as the medium tank Stridsvagn m/42, that was mobile and well protected.
+			}
+		}
 	}
 	
 	aircraft_manufacturer = { 
@@ -1483,7 +1596,7 @@ ideas = {
 			
 						
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { medium_aircraft_manufacturer }
@@ -1506,7 +1619,7 @@ ideas = {
 			
 						
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { naval_aircraft_manufacturer }
@@ -1530,7 +1643,7 @@ ideas = {
 			
 						
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { light_aircraft_manufacturer }
@@ -1559,7 +1672,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { atlantic_fleet_naval_manufacturer }
@@ -1575,7 +1688,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { convoy_escort_naval_manufacturer }
@@ -1591,7 +1704,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			 
 			cost = 150
@@ -1622,7 +1735,7 @@ ideas = {
 #			}
 #			
 #			research_bonus = {
-#				naval_equipment = 0.10
+#				naval_equipment = 0.15
 #			}
 #			 
 #			cost = 150
@@ -1646,7 +1759,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				industry = 0.10
+				industry = 0.15
 				
 			}
 			
@@ -1660,7 +1773,7 @@ ideas = {
 #			}
 #			
 #			research_bonus = {
-#				electronics = 0.10
+#				electronics = 0.15
 #			}
 #			
 #			traits = { electronics_concern }
@@ -1673,7 +1786,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				electronics = 0.10
+				electronics = 0.15
 			}
 			
 			traits = { electronics_concern }
@@ -1687,8 +1800,8 @@ ideas = {
 			#available = { has_completed_focus = SWE_scania_rubber }
 			
 			research_bonus = {
-				industry = 0.05
-				synth_resources = 0.1
+				industry = 0.10
+				synth_resources = 0.155
 			}
 			
 			traits = { refinery_concern }
@@ -1712,12 +1825,13 @@ ideas = {
 			}
 			
 			research_bonus = {
-				artillery = 0.10
+				artillery = 0.15
+				naval_gunnery_tech = 0.15
 			}
 			
 			equipment_bonus = {
 				artillery = {
-					reliability = 0.20
+					reliability = 0.10
 				}
 			}
 			
@@ -1735,7 +1849,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.15
 			}
 			
 			equipment_bonus = {
@@ -1747,6 +1861,31 @@ ideas = {
 			modifier = {
 			}
 		}
+		SWE_carl_gustafs_gevarsfaktori = { #copy of BEL M.A.E. Carl Gustafs (Stads) Gevärsfaktori
+
+			cost = 100
+
+			picture = generic_infantry_equipment_manufacturer_2
+
+			available = {
+				
+			}
+			
+			allowed = {
+				has_dlc = "Death or Dishonor"
+					original_tag = SWE
+			}
+			
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+			
+			modifier = {
+				equipment_conversion_speed = 0.1
+			}
+		}		
 		scania = {
 			
 
@@ -1756,7 +1895,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				motorized_equipment = 0.10
+				motorized_equipment = 0.15
 			}
 			
 			traits = { motorized_equipment_manufacturer }

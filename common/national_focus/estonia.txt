@@ -1901,7 +1901,7 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = nationalism
+			add_timed_idea = { idea = nationalism days = 1095 }
 		}
 	}
 	focus = {
@@ -2001,6 +2001,16 @@ focus = {
 		id = EST_create_our_faction
 		icon = GFX_goal_anschluss
 		prerequisite = { focus = EST_spread_democracy }
+		bypass = {
+			is_in_faction = yes
+			LAT = {
+		 		OR = {
+      				is_in_faction_with = EST
+      				exists = no
+      				has_completed_focus = LAT_baltic_cooperation
+      			}
+      		}
+		}		
 		available = {
 			is_puppet = no
 			is_in_faction = no
@@ -2478,7 +2488,10 @@ focus = {
 		
 		completion_reward = {
 			FIN = {
-				add_ideas = democratic_leanings
+				add_timed_idea = {
+					idea = democratic_influence
+					days = 390
+				}
 				add_ai_strategy = {
 					type = alliance
 					id = "back_to_routes"
@@ -2486,7 +2499,10 @@ focus = {
 				}
 			}
 			LAT = {
-				add_ideas = democratic_leanings
+				add_timed_idea = {
+					idea = democratic_influence
+					days = 390
+				}
 				add_ai_strategy = {
 					type = alliance
 					id = "back_to_routes"
@@ -2494,7 +2510,10 @@ focus = {
 				}
 			}
 			LIT = {
-				add_ideas = democratic_leanings
+				add_timed_idea = {
+					idea = democratic_influence
+					days = 390
+				}
 				add_ai_strategy = {
 					type = alliance
 					id = "back_to_routes"

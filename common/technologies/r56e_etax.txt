@@ -2,6 +2,18 @@
 
 technologies = {
 
+	@1918 = 0
+	@1936 = 2
+	@1938 = 4
+	@1939 = 6
+	@1940 = 8
+	@1941 = 10
+	@1942 = 12
+	@1943 = 14
+	@1944 = 16
+	@1945 = 18
+	@1946 = 20
+
 ###------> Doctrine Root <><> <><> <><> <><> <><>
 
 	etax_doctrine = {
@@ -33,6 +45,7 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1918
 		
 		folder = {
 			name = etax_folder
@@ -41,10 +54,10 @@ technologies = {
 			
 		categories = {
 			industry
-		}		
+		}
 		
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			
 			modifier = {
 				factor = 5
@@ -57,8 +70,6 @@ technologies = {
 		}
 		
 	}
-	
-
 	
 ###------> Army, Navy, Air <><> <><> <><> <><> <><>
 
@@ -74,14 +85,13 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
+
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1936
 
 		category_all_infantry = {
-			max_organisation = 15
-		}
-		category_tanks = {
-			max_organisation = 15
+			max_organisation = 5
 		}
 		
 		folder = {
@@ -90,22 +100,23 @@ technologies = {
 		}
 			
 		categories = {
-			industry
-		}	
+			land_doctrine			
+			cat_mobile_warfare
+			cat_mass_assault
+			cat_grand_battle_plan
+			cat_superior_firepower
+		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 3
-				tag = SOV
+				add = 20
+				has_war = yes
 			}
-		}	
+		}
 	}
 	
 	etax_navy_focus = {
-	
-		xor = { etax_air_focus }
 		
 		path = {
 			leads_to_tech = etax_navy_firepower
@@ -119,24 +130,28 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1936
 		
 		battleship = {
-			max_organisation = 10			
+			max_organisation = 5			
 		}
 		battle_cruiser = {
-			max_organisation = 10			
+			max_organisation = 5			
 		}
 		heavy_cruiser = {
-			max_organisation = 10			
+			max_organisation = 5			
 		}
 		light_cruiser = {
-			max_organisation = 10			
+			max_organisation = 5			
 		}
 		carrier = {
-			max_organisation = 10			
+			max_organisation = 5			
 		}
 		destroyer = {
-			max_organisation = 10			
+			max_organisation = 5			
+		}
+		submarine = {
+			max_organisation = 5			
 		}
 		
 		folder = {
@@ -145,27 +160,26 @@ technologies = {
 		}
 			
 		categories = {
-			industry
-		}	
+			naval_doctrine
+			cat_fleet_in_being
+			cat_trade_interdiction
+			cat_base_strike
+		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 3
-				tag = JAP
+				add = 20
+				has_war = yes
 			}
-			
 			modifier = {
-				factor = 3
-				tag = USA
-			}	
+				factor = 0
+				has_navy_size = { size < 25 }
+			}
 		}
 	}
 	
 	etax_air_focus = {
-	
-		xor = { etax_navy_focus }
 		
 		path = {
 			leads_to_tech = etax_air_firepower
@@ -179,8 +193,9 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1936
 		
-		air_ace_generation_chance_factor = 0.50
+		air_ace_generation_chance_factor = 0.015
 		
 		folder = {
 			name = etax_folder
@@ -188,21 +203,19 @@ technologies = {
 		}
 			
 		categories = {
-			industry
-		}	
+			air_doctrine
+			cat_strategic_destruction
+			cat_battlefield_support
+			cat_operational_integrity
+		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			
 			modifier = {
-				factor = 3
-				tag = GER
+				add = 20
+				has_war = yes
 			}
-			
-			modifier = {
-				factor = 3
-				tag = ENG
-			}				
 		}
 	}
 
@@ -219,10 +232,13 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1938
 		
 		category_army = {
-			soft_attack = 0.08
+			soft_attack = 0.06
 		}
+		
+		max_planning = 0.05
 		
 		folder = {
 			name = etax_folder
@@ -230,18 +246,27 @@ technologies = {
 		}
 			
 		categories = {
-			industry
-		}	
+			land_doctrine			
+			cat_mobile_warfare
+			cat_mass_assault
+			cat_grand_battle_plan
+			cat_superior_firepower
+		}
 
 		ai_will_do = {
-			factor = 1
-		}		
+			factor = 5
+			modifier = {
+				add = 20
+				has_war = yes
+			}
+		}
 	}
 	
 	etax_army_firepower_2 = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1941
 		
 		folder = {
 			name = etax_folder
@@ -249,16 +274,26 @@ technologies = {
 		}
 		
 		category_army = {
-			hard_attack = 0.125
+			hard_attack = 0.08
 		}
+		
+		max_planning = 0.05
 			
 		categories = {
-			industry
-		}	
+			land_doctrine			
+			cat_mobile_warfare
+			cat_mass_assault
+			cat_grand_battle_plan
+			cat_superior_firepower
+		}
 
 		ai_will_do = {
-			factor = 1
-		}	
+			factor = 5
+			modifier = {
+				add = 20
+				has_war = yes
+			}
+		}
 	}
 	
 	etax_army_defense = {
@@ -272,9 +307,10 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1938
 		
 		category_army = { 
-			defense = 0.125
+			defense = 0.06
 		}
 		
 		folder = {
@@ -283,16 +319,19 @@ technologies = {
 		}
 			
 		categories = {
-			industry
-		}	
+			land_doctrine			
+			cat_mobile_warfare
+			cat_mass_assault
+			cat_grand_battle_plan
+			cat_superior_firepower
+		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 3
-				tag = SOV
-			}	
+				add = 20
+				has_war = yes
+			}
 		}
 	}
 	
@@ -300,26 +339,30 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1941
 		
 		folder = {
 			name = etax_folder
 			position = { x = 2 y = 8 }
 		}
 
-		max_dig_in = 15
-		
+		max_dig_in = 10
+					
 		categories = {
-			industry
-		}	
+			land_doctrine			
+			cat_mobile_warfare
+			cat_mass_assault
+			cat_grand_battle_plan
+			cat_superior_firepower
+		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 3
-				tag = SOV
+				add = 20
+				has_war = yes
 			}
-		}	
+		}
 	}
 	
 ###------> Navy Branch <><> <><> <><> <><> <><>
@@ -335,9 +378,12 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1938
 		
 		modifier = {
-			naval_strike_targetting_factor = 0.15
+			navy_carrier_air_targetting_factor = 0.10
+			navy_capital_ship_attack_factor = 0.05
+			navy_screen_attack_factor = 0.05
 		}
 		
 		folder = {
@@ -346,17 +392,20 @@ technologies = {
 		}
 			
 		categories = {
-			industry
-		}	
+			naval_doctrine
+			cat_fleet_in_being
+			cat_trade_interdiction
+			cat_base_strike
+		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			
 			modifier = {
-				factor = 3
-				tag = USA
+				add = 20
+				has_war = yes
 			}
-		}	
+		}
 	}
 	
 	etax_navy_firepower_2 = {
@@ -368,9 +417,12 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1941
 		
-		sortie_efficiency = 0.15
-		port_strike = 0.25
+		convoy_raiding_efficiency_factor = 0.1
+		naval_coordination = 0.02
+		sortie_efficiency = 0.1
+		port_strike = 0.15
 		
 		folder = {
 			name = etax_folder
@@ -378,17 +430,20 @@ technologies = {
 		}
 			
 		categories = {
-			industry
-		}	
+			naval_doctrine
+			cat_fleet_in_being
+			cat_trade_interdiction
+			cat_base_strike
+		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			
 			modifier = {
-				factor = 3
-				tag = USA
+				add = 20
+				has_war = yes
 			}
-		}		
+		}
 	}
 	
 	etax_navy_defense = {
@@ -402,9 +457,11 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1938
 		
-		navy_capital_ship_defence_factor = 0.15
-		navy_submarine_defence_factor = 0.10
+		navy_capital_ship_defence_factor = 0.05
+		navy_submarine_defence_factor = 0.05
+		navy_anti_air_attack_factor = 0.10
 		
 		folder = {
 			name = etax_folder
@@ -412,17 +469,19 @@ technologies = {
 		}
 			
 		categories = {
-			industry
-		}	
+			naval_doctrine
+			cat_fleet_in_being
+			cat_trade_interdiction
+			cat_base_strike
+		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 3
-				tag = JAP
+				add = 20
+				has_war = yes
 			}
-		}			
+		}
 	}
 	
 	etax_navy_defense_2 = {
@@ -434,21 +493,11 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1941
 		
-		battle_cruiser = {
-			surface_detection = 0.25
-		}
-		battleship = {
-			surface_detection = 0.25
-		}
-		destroyer = {
-			surface_detection = 0.25
-		}
-		submarine = {
-			surface_detection = 0.25
-		}
-		
-		convoy_escort_efficiency = 0.25
+		critical_receive_chance = -0.15
+		convoy_escort_efficiency = 0.15
+		spotting_chance = 0.05
 		
 		folder = {
 			name = etax_folder
@@ -456,17 +505,20 @@ technologies = {
 		}
 			
 		categories = {
-			industry
-		}	
+			naval_doctrine
+			cat_fleet_in_being
+			cat_trade_interdiction
+			cat_base_strike
+		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			
 			modifier = {
-				factor = 3
-				tag = JAP
+				add = 20
+				has_war = yes
 			}
-		}			
+		}
 	}
 	
 ###------> Air Branch <><> <><> <><> <><> <><>
@@ -482,8 +534,9 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1938
 		
-		air_superiority_efficiency = 0.2
+		air_superiority_efficiency = 0.15
 		
 		folder = {
 			name = etax_folder
@@ -491,17 +544,19 @@ technologies = {
 		}
 			
 		categories = {
-			industry
-		}	
+			air_doctrine
+			cat_strategic_destruction
+			cat_battlefield_support
+			cat_operational_integrity
+		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 3
-				tag = GER
+				add = 20
+				has_war = yes
 			}
-		}		
+		}
 	}
 	
 	etax_air_firepower_2 = {
@@ -513,11 +568,11 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1941
 			
-		tac_bomber = {
-			air_bombing = 0.15
-		}
-		air_strategic_bomber_bombing_factor = 0.25
+		air_strategic_bomber_bombing_factor = 0.15
+		
+		
 		
 		folder = {
 			name = etax_folder
@@ -525,17 +580,19 @@ technologies = {
 		}
 			
 		categories = {
-			industry
-		}	
+			air_doctrine
+			cat_strategic_destruction
+			cat_battlefield_support
+			cat_operational_integrity
+		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 3
-				tag = GER
+				add = 20
+				has_war = yes
 			}
-		}			
+		}
 	}
 	
 	etax_air_defense = {
@@ -549,9 +606,10 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1938
 		
-		air_escort_efficiency = 0.2
-		air_intercept_efficiency = 0.2
+		air_escort_efficiency = 0.1
+		air_intercept_efficiency = 0.1
 		
 		folder = {
 			name = etax_folder
@@ -559,17 +617,19 @@ technologies = {
 		}
 			
 		categories = {
-			industry
-		}	
+			air_doctrine
+			cat_strategic_destruction
+			cat_battlefield_support
+			cat_operational_integrity
+		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 3
-				tag = ENG
+				add = 20
+				has_war = yes
 			}
-		}			
+		}
 	}
 	
 	etax_air_defense_2 = {
@@ -581,12 +641,17 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1941
 		
 		category_fighter = {
-				air_agility = 0.15
+				air_agility = 0.1
+				air_attack = 0.05
+				air_defence = 0.05
 			}
 		category_heavy_fighter = {
-				air_agility = 0.15
+				air_agility = 0.1
+				air_attack = 0.05
+				air_defence = 0.05
 			}
 		
 		folder = {
@@ -595,77 +660,27 @@ technologies = {
 		}
 			
 		categories = {
-			industry
-		}	
+			air_doctrine
+			cat_strategic_destruction
+			cat_battlefield_support
+			cat_operational_integrity
+		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 3
-				tag = ENG
+				add = 20
+				has_war = yes
 			}
-		}		
+		}
 	}
 	
-###------> Means and Ends <><> <><> <><> <><> <><>
+###------> Ends <><> <><> <><> <><> <><>
 
-	etax_the_means = {
-	
-		xor = { etax_the_ends }
-		
-		path = {
-			leads_to_tech = etax_unity
-			research_cost_coeff = 1
-		}
-		
-		path = {
-			leads_to_tech = etax_business_interests 
-			research_cost_coeff = 1
-		}
-		
-		doctrine = yes	
-		research_cost = 3.0
-		
-		category_all_infantry = {
-			default_morale = 0.15
-		}
-		
-		folder = {
-			name = etax_folder
-			position = { x = -6 y = 2 }
-		}
-			
-		categories = {
-			industry
-		}	
-
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-			
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 2
-				tag = FRA
-			}
-		}		
-	}
-	
 	etax_the_ends = {
-	
-		xor = { etax_the_means }
 		
 		path = {
-			leads_to_tech = etax_glory
+			leads_to_tech = etax_business_interests
 			research_cost_coeff = 1
 		}
 		
@@ -676,100 +691,43 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1936
 		
-		enemy_partisan_effect = -0.25
-  		foreign_subversive_activites = -0.1
+		global_building_slots_factor = 0.10
 		
 		folder = {
 			name = etax_folder
-			position = { x = 6 y = 2 }
+			position = { x = -6 y = 2 }
 		}
 			
 		categories = {
 			industry
-		}	
+		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 2
-				tag = SOV
+				add = 20
+				has_war = yes
 			}
-			
-			modifier = {
-				factor = 2
-				tag = GER
-			}
-			
-			modifier = {
-				factor = 1
-				tag = ITA
-			}
-			
-			modifier = {
-				factor = 2
-				tag = JAP
-			}
-		}			
+		}
 	}
-	
-###------> Means Branch <><> <><> <><> <><> <><>
 
-	etax_unity = {
-	
-		xor = { etax_business_interests }
-		
-		path = {
-			leads_to_tech = etax_broad_support 
-			research_cost_coeff = 1
-		}
-		
-		doctrine = yes	
-		research_cost = 3.0
-		
-		modifier = {
-				attrition = -0.15
-		}
-		
-		folder = {
-			name = etax_folder
-			position = { x = -4 y = 4 }
-		}
-			
-		categories = {
-			industry
-		}	
+###------> Business Interests Branch <><> <><> <><> <><> <><>
 
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				tag = ENG
-			}
-			
-			modifier = {
-				factor = 2
-				tag = FRA
-			}
-			
-		}		
-	}
-	
 	etax_business_interests = {
 	
-		xor = { etax_unity }
+		xor = { etax_desperation }
 		
 		path = {
 			leads_to_tech = etax_cost_plus 
 			research_cost_coeff = 1
 		}
-		
-		doctrine = yes	
+			
 		research_cost = 3.0
+		start_year = 1938
 		
-		global_building_slots_factor = 0.20
+		line_change_production_efficiency_factor = 0.1
 		
 		folder = {
 			name = etax_folder
@@ -778,139 +736,49 @@ technologies = {
 			
 		categories = {
 			industry
-		}	
+		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 2
-				tag = USA
+				add = 20
+				has_war = yes
 			}
-		}		
+		}
 	}
-	
-###------> Ends Branch <><> <><> <><> <><> <><>
 
-	etax_glory = {
-	
-		xor = { etax_desperation }
+	etax_cost_plus = {
 		
 		path = {
-			leads_to_tech = etax_purity 
+			leads_to_tech = etax_production_in_depth 
 			research_cost_coeff = 1
 		}
-		
-		doctrine = yes	
+			
 		research_cost = 3.0
+		start_year = 1940
 		
-		category_army = {
-			breakthrough = 0.15
-		}
+		industrial_capacity_factory = 0.1
 		
 		folder = {
 			name = etax_folder
-			position = { x = 8 y = 4 }
+			position = { x = -8 y = 6 }
 		}
 			
 		categories = {
 			industry
-		}	
+		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			
 			modifier = {
-				factor = 2
-				tag = GER
+				add = 20
+				has_war = yes
 			}
-			
-			modifier = {
-				factor = 2
-				tag = JAP
-			}
-		}		
+		}
 	}
 	
-	etax_desperation = {
-	
-		xor = { etax_glory }
-		
-		path = {
-			leads_to_tech = etax_no_qa 
-			research_cost_coeff = 1
-		}
-		
-		doctrine = yes	
-		research_cost = 3.0
-		
-		supply_consumption_factor = -0.15
-		
-		folder = {
-			name = etax_folder
-			position = { x = 4 y = 4 }
-		}
-			
-		categories = {
-			industry
-		}	
-
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				tag = SOV
-			}
-			
-			modifier = {
-				factor = 2
-				tag = ITA
-			}
-		}		
-	}
-	
-###------> Glory Branch <><> <><> <><> <><> <><>
-
-	etax_purity = {
-		
-		path = {
-			leads_to_tech = etax_great_leap 
-			research_cost_coeff = 1
-		}
-		
-		doctrine = yes	
-		research_cost = 3.0
-		
-		category_all_infantry = {
-			max_organisation = 10
-		}	
-		
-		folder = {
-			name = etax_folder
-			position = { x = 8 y = 6 }
-		}
-			
-		categories = {
-			industry
-		}	
-
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				tag = GER
-			}
-			
-			modifier = {
-				factor = 2
-				tag = JAP
-			}
-		}		
-	}
-	
-	etax_great_leap = {
+	etax_production_in_depth = {
 		
 		path = {
 			leads_to_tech = etax_practical_projects 
@@ -921,37 +789,65 @@ technologies = {
 			leads_to_tech = etax_grand_projects
 			research_cost_coeff = 1
 		}
-		
-		doctrine = yes	
+			
 		research_cost = 3.0
+		start_year = 1941
 		
-		research_speed_factor = 0.025
+		local_resources_factor = 0.1
 		
 		folder = {
 			name = etax_folder
-			position = { x = 8 y = 8 }
+			position = { x = -8 y = 8 }
 		}
 			
 		categories = {
 			industry
-		}	
+		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			
 			modifier = {
-				factor = 2
-				tag = GER
+				add = 20
+				has_war = yes
 			}
-			
-			modifier = {
-				factor = 2
-				tag = JAP
-			}
-		}	
+		}
 	}
-
+	
 ###------> Desperation Branch <><> <><> <><> <><> <><>
+		
+	etax_desperation = {
+	
+		xor = { etax_business_interests }
+		
+		path = {
+			leads_to_tech = etax_no_qa 
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes
+		research_cost = 3.0
+		start_year = 1938
+				
+  		consumer_goods_factor = -0.05
+		
+		folder = {
+			name = etax_folder
+			position = { x = -4 y = 4 }
+		}
+			
+		categories = {
+			industry
+		}
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				add = 20
+				has_war = yes
+			}
+		}
+	}
 
 	etax_no_qa = {
 		
@@ -959,34 +855,29 @@ technologies = {
 			leads_to_tech = etax_expendable_labor 
 			research_cost_coeff = 1
 		}
-		
-		doctrine = yes	
+			
 		research_cost = 3.0
+		start_year = 1940
 		
-		industrial_capacity_factory = 0.10
+		production_factory_start_efficiency_factor = 0.1
 		
 		folder = {
 			name = etax_folder
-			position = { x = 4 y = 6 }
+			position = { x = -4 y = 6 }
 		}
 			
 		categories = {
 			industry
-		}	
+		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			
 			modifier = {
-				factor = 2
-				tag = SOV
+				add = 20
+				has_war = yes
 			}
-			
-			modifier = {
-				factor = 1
-				tag = ITA
-			}
-		}		
+		}
 	}
 	
 	etax_expendable_labor = {
@@ -1003,34 +894,233 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1941
 		
-		production_speed_buildings_factor = 0.15
+		production_speed_buildings_factor = 0.075
 		
 		folder = {
 			name = etax_folder
-			position = { x = 4 y = 8 }
+			position = { x = -4 y = 8 }
 		}
 			
 		categories = {
 			industry
-		}	
+		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
+			modifier = {
+				add = 20
+				has_war = yes
+			}
+		}
+	}
+	
+###------> Means branch <><> <><> <><> <><> <><>
+
+	etax_the_means = {
+		
+		path = {
+			leads_to_tech = etax_unity
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = etax_glory
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 3.0
+		start_year = 1936
+		
+		category_all_infantry = {
+			default_morale = 0.025
+		}
+		
+		folder = {
+			name = etax_folder
+			 position = { x = 6 y = 2 }
+		}
+			
+		categories = {
+			land_doctrine			
+			cat_mobile_warfare
+			cat_mass_assault
+			cat_grand_battle_plan
+			cat_superior_firepower
+		}
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				add = 20
+				has_war = yes
+			}
+		}
+	}
+	
+###------> Glory Branch <><> <><> <><> <><> <><>
+
+	etax_glory = {
+	
+		xor = { etax_unity }
+		
+		path = {
+			leads_to_tech = etax_purity 
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 3.0
+		start_year = 1938
+		
+		category_army = {
+			breakthrough = 0.075
+		}
+		category_all_armor = {
+			fuel_consumption_factor = 0.05
+			supply_consumption_factor= 0.05
+		}
+		
+		folder = {
+			name = etax_folder
+			position = { x = 8 y = 4 }
+		}
+			
+		categories = {
+			land_doctrine			
+			cat_mobile_warfare
+			cat_mass_assault
+			cat_grand_battle_plan
+			cat_superior_firepower
+		}
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				add = 20
+				has_war = yes
+			}
+		}
+	}
+
+	etax_purity = {
+	
+		
+		
+		path = {
+			leads_to_tech = etax_great_leap 
+			research_cost_coeff = 1
+		}
+		
+		doctrine = yes	
+		research_cost = 3.0
+		start_year = 1940
+		
+		category_all_infantry = {
+			max_organisation = 5
+
+		}
+		training_time_army_factor = 0.075
+		
+		folder = {
+			name = etax_folder
+			position = { x = 8 y = 6 }
+		}
+			
+		categories = {
+			land_doctrine			
+			cat_mobile_warfare
+			cat_mass_assault
+			cat_grand_battle_plan
+			cat_superior_firepower
+		}
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				add = 20
+				has_war = yes
+			}
+		}
+	}
+	
+	etax_great_leap = {
+		
+		path = {
+			leads_to_tech = etax_practical_projects 
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = etax_grand_projects
+			research_cost_coeff = 1
+		}
+			
+		research_cost = 3.0
+		start_year = 1941
+		
+		research_speed_factor = 0.05
+		
+		folder = {
+			name = etax_folder
+			position = { x = 8 y = 8 }
+		}
+			
+		categories = {
+			electronics
+		}
+
+		ai_will_do = {
+			factor = 5
 			
 			modifier = {
-				factor = 2
-				tag = GER
+				add = 20
+				has_war = yes
 			}
-			
-			modifier = {
-				factor = 1
-				tag = ITA
-			}
-		}		
+		}
 	}
 
 ###------> Unity Branch <><> <><> <><> <><> <><>
+
+	etax_unity = {
+	
+		xor = { etax_glory }
+		
+		path = {
+			leads_to_tech = etax_broad_support 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 3.0
+		start_year = 1938
+		
+		supply_consumption_factor= -0.10
+		
+		
+		
+		folder = {
+			name = etax_folder
+			position = { x = 4 y = 4 }
+		}
+			
+		categories = {
+			land_doctrine			
+			cat_mobile_warfare
+			cat_mass_assault
+			cat_grand_battle_plan
+			cat_superior_firepower
+		}
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				add = 20
+				has_war = yes
+			}
+		}
+	}
 
 	etax_broad_support = {
 		
@@ -1041,31 +1131,32 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1940
 		
-		land_reinforce_rate = 0.15
+		attrition = -0.10
+		land_reinforce_rate = 0.015
 		
 		folder = {
 			name = etax_folder
-			position = { x = -4 y = 6 }
+			position = { x = 4 y = 6 }
 		}
 			
 		categories = {
-			industry
-		}	
+			land_doctrine			
+			cat_mobile_warfare
+			cat_mass_assault
+			cat_grand_battle_plan
+			cat_superior_firepower
+		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			
 			modifier = {
-				factor = 2
-				tag = ENG
+				add = 20
+				has_war = yes
 			}
-			
-			modifier = {
-				factor = 2
-				tag = FRA
-			}
-		}			
+		}
 	}
 	
 	etax_inclusive_science = {
@@ -1080,109 +1171,32 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
 		research_cost = 3.0
-		
-		research_speed_factor = 0.025
+		start_year = 1941
+		research_speed_factor = 0.05
 		
 		folder = {
 			name = etax_folder
-			position = { x = -4 y = 8 }
+			position = { x = 4 y = 8 }
 		}
 			
 		categories = {
-			industry
-		}	
+			electronics
+		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			
 			modifier = {
-				factor = 2
-				tag = ENG
+				add = 20
+				has_war = yes
 			}
-			
-			modifier = {
-				factor = 2
-				tag = FRA
-			}
-		}		
-	}
-
-###------> Business Interests Branch <><> <><> <><> <><> <><>
-
-	etax_cost_plus = {
-		
-		path = {
-			leads_to_tech = etax_production_in_depth 
-			research_cost_coeff = 1
 		}
-		
-		doctrine = yes	
-		research_cost = 3.0
-		
-		line_change_production_efficiency_factor = 0.2
-		
-		folder = {
-			name = etax_folder
-			position = { x = -8 y = 6 }
-		}
-			
-		categories = {
-			industry
-		}	
-
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-		}	
-	}
-	
-	etax_production_in_depth = {
-		
-		path = {
-			leads_to_tech = etax_practical_projects 
-			research_cost_coeff = 1
-		}
-		
-		path = {
-			leads_to_tech = etax_grand_projects
-			research_cost_coeff = 1
-		}
-		
-		doctrine = yes	
-		research_cost = 3.0
-		
-		local_resources_factor = 0.15
-		
-		folder = {
-			name = etax_folder
-			position = { x = -8 y = 8 }
-		}
-			
-		categories = {
-			industry
-		}	
-
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-		}		
 	}
 	
 ###------> Projects Branch <><> <><> <><> <><> <><>
 
 	etax_practical_projects = {
-		
-		xor = { etax_grand_projects }
 		
 		path = {
 			leads_to_tech = etax_great_works 
@@ -1193,46 +1207,33 @@ technologies = {
 			leads_to_tech = etax_quality 
 			research_cost_coeff = 1
 		}
-		
-		doctrine = yes	
+			
 		research_cost = 3.0
+		start_year = 1942
 		
 		production_speed_buildings_factor = 0.05
 		local_resources_factor = 0.05
 		
 		folder = {
 			name = etax_folder
-			position = { x = 6 y = 10 }
+			position = { x = -6 y = 10 }
 		}
 			
 		categories = {
 			industry
-		}	
+		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 2
-				tag = ENG
+				add = 20
+				has_war = yes
 			}
-			
-			modifier = {
-				factor = 2
-				tag = FRA
-			}
-			
-			modifier = {
-				factor = 2
-				tag = USA
-			}
-			
-		}		
+		}
 	}
 	
 	etax_grand_projects = {
-		
-		xor = { etax_practical_projects }
+	
 		
 		path = {
 			leads_to_tech = etax_super_soldiers
@@ -1244,52 +1245,43 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		doctrine = yes	
+		doctrine = yes
 		research_cost = 3.0
+		start_year = 1942
 		
+		rocket_artillery = {
+			soft_attack = 0.15
+		}
 		motorized_rocket_brigade = {
 			soft_attack = 0.10
 		}
 		rocket_artillery_brigade = {
-			soft_attack = 0.15
+			soft_attack = 0.10
 		}
-		rocket_artillery = {
-			soft_attack = 0.2
+		mot_rocket_artillery_brigade = {
+			soft_attack = 0.10
 		}
 		
 		folder = {
 			name = etax_folder
-			position = { x = -6 y = 10 }
+			position = { x = 6 y = 10 }
 		}
 			
 		categories = {
-			industry
-		}	
+			land_doctrine			
+			cat_mobile_warfare
+			cat_mass_assault
+			cat_grand_battle_plan
+			cat_superior_firepower
+		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 2
-				tag = SOV
+				add = 20
+				has_war = yes
 			}
-			
-			modifier = {
-				factor = 2
-				tag = GER
-			}
-			
-			modifier = {
-				factor = 2
-				tag = JAP
-			}
-			
-			modifier = {
-				factor = 2
-				tag = ITA
-			}
-			
-		}		
+		}
 	}
 	
 ###------> Practical Branch <><> <><> <><> <><> <><>
@@ -1297,65 +1289,90 @@ technologies = {
 	etax_great_works = {
 		
 		xor = { etax_quality }
-		
-		doctrine = yes	
+			
 		research_cost = 3.0
+		start_year = 1943
 		
 		folder = {
 			name = etax_folder
-			position = { x = 4 y = 12 }
+			position = { x = -8 y = 12 }
 		}
 			
 		categories = {
 			industry
-		}	
+		}
 		
-		industrial_capacity_factory = 0.15
+		industrial_capacity_factory = 0.10
 
 		ai_will_do = {
-			factor = 1
+			factor = 5
 			
 			modifier = {
-				factor = 2
-				tag = USA
-			}	
+				add = 20
+				has_war = yes
+			}
+			
+			modifier = {
+				factor = 0
+				OR = {
+					tag = ENG
+					tag = FRA
+				}
+			}
 		}
 	}
 	
 	etax_quality = {
 		
 		xor = { etax_great_works }
-		
-		doctrine = yes	
+			
 		research_cost = 3.0
+		start_year = 1943
 		
 		category_all_armor = {
-			reliability_factor = 0.15
+			reliability_factor = 0.10
+		}
+		
+		category_line_artillery = {
+			reliability_factor = 0.10
+		}
+		
+		category_fighter = {
+			reliability_factor = 0.10
+		}
+		
+		category_heavy_fighter = {
+			reliability_factor = 0.10
+		}
+		
+		category_cas = {
+			reliability_factor = 0.10
+		}
+		
+		category_nav_bomber = {
+			reliability_factor = 0.10
+		}
+		
+		category_strat_bomber = {
+			reliability_factor = 0.10
 		}
 		
 		folder = {
 			name = etax_folder
-			position = { x = 8 y = 12 }
+			position = { x = -4 y = 12 }
 		}
 			
 		categories = {
 			industry
-		}	
+		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 2
-				tag = ENG
+				add = 20
+				has_war = yes
 			}
-			
-			modifier = {
-				factor = 2
-				tag = FRA
-			}
-			
-		}	
+		}
 	}
 
 ###------> Grand Branch <><> <><> <><> <><> <><>
@@ -1366,31 +1383,25 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1943
 		
 		research_speed_factor = 0.05
 		
 		folder = {
 			name = etax_folder
-			position = { x = -4 y = 12 }
+			position = { x = 8 y = 12 }
 		}
 			
 		categories = {
-			industry
-		}	
+			nuclear
+		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 2
-				tag = SOV
+				add = 20
+				has_war = yes
 			}
-			
-			modifier = {
-				factor = 2
-				tag = GER
-			}
-			
 		}
 	}
 	
@@ -1400,32 +1411,31 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1943
 		
 		army_speed_factor = 0.075
 		
 		folder = {
 			name = etax_folder
-			position = { x = -8 y = 12 }
+			position = { x = 4 y = 12 }
 		}
 			
 		categories = {
-			industry
-		}	
+			land_doctrine			
+			cat_mobile_warfare
+			cat_mass_assault
+			cat_grand_battle_plan
+			cat_superior_firepower
+		}
+		
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 2
-				tag = JAP
+				add = 20
+				has_war = yes
 			}
-			
-			modifier = {
-				factor = 2
-				tag = ITA
-			}
-			
-		}	
+		}
 	}
 	
 ###------> Moonshot/Seashot Branch <><> <><> <><> <><> <><>
@@ -1434,14 +1444,16 @@ technologies = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1943
 		
-		air_superiority_efficiency = 0.3
+		air_accidents_factor = -0.1
+		army_bonus_air_superiority_factor = 0.1
 		tac_bomber = {
-			air_bombing = 0.25
+			air_bombing = 0.10
 		}
 		
 		dependencies = {
-			etax_grand_projects = 1
+			etax_practical_projects = 1
 		}
 		
 		folder = {
@@ -1450,33 +1462,35 @@ technologies = {
 		}
 			
 		categories = {
-			industry
-		}	
+			air_doctrine
+			cat_strategic_destruction
+			cat_battlefield_support
+			cat_operational_integrity
+		}
 
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 3
-				tag = GER
+				add = 20
+				has_war = yes
 			}
-
-		}	
+		}
 	}
 	
 	etax_seashot = {
 		
 		doctrine = yes	
 		research_cost = 3.0
+		start_year = 1943
 		
 		modifier = {
-			naval_strike_targetting_factor = 0.15
+			naval_strike_targetting_factor = 0.1
 		}
 		
 		navy_capital_ship_attack_factor = 0.1
 		
 		dependencies = {
-			etax_practical_projects = 1
+			etax_grand_projects = 1
 		}
 		
 		folder = {
@@ -1485,17 +1499,19 @@ technologies = {
 		}
 			
 		categories = {
-			industry
-		}	
+			naval_doctrine
+			cat_fleet_in_being
+			cat_trade_interdiction
+			cat_base_strike
+		}
+
 		ai_will_do = {
-			factor = 1
-			
+			factor = 5
 			modifier = {
-				factor = 3
-				tag = USA
+				add = 20
+				has_war = yes
 			}
-			
-		}		
+		}
 	}
 	
 ###------> X <><> <><> <><> <><> <><>

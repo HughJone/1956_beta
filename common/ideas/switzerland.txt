@@ -20,6 +20,7 @@ ideas = {
 			}
 			
 			modifier = {
+				mobilization_speed = 0.0125
 				conscription = 0.0125			
 			}
 			
@@ -31,6 +32,17 @@ ideas = {
 		neutral_influence = {
 			
 			picture = generic_neutrality_drift_bonus
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = neutrality
+				}
+				
+			}
 			
 			modifier = {
 				neutrality_drift = 0.1
@@ -191,6 +203,17 @@ ideas = {
 			}
 			
 			picture = communism_drift_bonus
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = communism
+				}
+				
+			}
 			
 			modifier = {
 				communism_drift = 0.15
@@ -207,6 +230,17 @@ ideas = {
 			}
 			
 			picture = generic_production_bonus
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = democratic
+				}
+				
+			}
 			
 			modifier = {
 				democratic_drift = 0.1
@@ -226,6 +260,15 @@ ideas = {
 			cancel_if_invalid = yes
 			
 			picture = generic_fascism_banned
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				has_government = fascism
+				
+			}
 			
 			modifier = {
 				fascism_drift = -0.05
@@ -249,6 +292,15 @@ ideas = {
 			cancel_if_invalid = yes
 			
 			picture = FRA_matignon_agreements
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				has_government = communism
+				
+			}
 			
 			modifier = {				
 				communism_drift = -0.05
@@ -272,6 +324,18 @@ ideas = {
 				NOT = { has_government = communism }
 			}
 			cancel_if_invalid = yes
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				OR = {
+					has_government = communism
+					has_government = fascism
+				}
+				
+			}
 			
 			picture = FRA_matignon_agreements
 			
@@ -298,7 +362,6 @@ ideas = {
 			
 			modifier = {
 				consumer_goods_factor = -0.05
-				production_speed_buildings_factor = 0.1
 				global_building_slots_factor = 0.1
 			}
 		}
@@ -341,6 +404,9 @@ ideas = {
 			modifier = {
 				mobilization_speed = 0.50
 				conscription_factor = 0.50
+				political_power_factor = -0.50
+				political_power_cost = 0.25
+				conscription = 0.005
 			}
 		}
 
@@ -367,6 +433,17 @@ ideas = {
 			}
 			
 			picture = generic_fascism_drift_bonus
+
+			cancel = {
+				OR = {
+					is_subject = yes
+					is_puppet = yes
+				}
+				NOT = {
+					has_government = fascism
+				}
+				
+			}
 			
 			modifier = {
 				fascism_drift = 0.1
@@ -1201,6 +1278,10 @@ ideas = {
 				original_tag = SWI
 			}
 			
+			ai_will_do = {
+				factor = 4
+			}
+			
 			traits = { silent_workhorse }
 		}
 
@@ -1253,7 +1334,7 @@ ideas = {
 			picture = eugen_bircher
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -1268,7 +1349,7 @@ ideas = {
 			picture = generic_air_europe_1
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -1289,7 +1370,7 @@ ideas = {
 			picture = generic_navy_europe_1
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { merchant_mariner }
@@ -1304,7 +1385,7 @@ ideas = {
 			picture = generic_political_advisor_europe_3
 			
 			research_bonus = {
-				nuclear = 0.1
+				nuclear = 0.15
 			}
 			
 			traits = { nuclear_scientist }
@@ -1533,7 +1614,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			equipment_bonus = {
@@ -1554,7 +1635,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			equipment_bonus = {
@@ -1580,7 +1661,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { light_aircraft_manufacturer }
@@ -1602,7 +1683,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { medium_aircraft_manufacturer }
@@ -1624,7 +1705,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { heavy_aircraft_manufacturer }
@@ -1657,7 +1738,7 @@ ideas = {
 			cost = 75
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			equipment_bonus = {		
@@ -1684,7 +1765,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.15
 			}
 			
 			equipment_bonus = {
@@ -1709,7 +1790,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				artillery = 0.10
+				artillery = 0.15
 			}
 			
 			equipment_bonus = {
@@ -1743,7 +1824,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				motorized_equipment = 0.10
+				motorized_equipment = 0.15
 			}
 			
 			equipment_bonus = {
@@ -1774,7 +1855,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				industry = 0.1
+				industry = 0.15
 			}
 			
 			traits = { industrial_concern }
@@ -1793,8 +1874,8 @@ ideas = {
 			}
 			
 			research_bonus = {
-				industry = 0.05
-				synth_resources = 0.1
+				industry = 0.10
+				synth_resources = 0.155
 			}
 			
 			traits = { refinery_concern }
@@ -1813,7 +1894,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				electronics = 0.1
+				electronics = 0.12
 			}
 			
 			modifier = {

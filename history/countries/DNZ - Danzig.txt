@@ -67,55 +67,26 @@ add_opinion_modifier = { target = POL modifier = POL_Anti_Polish_Sentiment }
 set_convoys = 10
 
 set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 16
-			}
-
-			fascism = {
-				popularity = 66.6
-			}
-			
-			communism = {
-				popularity = 0.4
-			}
-			
-			neutrality = { 
-				popularity = 17
-			}
-		}
-	
 	ruling_party = fascism
 	last_election = "1934.11.23"
 	election_frequency = 57
 	elections_allowed = yes
 }
+set_popularities = {
+	democratic = 16
+	fascism = 66.6
+	communism = 0.4
+	neutrality = 17
+}
 
 1939.1.1 = {
-	set_politics = {
 
-		parties = {
-			democratic = { 
-				popularity = 3
-			}
-
-			fascism = {
-				popularity = 80
-			}
-			
-			communism = {
-				popularity = 0
-			}
-			
-			neutrality = { 
-				popularity = 17
-			}
-		}
-		
-		
-	}
-	
+}
+set_popularities = {
+	democratic = 3
+	fascism = 80
+	communism = 0
+	neutrality = 17
 }
 
 create_country_leader = {
@@ -125,7 +96,7 @@ create_country_leader = {
 	expire = "1939.11.23"
 	ideology = nazism
 	traits = {
-		#
+		likes_germany
 	}
 }
 
@@ -154,7 +125,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Anton Plenikowski"
 	desc = "POLITICS_ANTON_PLENIKOWSKI_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+	picture = "r56_portrait_DNZ_Anton_Plenikowski.dds"
 	expire = "1965.1.1"
 	ideology = stalinism
 	traits = {
@@ -167,4 +138,8 @@ create_corps_commander = {
 	portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 	traits = {  urban_assault_specialist }
 	skill = 1
+    attack_skill = 1
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
 }

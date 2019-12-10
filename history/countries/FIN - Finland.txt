@@ -12,7 +12,7 @@ if = {
 set_convoys = 5
 set_war_support = 0.5
 set_stability = 0.60 
-set_research_slots = 3
+set_research_slots = 4
 
 add_ideas = {
 	limited_conscription
@@ -25,6 +25,8 @@ set_technology = {
 	camo = 1
 	gw_armored_car = 1
 	winter_clothes_gw = 1
+	steel_production_1 = 1
+	jaegers = 1
 	
 	infantry_weapons = 1
 	infantry_weapons1 = 1
@@ -53,6 +55,30 @@ if = {
 		basic_battery = 1
 		basic_secondary_battery = 1
 		coastal_defense_ships = 1
+	}
+}
+
+#Finnish Abandonment/Helps Prevents Winter War from turning into World War 2.1 
+IF = {
+	limit = {
+		AND = {
+		FIN = { is_ai = yes }
+		is_historical_focus_on = yes
+		}	
+	}
+	ENG = {
+	add_ai_strategy = {
+		type = befriend
+		id = "FIN"			
+		value = -25 
+		}
+	}
+	FRA = {
+	add_ai_strategy = {
+		type = befriend
+		id = "FIN"			
+		value = -25 
+		}
 	}
 }
 
@@ -125,57 +151,31 @@ if = {
 }
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 40
-		}
-
-		fascism = {
-			popularity = 9
-		}
-		
-		communism = {
-			popularity = 0
-		}
-
-		neutrality = {
-			popularity = 51
-		}
-	}
-	
 	ruling_party = democratic
 	last_election = "1931.1.15"
 	election_frequency = 72
 	elections_allowed = yes
 }
+set_popularities = {
+	democratic = 65
+	fascism = 6
+	communism = 0
+	neutrality = 29
+}
 
 1939.1.1 = {
 	set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 10
-			}
-
-			fascism = {
-				popularity = 10
-			}
-			
-			communism = {
-				popularity = 1
-			}
-
-			neutrality = {
-				popularity = 79
-			}
-		}
-		
 		ruling_party = neutrality
 		last_election = "1939.7.1"
 		election_frequency = 36
 		elections_allowed = yes
 	}
+	set_popularities = {
+		democratic = 25
+		fascism = 10
+		communism = 1
+		neutrality = 64
+	}	
 }
 create_country_leader = {
 	name = "Pehr Evind Svinhufvud"
@@ -191,7 +191,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Aimo Aaltonen"
 	desc = "POLITICS_AIMO_AALTONEN_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+	picture = "gfx/leaders/FIN/r56_portrait_FIN_aimo_aaltonen.dds"
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
@@ -202,7 +202,7 @@ create_country_leader = {
 create_country_leader = {
 	name = "Vilho Annala"
 	desc = "POLITICS_VILHO_ANNALA_DESC"
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+	picture = "gfx/leaders/FIN/r56_portrait_FIN_vilho_annala.dds"
 	expire = "1965.1.1"
 	ideology = fascism_ideology
 	traits = {
@@ -249,20 +249,20 @@ create_corps_commander = { #move as an artillerist in the high command instead?
 	skill = 3
     attack_skill = 2
     defense_skill = 4
-    planning_skill = 2
+    planning_skill = 1
     logistics_skill = 2
 }
 
 create_field_marshal = {
-	name = "C.G.E. Mannerheim"
-	portrait_path = "gfx/leaders/FIN/r56_portrait_FIN_CGE_mannerheim.dds"
-	id = 999
-	traits = { trait_cautious defensive_doctrine old_guard }
+	name = "Carl Gustaf Emil Mannerheim"
+	picture = "portrait_fin_carl_mannerheim.dds"
+	traits = { inflexible_strategist war_hero trait_cautious defensive_doctrine trickster winter_specialist }
 	skill = 5
-    attack_skill = 2
-    defense_skill = 5
-    planning_skill = 3
-    logistics_skill = 6
+	id = 58
+	attack_skill = 3
+	defense_skill = 6
+	planning_skill = 4
+	logistics_skill = 3
 }
 #create_field_marshal = {
 #	name = "Hugo Österman"

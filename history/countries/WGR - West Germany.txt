@@ -1,7 +1,7 @@
-﻿capital = 64
+﻿capital = 51
 
 
-set_research_slots = 4
+set_research_slots = 5
 set_convoys = 50
 set_stability = 0.7
 set_war_support = 0.1
@@ -121,27 +121,16 @@ set_technology = {
 }
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 80
-		}
-
-		fascism = {
-			popularity = 10
-		}
-		
-		communism = {
-			popularity = 10
-			banned = no #default is no
-		}
-	}
-	
 	ruling_party = democratic
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
+}
 
+set_popularities = {
+	democratic = 80
+	fascism = 10
+	communism = 10
 }
 
 
@@ -151,7 +140,7 @@ add_ideas = {
 create_country_leader = {
 	name = "Ernst Rener"
 	desc = ""
-	picture = "gfx/leaders/WGR/Portrait_WGR_ernst_rener.dds"
+	picture = "gfx/leaders/GER/Portrait_Germany_Generic_land_5.dds"
 	expire = "1965.1.1"
 	ideology = nazism
 	traits = {

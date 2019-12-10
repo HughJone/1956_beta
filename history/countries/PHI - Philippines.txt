@@ -6,7 +6,7 @@ oob = "PHI_1936"
 set_convoys = 5
 set_war_support = 0.4
 set_stability = 0.60 
-set_research_slots = 3
+set_research_slots = 4
 
 set_technology = {
 
@@ -25,10 +25,6 @@ set_technology = {
     tech_recon = 1
     gwtank = 1
     transport = 1
-    early_destroyer = 1
-	early_light_cruiser = 1
-    early_battleship = 1
-	early_battlecruiser = 1
 }
 
 1939.1.1 = {
@@ -90,32 +86,21 @@ set_technology = {
 }
 
 set_politics = {
-
-	parties = {
-		democratic = {
-			popularity = 82
-		}
-
-		fascism = {
-			popularity = 9
-		}
-
-		communism = {
-			popularity = 9
-			#banned = no #default is no
-		}
-	}
-
 	ruling_party = democratic
 	last_election = "1935.9.15"
 	election_frequency = 72
 	elections_allowed = yes
 }
+set_popularities = {
+	democratic = 82
+	fascism = 9
+	communism = 9
+}
 
 create_country_leader = {
 	name = "Manuel Luis Quezón"
 	desc = "POLITICS_MANUEL_LUIS_QUEZON_DESC"
-	picture = "gfx/leaders/PHI/r56_portrait_PHI_Manuel_Luis_Quezon.dds"
+	picture = "gfx/leaders/PHI/Portrait_Philippines_Manuel_Luis_Quezon.dds"
 	expire = "1965.1.1"
 	ideology = conservatism
 	traits = {
@@ -128,18 +113,20 @@ create_country_leader = {
 	desc = "POLITICS_ANDRES_ROXAS_SORIANO_DESC"
 	picture = "gfx/leaders/PHI/r56_portrait_PHI_Andres_Roxas_Soriano.dds"
 	expire = "1965.1.1"
-	ideology = nazism
+	ideology = falangism
 	traits = {
 		#
 	}
 }
+#another falangist: Enrique Zóbel de Ayala-> hispanist route
+#José Paciano Laurel y García chief pro japanese gov.
 
 create_country_leader = {
-	name = "Pedro P. Baguisa"
-	desc = "POLITICS_PEDRO_BAGUISA_DESC"
-	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
+	name = "Crisanto Evangelista"
+	desc = ""
+	picture = "gfx/leaders/PHI/r56_portrait_Philippines_Crisanto_Evangelista.dds"
 	expire = "1965.1.1"
-	ideology = marxism
+	ideology = leninism
 	traits = {
 		#
 	}
@@ -147,26 +134,15 @@ create_country_leader = {
 
 1939.1.1 = {
 	set_politics = {
-
-		parties = {
-			democratic = {
-				popularity = 82
-			}
-
-			fascism = {
-				popularity = 9
-			}
-
-			communism = {
-				popularity = 9
-				#banned = no #default is no
-			}
-		}
-
 		ruling_party = democratic
 		last_election = "1935.9.15"
 		election_frequency = 72
 		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 82
+		fascism = 9
+		communism = 9
 	}
 }
 

@@ -70,26 +70,13 @@ set_convoys = 10
 }
 
 set_politics = {
-
-	parties = {
-		democratic = { 
-			popularity = 100
-		}
-
-		fascism = {
-			popularity = 0
-		}
-		
-		communism = {
-			popularity = 0
-			#banned = no #default is no
-		}
-	}
-	
 	ruling_party = democratic
 	last_election = "1932.6.5"
 	election_frequency = 48
 	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 100
 }
 
 create_country_leader = {
@@ -103,28 +90,37 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Cristóbal Ladislao"
+	desc = "POLITICS_CRISTOBAL_LADISLAO_DESC"
+	picture = "gfx/leaders/PAN/r56_Portrait_PAN_Cristobal_Ladislao.dds"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Arnulfo Arias Madrid"
+	desc = "POLITICS_ARNULFO_ARIAS_MADRID_DESC"
+	picture = "gfx/leaders/PAN/r56_idea_PAN_Arnulfo_Arias_Madrid.tga"
+	expire = "1965.1.1"
+	ideology = rexism  #Nationalist and anti-communist
+	traits = {
+		#
+	}
+}
+
 1939.1.1 = {
-	set_politics = {
-
-		parties = {
-			democratic = { 
-				popularity = 100
-			}
-
-			fascism = {
-				popularity = 0
-			}
-			
-			communism = {
-				popularity = 0
-				#banned = no #default is no
-			}
-		}
-		
+	set_politics = {		
 		ruling_party = democratic
 		last_election = "1936.6.7"
 		election_frequency = 48
 		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 100
 	}
 
 	create_country_leader = {
