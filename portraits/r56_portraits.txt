@@ -4,18 +4,69 @@ continent = {
 	political = {
 		democratic = {
 			male = { 
-				"gfx/leaders/r56_generic/r56_portrait_generic_politician_asia_1.tga"	
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_asia_1_democracy.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_asia_2_democracy.dds"
+				"gfx/leaders/JAP/Portrait_Japan_Generic_2.dds"
+			}
+		}
+		communism = {
+			male = {
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_asia_1_communism.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_asia_2_communism.dds"
+				"gfx/leaders/JAP/Portrait_Japan_Generic_1.dds"
+			}
+		}
+		fascism = {
+			male = {
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_asia_1_fascism.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_asia_2_fascism.dds"
+				"gfx/leaders/JAP/Portrait_Japan_Generic_3.dds"
+			}
+		}
+		neutrality = {
+			male = {
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_asia_1_fascism.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_asia_2_fascism.dds"
+				"gfx/leaders/JAP/Portrait_Japan_Generic_3.dds"	
+			}
+		}		
+	}
+	army = {
+		male = {
+			"gfx/leaders/JAP/Portrait_Japan_Generic_land_1.dds"
+			"gfx/leaders/JAP/Portrait_Japan_Generic_land_3.dds"
+			"gfx/leaders/JAP/Portrait_Japan_Generic_land_4.dds"
+			"gfx/leaders/JAP/Portrait_Japan_Generic_land_5.dds"
+		}
+	}
+	navy = {
+		male = {
+			"gfx/leaders/JAP/Portrait_Japan_Generic_navy_1.dds"
+			"gfx/leaders/JAP/Portrait_Japan_Generic_navy_2.dds"
+			"gfx/leaders/JAP/Portrait_Japan_Generic_navy_3.dds"
+		}
+	}	
+}
+continent = {
+	name = middle_east
+	
+	political = {
+		democratic = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_middle_east_1.dds"
 			}
 		}
 	}
 }
+
 
 continent = {
 	name = europe
 	
 	political = {
 		communism = {
-			male = { 
+			male = {
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_3.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_1.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
@@ -24,25 +75,29 @@ continent = {
 			}
 		}
 		democratic = {
-			male = { 
+			male = {
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_2.dds"
 				"gfx/leaders/FRA/Portrait_France_Generic_2.dds"
-				"gfx/leaders/USA/Portrait_USA_Generic_2.dds"			
+				"gfx/leaders/USA/Portrait_USA_Generic_2.dds"
+
 			}
 		}
 		fascism = {
-			male = { 
+			male = {
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
 				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+				"gfx/leaders/SOV/Portrait_Soviet_Victor_Baydalakov.dds"
 			}
 		}
 		neutrality = {
-			male = { 
+			male = {
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds" 
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"					
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
@@ -59,7 +114,7 @@ continent = {
 	name = north_america
 	political = {
 		communism = {
-			male = { 
+			male = {
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_3.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_1.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
@@ -68,7 +123,8 @@ continent = {
 			}
 		}
 		democratic = {
-			male = { 
+			male = {
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds" 
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
@@ -83,10 +139,12 @@ continent = {
 				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
 				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+				"gfx/leaders/SOV/Portrait_Soviet_Victor_Baydalakov.dds"
 			}
 		}
 		neutrality = {
 			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"					
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
@@ -176,6 +234,52 @@ BAN = {
 		}
 	}
 }
+HYD = {
+	army = {
+		male = {
+			"gfx/leaders/RAJ/Portrait_The_Raj_Army_Generic.dds"
+			"gfx/leaders/RAJ/Portrait_The_Raj_Army_Generic_2.dds"
+			"gfx/leaders/SAU/Portrait_Arabia_Generic_3.dds"
+			
+		}
+	}
+	navy = {
+		male = {
+			"gfx/leaders/RAJ/Portrait_The_Raj_Generic_navy_1.dds"
+			"gfx/leaders/RAJ/Portrait_The_Raj_Generic_navy_2.dds"
+			"gfx/leaders/SAU/Portrait_Arabia_Generic_navy_1.dds"
+			"gfx/leaders/SAU/Portrait_Arabia_Generic_navy_2.dds"
+			
+		}
+	}	
+	
+	political = {
+		communism = {
+			male = { 
+				"gfx/leaders/RAJ/Portrait_The_Raj_Political_Leader_Generic_2.dds"
+				"gfx/leaders/SAU/Portrait_Arabia_Generic_1.dds"
+			}
+		}
+		democratic = {
+			male = { 
+				"gfx/leaders/RAJ/Portrait_The_Raj_Political_Leader_Generic_2.dds"
+				"gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
+			}
+		}
+		fascism = {
+			male = { 
+				"gfx/leaders/RAJ/Portrait_The_Raj_Army_Generic.dds"
+				"gfx/leaders/RAJ/Portrait_The_Raj_Army_Generic_2.dds"
+				"gfx/leaders/SAU/Portrait_Arabia_Generic_3.dds"
+			}
+		}
+		neutrality = {
+			male = { 
+				"gfx/leaders/RAJ/Portrait_The_Raj_Political_Leader_Generic_2.dds"
+			}
+		}
+	}
+}
 PAK = {
 	navy = {
 		male = {
@@ -209,6 +313,8 @@ PAK = {
 		neutrality = {
 			male = { 
 				"gfx/leaders/RAJ/Portrait_The_Raj_Political_Leader_Generic_2.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_middle_east_1.dds"
+				
 			}
 		}
 	}
@@ -236,6 +342,8 @@ POR = {
 			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_4.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_5.dds"				
 			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_europe_1.dds"
 			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GRE_1.dds"			
 		}
@@ -263,8 +371,8 @@ BEL = {
 			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
-			"gfx/leaders/Europe/portrait_europe_generic_navy_4.dds"	
-			"gfx/leaders/Europe/portrait_europe_generic_navy_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_4.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_5.dds"	
 			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_1.dds"			
 		}
 	}	
@@ -330,7 +438,7 @@ WLL = {
 GER = {
 	political = {
 		communism = {
-			male = { 
+			male = {
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_3.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_1.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
@@ -354,6 +462,7 @@ GER = {
 				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
 				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+				"gfx/leaders/SOV/Portrait_Soviet_Victor_Baydalakov.dds"
 			}
 		}
 		neutrality = {
@@ -437,6 +546,146 @@ ITA = {
 	}
 }
 
+NAP = {
+	army = {
+		male = {
+			"gfx/leaders/r56_generic/r56_portrait_ITA_generic_land_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_13.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_19.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_1.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_2.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_3.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_4.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_5.dds"						
+		}
+	}
+	navy = {
+		male = {
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_europe_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_4.dds"	
+			"gfx/leaders/Europe/portrait_europe_generic_navy_5.dds"
+			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_1.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_navy_1.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_navy_2.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_navy_3.dds"							
+		}
+	}	
+}
+
+SAD = {
+	army = {
+		male = {
+			"gfx/leaders/r56_generic/r56_portrait_ITA_generic_land_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_13.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_19.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_1.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_2.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_3.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_4.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_5.dds"					
+		}
+	}
+	navy = {
+		male = {
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_europe_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_4.dds"	
+			"gfx/leaders/Europe/portrait_europe_generic_navy_5.dds"
+			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_1.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_navy_1.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_navy_2.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_navy_3.dds"							
+		}
+	}	
+}
+
+SIC = {
+	army = {
+		male = {
+			"gfx/leaders/r56_generic/r56_portrait_ITA_generic_land_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_13.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_19.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_1.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_2.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_3.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_4.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_5.dds"						
+		}
+	}
+	navy = {
+		male = {
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_europe_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_4.dds"	
+			"gfx/leaders/Europe/portrait_europe_generic_navy_5.dds"
+			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_1.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_navy_1.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_navy_2.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_navy_3.dds"							
+		}
+	}	
+}
+
+VNZ = {
+	army = {
+		male = {
+			"gfx/leaders/r56_generic/r56_portrait_ITA_generic_land_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_13.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_19.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_1.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_2.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_3.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_4.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_land_5.dds"						
+		}
+	}
+	navy = {
+		male = {
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_europe_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_4.dds"	
+			"gfx/leaders/Europe/portrait_europe_generic_navy_5.dds"
+			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_1.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_navy_1.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_navy_2.dds"
+			"gfx/leaders/ITA/Portrait_Italy_Generic_navy_3.dds"							
+		}
+	}	
+}
+
 DDR = {
 	political = {
 		communism = {
@@ -468,6 +717,7 @@ DDR = {
 		}
 		neutrality = {
 			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"					
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
@@ -491,7 +741,6 @@ DDR = {
 
 	navy = {
 		male = {
-
 			"gfx/leaders/GER/Portrait_Germany_Generic_navy_1.dds"
 			"gfx/leaders/GER/Portrait_Germany_Generic_navy_2.dds"
 			"gfx/leaders/GER/Portrait_Germany_Generic_navy_3.dds"
@@ -532,7 +781,8 @@ WGR = {
 			}
 		}
 		neutrality = {
-			male = { 
+			male = {
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"					
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
@@ -550,7 +800,9 @@ WGR = {
 			"gfx/leaders/GER/Portrait_Germany_Generic_land_3.dds"
 			"gfx/leaders/GER/Portrait_Germany_Generic_land_4.dds"
 			"gfx/leaders/GER/Portrait_Germany_Generic_land_5.dds"
-
+			#unused air guys in base game as generics
+			"gfx/leaders/GER/Portrait_Germany_Wolfram_Freiherr_von_Richthofen.dds"
+			"gfx/leaders/GER/Portrait_Germany_Willi_Reschke.dds"
 		}
 	}
 
@@ -566,7 +818,7 @@ WGR = {
 		}
 	}
 }
-BAV = {
+BAY = {
 	political = {
 		communism = {
 			male = { 
@@ -578,7 +830,8 @@ BAV = {
 			}
 		}
 		democratic = {
-			male = { 
+			male = {
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
@@ -637,6 +890,372 @@ BAV = {
 		}
 	}
 }
+
+PRE = {
+	political = {
+		communism = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_1.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_1.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_1.dds"
+			}
+		}
+		democratic = {
+			male = {
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_2.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_2.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_2.dds"			
+			}
+		}
+		fascism = {
+			male = { 
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+			}
+		}
+		neutrality = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"					
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_3.dds"	
+			}
+		}
+	}
+	army = {
+		male = {
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_1.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_2.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_3.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_4.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_1.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_3.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_19.dds"
+			#unused air guys in base game as generics
+			"gfx/leaders/GER/Portrait_Germany_Wolfram_Freiherr_von_Richthofen.dds"
+			"gfx/leaders/GER/Portrait_Germany_Willi_Reschke.dds"			
+		}
+	}
+
+	navy = {
+		male = {
+			"gfx/leaders/GER/Portrait_Germany_Generic_navy_1.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_navy_2.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_navy_3.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_2.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_3.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_4.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_europe_1.dds"
+		}
+	}
+}
+
+HAN = {
+	political = {
+		communism = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_1.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_1.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_1.dds"
+			}
+		}
+		democratic = {
+			male = {
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_2.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_2.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_2.dds"			
+			}
+		}
+		fascism = {
+			male = { 
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+			}
+		}
+		neutrality = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"					
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_3.dds"	
+			}
+		}
+	}
+	army = {
+		male = {
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_1.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_2.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_3.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_4.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_1.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_3.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_19.dds"
+			#unused air guys in base game as generics
+			"gfx/leaders/GER/Portrait_Germany_Wolfram_Freiherr_von_Richthofen.dds"
+			"gfx/leaders/GER/Portrait_Germany_Willi_Reschke.dds"			
+		}
+	}
+
+	navy = {
+		male = {
+			"gfx/leaders/GER/Portrait_Germany_Generic_navy_1.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_navy_2.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_navy_3.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_2.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_3.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_4.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_europe_1.dds"
+		}
+	}
+}
+
+SAX = {
+	political = {
+		communism = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_1.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_1.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_1.dds"
+			}
+		}
+		democratic = {
+			male = {
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_2.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_2.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_2.dds"			
+			}
+		}
+		fascism = {
+			male = { 
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+			}
+		}
+		neutrality = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"					
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_3.dds"	
+			}
+		}
+	}
+	army = {
+		male = {
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_1.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_2.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_3.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_4.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_1.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_3.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_19.dds"
+			#unused air guys in base game as generics
+			"gfx/leaders/GER/Portrait_Germany_Wolfram_Freiherr_von_Richthofen.dds"
+			"gfx/leaders/GER/Portrait_Germany_Willi_Reschke.dds"			
+		}
+	}
+
+	navy = {
+		male = {
+			"gfx/leaders/GER/Portrait_Germany_Generic_navy_1.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_navy_2.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_navy_3.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_2.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_3.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_4.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_europe_1.dds"
+		}
+	}
+}
+
+WUR = {
+	political = {
+		communism = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_1.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_1.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_1.dds"
+			}
+		}
+		democratic = {
+			male = {
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_2.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_2.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_2.dds"			
+			}
+		}
+		fascism = {
+			male = { 
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+			}
+		}
+		neutrality = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"					
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_3.dds"	
+			}
+		}
+	}
+	army = {
+		male = {
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_1.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_2.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_3.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_4.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_1.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_3.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_19.dds"
+			#unused air guys in base game as generics
+			"gfx/leaders/GER/Portrait_Germany_Wolfram_Freiherr_von_Richthofen.dds"
+			"gfx/leaders/GER/Portrait_Germany_Willi_Reschke.dds"			
+		}
+	}
+
+	navy = {
+		male = {
+			"gfx/leaders/GER/Portrait_Germany_Generic_navy_1.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_navy_2.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_navy_3.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_2.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_3.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_4.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_europe_1.dds"
+		}
+	}
+}
+
+SHL = {
+	political = {
+		communism = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_1.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_1.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_1.dds"
+			}
+		}
+		democratic = {
+			male = {
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_2.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_2.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_2.dds"			
+			}
+		}
+		fascism = {
+			male = { 
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+			}
+		}
+		neutrality = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"					
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_3.dds"	
+			}
+		}
+	}
+	army = {
+		male = {
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_1.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_2.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_3.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_4.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_1.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_3.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_19.dds"
+			#unused air guys in base game as generics
+			"gfx/leaders/GER/Portrait_Germany_Wolfram_Freiherr_von_Richthofen.dds"
+			"gfx/leaders/GER/Portrait_Germany_Willi_Reschke.dds"			
+		}
+	}
+
+	navy = {
+		male = {
+			"gfx/leaders/GER/Portrait_Germany_Generic_navy_1.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_navy_2.dds"
+			"gfx/leaders/GER/Portrait_Germany_Generic_navy_3.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_2.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_3.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GER_4.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_europe_1.dds"
+		}
+	}
+}
+
 ###Greece and Cyprus
 GRE = {
 	political = {
@@ -690,6 +1309,15 @@ GRE = {
   army = {
 		male = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_land_GRE_1.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_19.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_1.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_3.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_4.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_5.dds"
+			"gfx/leaders/Europe/Portrait_europe_generic_land_6.dds"	
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_8.dds"			
 		}
 	}
 }
@@ -737,13 +1365,22 @@ CYP = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GRE_2.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_1.dds"
-			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_2.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_4.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_5.dds"	
 		}
 	}
   army = {
 		male = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_land_GRE_1.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_19.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_1.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_3.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_4.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_5.dds"
+			"gfx/leaders/Europe/Portrait_europe_generic_land_6.dds"	
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_8.dds"		
 		}
 	}
 }
@@ -953,8 +1590,8 @@ SLV = {
 			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_GRE_2.dds"
 			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_1.dds"
 			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_3.dds"
-			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
-			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_4.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_5.dds"	
 		}
 	}
 }
@@ -971,6 +1608,7 @@ SER = {
 		}
 		democratic = {
 			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
@@ -1024,6 +1662,7 @@ MNT = {
 		}
 		democratic = {
 			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
@@ -1077,6 +1716,7 @@ MCD = {
 		}
 		democratic = {
 			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
@@ -1179,6 +1819,79 @@ SWE = {
 			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_4.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_5.dds"			
+			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_2.dds"
+			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_3.dds"
+			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_1.dds"		
+		}
+	}
+}
+SMI = {
+	political = {
+		communism = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_1.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_1.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_1.dds"
+			}
+		}
+		democratic = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_2.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_2.dds"			
+			}
+		}
+		fascism = {
+			male = { 
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+			}
+		}
+		neutrality = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"					
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_3.dds"	
+			}
+		}
+	}
+	army = {
+		male = {
+			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_land_1.dds"
+			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_land_2.dds"
+			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_land_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_13.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_19.dds"
+		}
+	}
+
+	navy = {
+		male = {
+#			"gfx/leaders/SWE/Portrait_Sweden_Helge_Generic.dds"
+			"gfx/leaders/r56_generic/r56_portrait_generic_admiral_europe_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_4.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_5.dds"				
 			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_1.dds"
 			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_2.dds"
 			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_3.dds"
@@ -1238,6 +1951,7 @@ UKR = {
 		}
 		neutrality = {
 			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"					
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
@@ -1280,6 +1994,7 @@ BLR = {
 		}
 		democratic = {
 			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
@@ -1358,6 +2073,7 @@ GEO = {
 		}
 		neutrality = {
 			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"					
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
@@ -1404,6 +2120,82 @@ ARM = {
 			"gfx/leaders/SOV/Portrait_Soviet_Generic_navy_2.dds"
 			"gfx/leaders/SOV/Portrait_Soviet_Generic_navy_3.dds"
 		}
+	}
+}
+ISR = {
+	political = {
+		communism = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_1.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_1.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_1.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_4.dds"
+			}
+		}
+		democratic = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_2.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_2.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_2.dds"
+				"gfx/leaders/Europe/portrait_europe_generic_6.dds"
+				"gfx/leaders/Europe/Portrait_europe_generic_7.dds"
+				"gfx/leaders/South America/portrait_south_america_generic_7.dds"
+				"gfx/leaders/South America/portrait_south_america_generic_8.dds"
+
+			}
+		}
+		fascism = {
+			male = { 
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+				"gfx/leaders/South America/portrait_south_america_generic_9.dds"
+			}
+		}
+		neutrality = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"					
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_3.dds"	
+			}
+		}		
+	}
+	army = {
+		male = {
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_8.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_9.dds"	
+		}
+	}	
+	navy = {
+		male = {
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_4.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_5.dds"	
+			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_1.dds"
+			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_2.dds"
+			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_3.dds"
+			"gfx/leaders/r56_generic/r56_portrait_Sweden_Generic_navy_3.dds"				
+		}		
 	}
 }
 ENG = {
@@ -1459,6 +2251,9 @@ ENG = {
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_3.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_4.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_8.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_9.dds"			
 		}
 	}
 
@@ -1503,6 +2298,7 @@ SCO = {
 		}
 		neutrality = {
 			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"					
 				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
@@ -1525,6 +2321,9 @@ SCO = {
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_3.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_4.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_8.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_9.dds"			
 		}
 	}
 
@@ -1542,6 +2341,7 @@ WLS = {
 	political = {
 		communism = {
 			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_3.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_1.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
@@ -1591,6 +2391,9 @@ WLS = {
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_3.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_4.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_8.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_9.dds"			
 		}
 	}
 
@@ -1608,6 +2411,7 @@ NIR = {
 	political = {
 		communism = {
 			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_europe_augustyn_czartoryski.dds"
 				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_3.dds"
 				"gfx/leaders/ENG/Portrait_Britain_Generic_1.dds"
 				"gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
@@ -1657,6 +2461,9 @@ NIR = {
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_3.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_4.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_8.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_9.dds"			
 		}
 	}
 
@@ -1723,6 +2530,9 @@ SAF = {
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_3.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_4.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_8.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_9.dds"			
 		}
 	}
 
@@ -1750,6 +2560,9 @@ MAL_UK = {
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_3.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_4.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_8.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_9.dds"			
 		}
 	}
 
@@ -1776,6 +2589,9 @@ RAJ_UK = {
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_3.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_4.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_8.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_9.dds"			
 		}
 	}
 
@@ -1787,6 +2603,46 @@ RAJ_UK = {
 			"gfx/leaders/ENG/Portrait_Britain_Generic_navy_3.dds"
 		}
 	}
+	political = {
+		communism = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_1.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_1.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_1.dds"
+			}
+		}
+		democratic = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_2.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_2.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_2.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_2.dds"			
+			}
+		}
+		fascism = {
+			male = { 
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+			}
+		}
+		neutrality = {
+			male = { 
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_1.dds"
+				"gfx/leaders/r56_generic/r56_portrait_generic_politician_europe_2.dds"					
+				"gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
+				"gfx/leaders/ENG/Portrait_Britain_Generic_3.dds"
+				"gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+				"gfx/leaders/FRA/Portrait_France_Generic_3.dds"
+				"gfx/leaders/USA/Portrait_USA_Generic_3.dds"	
+			}
+		}
+	}	
 }
 
 AST = {
@@ -1842,6 +2698,9 @@ AST = {
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_3.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_4.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_8.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_9.dds"			
 		}
 	}
 
@@ -1909,6 +2768,9 @@ CAN = {
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_3.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_4.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_8.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_9.dds"
 		}
 	}
 
@@ -1976,6 +2838,9 @@ NZL = {
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_3.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_4.dds"
 			"gfx/leaders/r56_generic/r56_portrait_commonwealth_generic_general_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_8.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_9.dds"			
 		}
 	}
 
@@ -1997,6 +2862,10 @@ INS_HOL = {
 			"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_7.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_8.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_9.dds"
 		}
 	}
 
@@ -2006,6 +2875,8 @@ INS_HOL = {
 			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
 			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_4.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_navy_5.dds"			
 		}
 	}
 }
@@ -2058,6 +2929,7 @@ MOR = {
 		democratic = {
 				male = {
 					"gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
+					"gfx/leaders/r56_generic/r56_portrait_generic_middle_east_1.dds"
 			}
 		}
 		fascism = {
@@ -2098,6 +2970,7 @@ ALG = {
 		democratic = {
 				male = {
 					"gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
+					"gfx/leaders/r56_generic/r56_portrait_generic_middle_east_1.dds"
 			}
 		}
 		fascism = {
@@ -2138,6 +3011,7 @@ EGY = {
 		democratic = {
 				male = {
 					"gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
+					"gfx/leaders/r56_generic/r56_portrait_generic_middle_east_1.dds"
 			}
 		}
 		fascism = {
@@ -2178,6 +3052,7 @@ TUN = {
 		democratic = {
 				male = {
 					"gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
+					
 			}
 		}
 		fascism = {
@@ -2188,6 +3063,7 @@ TUN = {
 		neutrality = {
 				male = {
 					"gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
+					"gfx/leaders/r56_generic/r56_portrait_generic_middle_east_1.dds"
 			}
 		}
 	}
@@ -2218,6 +3094,7 @@ BAH = {
 		democratic = {
 				male = {
 					"gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
+					"gfx/leaders/r56_generic/r56_portrait_generic_middle_east_1.dds"
 			}
 		}
 		fascism = {
@@ -2258,6 +3135,7 @@ WES = {
 		democratic = {
 				male = {
 					"gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
+					"gfx/leaders/r56_generic/r56_portrait_generic_middle_east_1.dds"
 			}
 		}
 		fascism = {
@@ -2301,6 +3179,7 @@ SUD = { # SUDAN arab elite, possibly some african commanders (although historica
 		democratic = {
 				male = {
 					"gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
+					"gfx/leaders/r56_generic/r56_portrait_generic_middle_east_1.dds"
 			}
 		}
 		fascism = {
@@ -2312,6 +3191,44 @@ SUD = { # SUDAN arab elite, possibly some african commanders (although historica
 				male = {
 					"gfx/leaders/SAU/Portrait_Arabia_Generic_2.dds"
 			}
+		}
+	}
+}
+VIC = {
+	army = {
+		male = {
+			"gfx/leaders/FRA/Portrait_France_Generic_land_1.dds"
+			"gfx/leaders/FRA/Portrait_France_Generic_land_2.dds"
+			"gfx/leaders/FRA/Portrait_France_Generic_land_3.dds"
+			"gfx/leaders/FRA/Portrait_France_Generic_land_4.dds"
+			"gfx/leaders/FRA/Portrait_France_Generic_land_5.dds"
+		}
+	}
+	
+	navy = {
+		male = {
+			"gfx/leaders/FRA/Portrait_France_Generic_navy_1.dds"
+			"gfx/leaders/FRA/Portrait_France_Generic_navy_2.dds"
+			"gfx/leaders/FRA/Portrait_France_Generic_navy_3.dds"
+		}
+	}
+}
+OCC = {
+	army = {
+		male = {
+			"gfx/leaders/FRA/Portrait_France_Generic_land_1.dds"
+			"gfx/leaders/FRA/Portrait_France_Generic_land_2.dds"
+			"gfx/leaders/FRA/Portrait_France_Generic_land_3.dds"
+			"gfx/leaders/FRA/Portrait_France_Generic_land_4.dds"
+			"gfx/leaders/FRA/Portrait_France_Generic_land_5.dds"
+		}
+	}
+	
+	navy = {
+		male = {
+			"gfx/leaders/FRA/Portrait_France_Generic_navy_1.dds"
+			"gfx/leaders/FRA/Portrait_France_Generic_navy_2.dds"
+			"gfx/leaders/FRA/Portrait_France_Generic_navy_3.dds"
 		}
 	}
 }

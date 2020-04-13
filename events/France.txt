@@ -251,8 +251,7 @@ country_event = {
         tag = FRA
 		has_government = democratic
 		has_start_date < 1936.01.02
-		NOT = { has_completed_focus = FRA_popular_front_united }
-		NOT = { has_completed_focus = FRA_create_french_union }
+		has_idea = FRA_disjointed_government
 		OR = {
 			AND = {
 				date > 1938.8.4
@@ -280,7 +279,7 @@ country_event = {
 			ideology = conservatism
 		}	
 		hidden_effect = {	
-			set_country_flag = front_explosed
+			set_global_flag = front_explosed
 		}
 	}
 }
@@ -347,36 +346,9 @@ country_event = {
 	picture = GFX_report_event_fascist_gathering
 	
 	is_triggered_only = yes
-
-	immediate = {
-		hidden_effect = { remove_ideas = fascist_revolutionaries }
-	}
 	
 	option = {
 		name = france.111.b
-		if = {
-			limit = {
-				NOT = { has_government = fascism }
-			}
-			set_politics = {
-				ruling_party = fascism
-				elections_allowed = no
-			}
-		}
-		set_party_name = { ideology = fascism long_name = FRA_fascism_party3_long name = FRA_fascism_party3 }
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Louis Franchet d'Espèrey"
-			desc = "POLITICS_FRANCHET_ESPEREY_DESC"
-			picture = "r56_portrait_FRA_Louis_Franchet_d_Esperey.dds"
-			expire = "1965.1.1"
-			ideology = fascism_ideology
-		}		
-		add_timed_idea = { idea = reign_of_terror days = 730 }
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.2
-		}
 	}
 }
 
@@ -408,8 +380,6 @@ country_event = {
 			picture = "r56_portrait_FRA_Jacques_Doriot.dds"
 			expire = "1965.1.1"
 			ideology = fascism_ideology
-			traits = {
-			}
 		}
 	}
 }
@@ -711,30 +681,6 @@ country_event = {
 
 	option = {
 		name = france.123.a
-		if = {
-			limit = {
-				NOT = { has_government = neutrality }
-			}
-			set_politics = {
-				ruling_party = neutrality
-				elections_allowed = no
-			}
-		}
-		if = {
-			limit = {
-				has_government = neutrality
-			}
-			add_political_power = 100
-		}
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Jean d'Orléans"
-			desc = "POLITICS_JEAN_DORLEANS_DESC"
-			picture = "gfx/leaders/FRA/Portrait_France_Jean_dOrleans.tga"
-			expire = "1965.1.1"
-			ideology = absolute_monarchism
-		}
-		add_stability = 0.1
 	}
 	
 }
@@ -1529,30 +1475,6 @@ country_event = {
 
 	option = {
 		name = france.148.a
-		if = {
-			limit = {
-				NOT = { has_government = neutrality }
-			}
-			set_politics = {
-				ruling_party = neutrality
-				elections_allowed = yes
-			}
-		}
-		if = {
-			limit = {
-				has_government = neutrality
-			}
-			add_political_power = 100
-		}
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Napoléon VI"
-			desc = "POLITICS_NAPOLEON_VI_DESC"
-			picture = "r56_portrait_France_Napoleon_VI.dds"
-			expire = "1965.1.1"
-			ideology = absolute_monarchism
-		}
-		set_cosmetic_tag = FRAEMPIRE
 	}
 }
 
@@ -1569,7 +1491,7 @@ country_event = {
 		original_tag = FRA
 		has_government = neutrality
 		date > 1939.1.1
-		has_country_leader = { ruling_only = yes name = "Jean d'Orléans" }
+		has_country_leader = { ruling_only = yes name = "Jean III" }
 	}
 
 	mean_time_to_happen = {
@@ -1579,14 +1501,48 @@ country_event = {
 	option = {
 		name = france.149.a
 		kill_country_leader = yes
-		create_country_leader = {
-			name = "Henri d'Orléans"
-			desc = "POLITICS_HENRI_ORLEANS_DESC"
-			picture = "gfx/leaders/FRA/Portrait_France_Henri_Orleans.tga"
-			expire = "1965.1.1"
-			ideology = absolute_monarchism
-			traits = {
-				popular_figurehead2
+		if = {
+			limit = {
+				has_completed_focus = FRA_constitutional_monarchy
+			}
+			create_country_leader = {
+				name = "Henri VI"
+				desc = "POLITICS_HENRI_ORLEANS_DESC"
+				picture = "gfx/leaders/FRA/Portrait_France_Henri_Orleans.dds"
+				expire = "1965.1.1"
+				ideology = moderatism
+				traits = {
+					count_of_paris
+					constitutional_monarch
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_completed_focus = FRA_restore_ancient_reights
+			}
+			create_country_leader = {
+				name = "Henri VI"
+				desc = "POLITICS_HENRI_ORLEANS_DESC"
+				picture = "gfx/leaders/FRA/Portrait_France_Henri_Orleans.dds"
+				expire = "1965.1.1"
+				ideology = moderatism
+				traits = {
+					count_of_paris
+					absolute_monarch
+				}
+			}
+		}
+		else = {
+			create_country_leader = {
+				name = "Henri VI"
+				desc = "POLITICS_HENRI_ORLEANS_DESC"
+				picture = "gfx/leaders/FRA/Portrait_France_Henri_Orleans.dds"
+				expire = "1965.1.1"
+				ideology = absolute_monarchism
+				traits = {
+					count_of_paris
+				}
 			}
 		}
 	}
@@ -2088,9 +2044,7 @@ country_event = {
 		custom_effect_tooltip = FRA_franco_british_cores
 		hidden_effect = {
 			ENG = { set_cosmetic_tag = FRA_UK }
-			GER = { 
-				country_event = { hours = 6 id = news.35 }
-			}
+			news_event = { hours = 1 id = news.35 }
 		}
 	}
 }
@@ -2204,52 +2158,44 @@ country_event = {
 		# Italian Occupation Zone (if they did well)
 		if = { #if Italy did really well, they get an extra bonus state (but only if that doesn't lead to bordergore)
 			limit = {
-				AND = {
-					735 = { #Savoy
-						owner = { original_tag = FRA }
-						is_controlled_by = ITA
-					}
-					21 = { #Provence
-						owner = { original_tag = FRA }
-						is_controlled_by = ITA
-					}
-					32 = { #Alpes
-						owner = { original_tag = FRA }
-						is_controlled_by = ITA
-					}
+				735 = { #Savoy
+					owner = { original_tag = FRA }
+					is_controlled_by = ITA
+				}
+				21 = { #Provence
+					owner = { original_tag = FRA }
+					is_controlled_by = ITA
+				}
+				32 = { #Alpes
+					owner = { original_tag = FRA }
+					is_controlled_by = ITA
 				}
 			}
 			ITA = { transfer_state = 32 }
 		}
 		if = {
 			limit = {
-				AND = {
-					21 = { #Provence
-						owner = { original_tag = FRA }
-						is_controlled_by = ITA
-					}
+				21 = { #Provence
+					owner = { original_tag = FRA }
+					is_controlled_by = ITA
 				}
 			}
 			ITA = { transfer_state = 21 }
 		}
 		if = {
 			limit = {
-				AND = {
-					1 = { #Corsica
-						owner = { original_tag = FRA }
-						is_controlled_by = ITA
-					}
+				1 = { #Corsica
+					owner = { original_tag = FRA }
+					is_controlled_by = ITA
 				}
 			}
 			ITA = { transfer_state = 1 }
 		}
 		if = {
 			limit = {
-				AND = {
-					735 = { #Savoy
-						owner = { original_tag = FRA }
-						is_controlled_by = ITA
-					}
+				735 = { #Savoy
+					owner = { original_tag = FRA }
+					is_controlled_by = ITA
 				}
 			}
 			ITA = { transfer_state = 735 }
@@ -2269,6 +2215,15 @@ country_event = {
 		}
 		FRA = {
 			set_capital = 539
+			set_cosmetic_tag = FRA_VICHY
+			create_country_leader = {
+				name = "Philippe Pétain"
+				desc = "POLITICS_PHILIPPE_PÉTAIN_DESC"
+				picture = "Portrait_France_Philippe_Petain.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+			}
+			load_focus_tree = vichy_french_focus			
 			hidden_effect = {
 					set_state_controller = 26
 					set_state_controller = 22
@@ -2385,12 +2340,10 @@ country_event = {
 							}
 						}
 						NOT = {
-							OR = {
-								state = 554
-								state = 680
-								state = 677
-								state = 458
-							}
+							state = 554
+							state = 680
+							state = 677
+							state = 458
 						}
 					}
 				}
@@ -2422,9 +2375,9 @@ country_event = {
 			}
 			save_event_target_as = vichy_france
 		}
-		country_event = { hours = 6 id = news.34 }
+		news_event = { hours = 6 id = news.34 }
 		hidden_effect =  {
-			FRA = { news_event = { id = france.20 days = 1 } }
+			FRA = { country_event = { id = france.20 days = 1 } }
 		}
 		FRI = {
 			country_event = frenchindochina.4
@@ -2442,6 +2395,7 @@ country_event = {
 		#Set same cosmetic tag they would get on capitulation
 		FRA = {
 			set_cosmetic_tag = FRA_FREE
+			load_focus_tree = free_french_focus
 		}
 		# German Occupation Zone
 		if = {
@@ -2499,19 +2453,17 @@ country_event = {
 		# Italian Occupation Zone (if they did well)
 		if = { #if Italy did really well, they get an extra bonus state (but only if that doesn't lead to bordergore)
 			limit = {
-				AND = {
-					735 = { #Savoy
-						owner = { original_tag = FRA }
-						is_controlled_by = ITA
-					}
-					21 = { #Provence
-						owner = { original_tag = FRA }
-						is_controlled_by = ITA
-					}
-					32 = { #Alpes
-						owner = { original_tag = FRA }
-						is_controlled_by = ITA
-					}
+				735 = { #Savoy
+					owner = { original_tag = FRA }
+					is_controlled_by = ITA
+				}
+				21 = { #Provence
+					owner = { original_tag = FRA }
+					is_controlled_by = ITA
+				}
+				32 = { #Alpes
+					owner = { original_tag = FRA }
+					is_controlled_by = ITA
 				}
 			}
 			ITA = { transfer_state = 32 }
@@ -2713,9 +2665,9 @@ country_event = {
 			}
 			save_event_target_as = vichy_france
 		}
-		country_event = { hours = 6 id = news.34 }
+		news_event = { hours = 6 id = news.34 }
 		hidden_effect =  {
-			FRA = { news_event = { id = france.20 days = 1 } }
+			FRA = { country_event = { id = france.20 days = 1 } }
 		}
 		FRI = {
 			country_event = frenchindochina.4
@@ -2859,9 +2811,6 @@ country_event = {
 				picture = "Portrait_France_Charles_De_Gaulle.dds"
 				expire = "1965.1.1"
 				ideology = conservatism
-				traits = {
-					
-				}
 			}
 		}
 		name = france.20.a
@@ -2961,10 +2910,8 @@ country_event = {
 			limit = { 
 				ITA = {
 					NOT = { 
-						OR = {
-							has_completed_focus = ITA_claims_on_yugoslavia
-							has_completed_focus = ITA_operazione_tiberio
-						}
+						has_completed_focus = ITA_claims_on_yugoslavia
+						has_completed_focus = ITA_operazione_tiberio
 					}
 					NOT = { is_in_faction_with = GER }
 					NOT = { has_war_with = YUG }
@@ -3036,7 +2983,7 @@ country_event = {
 					is_in_faction_with = GER
 				}
 			}
-			create_faction = "french_alliance"
+			create_faction = french_alliance
 			add_to_faction = YUG
 			YUG = {
 				add_ai_strategy = {
@@ -3268,8 +3215,6 @@ country_event = {
         	picture = "Portrait_France_Paul_Reynaud.dds"
         	expire = "1965.1.1"
         	ideology = liberalism
-        	traits = {
-            }
         }
         set_country_flag = daladier_resigned
       }
@@ -3293,7 +3238,7 @@ country_event = {
 			FRA = {
 				add_ai_strategy = {
 					type = befriend
-					id = "PREV"
+					id = PREV
 					value = 200
 				}
 			}
@@ -3548,12 +3493,10 @@ news_event = {
 		name = france.34.b
 		trigger = {
 			NOT = {
-				OR = {
-					tag = ENG
-					tag = FRA
-					is_in_faction_with = ENG
-					is_subject_of = ENG
-				}
+				tag = ENG
+				tag = FRA
+				is_in_faction_with = ENG
+				is_subject_of = ENG
 			}
 		}
 	}
